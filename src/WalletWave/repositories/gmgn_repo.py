@@ -1,6 +1,7 @@
 from WalletWave.models.wallets import WalletsResponse
 from WalletWave.models.wallet_info import WalletInfoResponse
-from WalletWave.services.gmgn_client.client import Gmgn
+#from WalletWave.services.gmgn_client.client import Gmgn
+from WalletWave.services.gmgn_client.client_v2 import Gmgn
 from WalletWave.services.gmgn_client.utils.gmgn_endpoints import GmgnEndpoints
 
 
@@ -35,13 +36,6 @@ class GmgnRepo:
             raise ValueError("Invalid timeframe or wallet tag")
 
         params = {
-            "device_id": "f80400db-d886-4350-89fc-767ce49eefd7",
-            "client_id": "gmgn_web_2025.0128.214338",
-            "from_app": "gmgn",
-            "app_ver": "2025.0128.214338",
-            "tz_name": "America/Indianapolis",
-            "tz_offset": "-18000",
-            "app_lang": "en",
             "tag": wallet_tag,
             "orderby": f"pnl_{timeframe}",
             "direction": order,
@@ -55,7 +49,7 @@ class GmgnRepo:
         # Make the request
         response = await self.client.execute_requests()
 
-        return WalletsResponse.model_validate(response)
+        return WalletsResponse.model_validate(response[0])
 
     async def get_token_info(self, contract_address: str) -> dict:
         if not contract_address:
@@ -81,7 +75,8 @@ class GmgnRepo:
         # Append the request to later on parallelize it
         self.client.queue_request(url, params, timeout)
         response = await self.client.execute_requests()
-        return WalletInfoResponse.model_validate(response)
+
+        return WalletInfoResponse.model_validate(response[0])
 
 if __name__ == "__main__":
     # repo = GmgnRepo()
