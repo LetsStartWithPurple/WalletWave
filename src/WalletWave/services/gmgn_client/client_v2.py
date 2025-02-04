@@ -23,8 +23,18 @@ class Gmgn:
         self.error_count = 0
 
         # limits the amount of async tasks to 10
-        # Todo: maybe add a config setting for the user to control this amount
-        self.semaphore = asyncio.Semaphore(3)
+        self.user_parallel_requests = 5  # Default value
+
+        while True:
+            try:
+                self.user_parallel_requests = int(input("Number of simultaneous requests to execute (Default 5): "))
+                if self.user_parallel_requests < 0:
+                    continue
+                break
+            except ValueError:
+                continue
+
+        self.semaphore = asyncio.Semaphore(self.user_parallel_requests)
 
         self.logger.debug("Initializing impersonation...")
         self.impersonate = "chrome"
@@ -54,17 +64,6 @@ class Gmgn:
                     self.logger.error(f"url {url} failed after {max_retries} retries")
                 response.raise_for_status()
                 return response
-            except HTTPError as e:
-                # Todo: Analyze why some requests do not even return a response instead of just returning 403 (or 429) aaaa
-                status_code = e.response.status_code if e.response is not None else 'Unknown'
-                self.logger.error(f"Received HTTP {status_code} for {url} : {str(e)}")
-
-                # backoff
-                # todo: add timeout variable, right now it's not being used, possibly Union[int, Tuple[int, int]]
-                await asyncio.sleep(random.randint(5, 10))
-                return None
-
-                # todo: add a retry method or just skip all together
             except Exception as e:
                 self.logger.error(f"Failed {url}: {e}")
                 return None
