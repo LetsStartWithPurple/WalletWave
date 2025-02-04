@@ -27,27 +27,25 @@ class Gmgn:
         self.semaphore = asyncio.Semaphore(10)
 
         self.logger.debug("Initializing impersonation...")
+        # Impersonate comes from curl_cffi.requests
         self.impersonate = "chrome"
 
         self.logger.debug("Initiating Gmgn Client...")
 
     async def _make_request(self, session: AsyncSession, url: str, params: Optional[dict] = None, timeout: int = 0):
         self.logger.debug(f"Preparing request to URL: {url} with params: {params}")
-
         async with self.semaphore:
             try:
                 # trying a random sleep to prevent 403
-                await asyncio.sleep(random.uniform(3, 5))
+                await asyncio.sleep(random.uniform(1, 5))
                 response = await session.get(url)
-
+                # Throw error if status code is 4xx or 5xx
                 response.raise_for_status()
-
                 return response
             except HTTPError as e:
-                status_code = e.response.status_code if e.response is not None else 'Unknown'
-                self.logger.error(f"Received HTTP {status_code} for {url}")
+                if e.response and e.response.status_code == 200:
+                    return e.response
 
-                # backoff
                 # todo: add timeout variable, right now it's not being used, possibly Union[int, Tuple[int, int]]
                 await asyncio.sleep(random.randint(5, 10))
                 return None
@@ -102,12 +100,11 @@ class Gmgn:
             with progress:
                 task_progress = progress.add_task("Processing requests...", total=total_requests)
 
+                # For each completed task (routine) in the list of tasks:
                 for routine in asyncio.as_completed(tasks):
                     result = await routine
                     results.append(result)
                     progress.update(task_progress, advance=1, description=f"Last Processed: ...{result.url}")
-
-
 
             # for (url, params, timeout), response in zip(self.pending_requests, responses):
             #     if response:

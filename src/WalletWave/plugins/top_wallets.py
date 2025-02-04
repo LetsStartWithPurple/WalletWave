@@ -69,7 +69,6 @@ class TopWallets(PluginInterface):
             # Collect top wallets
             wallet_addresses = [wallet.wallet_address for wallet in top_wallets_response]
 
-
             # Step 2: Analyze each wallet activity
             wallet_information = await self.gmgn.get_wallet_info(wallet_addresses, period=timeframe)
 
@@ -82,7 +81,6 @@ class TopWallets(PluginInterface):
                 # log wallet info summary
                 self.logger.info(wallet_info.to_summary(wallet_address, summary_func=custom_summary))
                 wallet_tuples.append((wallet_info, wallet_address))
-
 
             # Step 3: Filter wallets by winrate
             filtered_wallets = await self.filter_by_winrate(wallet_tuples)
@@ -116,7 +114,7 @@ class TopWallets(PluginInterface):
         except Exception as e:
             self.logger.error(f"Error analyzing: {e}")
 
-    #custom function
+    # Custom Function
     async def get_top_wallets(self, timeframe="7d", wallet_tag="smart_degen"):
         """
         Fetch top performing wallets using the getTrendingWallets endpoint.

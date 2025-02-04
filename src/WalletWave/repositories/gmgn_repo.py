@@ -63,7 +63,7 @@ class GmgnRepo:
             self,
             wallet_address: Union[str, List[str]],
             timeout: int = 0,
-            period: str = "7d") -> List[Union[WalletInfoResponse, None]]:
+            period: str = "7d") -> List[Union[WalletInfoResponse, None]]: # Returns a list where each element can be a WalletInfoResponse or None
         # todo: document that lists of wallets can now be sent to get_wallet_info
         # todo: document that returning it as a list will keep return type consistent. plugin developers don't need to worry about str or list, it will always be a list
         valid_periods = ["7d", "30d"]
@@ -77,8 +77,6 @@ class GmgnRepo:
             wallet_address = [wallet_address]
 
         params = {"period": period}
-        # build the endpoint url
-        # url = self.endpoint.get_url(self.endpoint.WALLET_INFO, wallet_address=wallet_address)
 
         # Easier
         for wallet in wallet_address:
@@ -86,6 +84,7 @@ class GmgnRepo:
             # Append the request to later on parallelize it
             self.client.queue_request(url, params, timeout)
 
+        # Returns 
         return self._validate_wallet_info(
             await self.client.execute_requests()
         )

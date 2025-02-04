@@ -94,10 +94,18 @@ class WalletInfoResponse(BaseModel):
         :param wallet_address: The address of the wallet.
         :param summary_func: Optional callable to customize the summary.
         :return: Dictionary summarizing the wallet data.
+            Example:
+                ...
+                "buy_7d": 38,
+                "sell_7d": 60,
+                "buy": 38,
+                "sell": 60,
+                ...
         """
 
         if summary_func is not None:
             return summary_func(wallet_address, self.wallet_data)
         else:
             # return the entire dictionary, including wallet address
+            # Adds "wallet_data" to the dictionary by using **
             return {"wallet_address": wallet_address, **self.wallet_data.model_dump()}
