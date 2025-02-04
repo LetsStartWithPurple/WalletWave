@@ -55,7 +55,7 @@ class Gmgn:
                 response.raise_for_status()
                 return response
             except HTTPError as e:
-                # Todo: Analyze why some requests do not even return a response instead of just returning 403 (or 429)
+                # Todo: Analyze why some requests do not even return a response instead of just returning 403 (or 429) aaaa
                 status_code = e.response.status_code if e.response is not None else 'Unknown'
                 self.logger.error(f"Received HTTP {status_code} for {url} : {str(e)}")
 
