@@ -93,10 +93,6 @@ class Gmgn:
                     "sec-ch-ua": '"Chromium";v="104", " Not A;Brand";v="99", "Google Chrome";v="104"',
                     "sec-ch-ua-mobile": "?0",
                     "sec-ch-ua-platform": '"Windows"',
-                },
-                proxies={
-                'http': 'http://victorcapa12:xe84UnLt77wL3TSb@proxy.packetstream.io:31112',
-                'https': 'https://victorcapa12:xe84UnLt77wL3TSb@proxy.packetstream.io:31111'
                 }
         ) as session:
             tasks = [
