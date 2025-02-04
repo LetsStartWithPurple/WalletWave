@@ -22,6 +22,8 @@ class Gmgn:
         self.max_requests = random.randint(*self.max_requests_range)
         self.error_count = 0
 
+        # limits the amount of async tasks to 10
+        # Todo: maybe add a config setting for the user to control this amount
         self.semaphore = asyncio.Semaphore(10)
 
         self.logger.debug("Initializing impersonation...")
@@ -29,14 +31,13 @@ class Gmgn:
 
         self.logger.debug("Initiating Gmgn Client...")
 
-
     async def _make_request(self, session: AsyncSession, url: str, params: Optional[dict] = None, timeout: int = 0):
-        self.logger.info(f"Preparing request to URL: {url} with params: {params}")
+        self.logger.debug(f"Preparing request to URL: {url} with params: {params}")
 
         async with self.semaphore:
             try:
                 # trying a random sleep to prevent 403
-                await asyncio.sleep(random.uniform(0, 2))
+                await asyncio.sleep(random.uniform(3, 5))
                 response = await session.get(url)
 
                 response.raise_for_status()
@@ -47,7 +48,7 @@ class Gmgn:
                 self.logger.error(f"Received HTTP {status_code} for {url}")
 
                 # backoff
-                # todo: add timeout methods
+                # todo: add timeout variable, right now it's not being used, possibly Union[int, Tuple[int, int]]
                 await asyncio.sleep(random.randint(5, 10))
                 return None
 
@@ -65,42 +66,67 @@ class Gmgn:
             self.logger.warning("No pending requests to execute.")
             return []
 
-        self.logger.info(f"Executing {len(self.pending_requests)} queued requests...")
+        total_requests = len(self.pending_requests)
+        self.logger.info(f"Executing {total_requests} queued requests...")
 
         async with AsyncSession(
-            impersonate=self.impersonate,
-            headers={
-                "Accept": "application/json, text/plain, */*",
-                "Accept-Language": "en-US,en;q=0.9",
-                "Accept-Encoding": "gzip, deflate, br",
-                "Referer": "https://gmgn.ai",
-                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-                              "AppleWebKit/537.36 (KHTML, like Gecko) "
-                              "Chrome/104.0.0.0 Safari/537.36",
-                "sec-ch-ua": '"Chromium";v="104", " Not A;Brand";v="99", "Google Chrome";v="104"',
-                "sec-ch-ua-mobile": "?0",
-                "sec-ch-ua-platform": '"Windows"',
-        }
+                impersonate=self.impersonate,
+                headers={
+                    "Accept": "application/json, text/plain, */*",
+                    "Accept-Language": "en-US,en;q=0.9",
+                    "Accept-Encoding": "gzip, deflate, br",
+                    "Referer": "https://gmgn.ai",
+                    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                                  "AppleWebKit/537.36 (KHTML, like Gecko) "
+                                  "Chrome/104.0.0.0 Safari/537.36",
+                    "sec-ch-ua": '"Chromium";v="104", " Not A;Brand";v="99", "Google Chrome";v="104"',
+                    "sec-ch-ua-mobile": "?0",
+                    "sec-ch-ua-platform": '"Windows"',
+                }
         ) as session:
+            tasks = [
+                self._make_request(session, url, params, timeout)
+                for url, params, timeout in self.pending_requests
+            ]
             results = []
-            tasks = []
 
-            for url, params, timeout in self.pending_requests:
-                tasks.append(self._make_request(session, url, params, timeout))
+            # use rich progress bar while processing tasks instead of spamming CLI with logs
+            progress = Progress(
+                SpinnerColumn(),
+                TextColumn("[progress.description]{task.description}"),
+                BarColumn(),
+                TextColumn("[progress.percentage]{task.percentage:>3.0f}%"),
+                TimeElapsedColumn(),
+            )
 
-            responses = await asyncio.gather(*tasks)
+            with progress:
+                task_progress = progress.add_task("Processing requests...", total=total_requests)
 
-            for (url, params, timeout), response in zip(self.pending_requests, responses):
-                if response:
-                    json_response = response.json() if response else None
-                    results.append(json_response)
-                    self.logger.info(f"Request to {url} was successful")
-                else:
-                    self.logger.error(f"Request to {url} failed: {response.text if response else 'No response received'}")
-                    results.append(None)
+                for routine in asyncio.as_completed(tasks):
+                    result = await routine
+                    results.append(result)
+                    progress.update(task_progress, advance=1, description=f"Last Processed: ...{result.url}")
+
+
+
+            # for (url, params, timeout), response in zip(self.pending_requests, responses):
+            #     if response:
+            #         json_response = response.json() if response else None
+            #         results.append(json_response)
+            #         self.logger.info(f"Request to {url} was successful")
+            #     else:
+            #         self.logger.error(
+            #             f"Request to {url} failed: {response.text if response else 'No response received'}")
+            #         results.append(None)
 
         self.pending_requests.clear()
-        return results
+
+        # Process responses into JSON
+        processed_results = [
+            response.json() if response else None for response in results
+        ]
+
+        return processed_results
 
 
 if __name__ == "__main__":
