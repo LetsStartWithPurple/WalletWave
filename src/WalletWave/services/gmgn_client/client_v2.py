@@ -17,7 +17,6 @@ class Gmgn:
         self.log_config = LogConfig()
         self.gmgn_logger = self.log_config.get_gmgn_api_logger()
         self.pending_requests: List[Tuple[str, dict, int]] = []
-        self.failed_requests: List[Tuple[str, dict, int]] = []
         self.request_count = 0
         self.max_requests_range = max_requests_range
         self.max_requests = random.randint(*self.max_requests_range)
@@ -44,7 +43,6 @@ class Gmgn:
                 if not response or response.status_code == 403:
                     self.logger.error(f"Failed {url}: No response received")
                     # Retries logic
-                    self.failed_requests.append((url, params, timeout))
                     current_retries += 1
                     while current_retries <= max_retries:
                         self.logger.info(f"retrying {current_retries} for {url}")
