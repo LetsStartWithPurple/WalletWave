@@ -45,7 +45,7 @@ class Gmgn:
                 return response
             except HTTPError as e:
                 status_code = e.response.status_code if e.response is not None else 'Unknown'
-                self.logger.error(f"Received HTTP {status_code} for {url}")
+                self.logger.error(f"Received HTTP {status_code} for {url} : {str(e)}")
 
                 # backoff
                 # todo: add timeout variable, right now it's not being used, possibly Union[int, Tuple[int, int]]
