@@ -69,14 +69,15 @@ class SolanaWalletScanner(PluginInterface):
         wallet_data = []
         self.logger.info("Executing Solana Wallet Scanner...")
 
-        for wallet in self.wallets:
-            try:
-                wallet_info = await self.gmgn.get_wallet_info(wallet, timeout, period=self.timeframe)
-                print(wallet_info)
-                wallet_data.append(wallet_info.to_summary(wallet))
+        # Todo: Check why sometimes wallet_info is empty.. which makes .to_summary() fail
+        wallet_info = await self.gmgn.get_wallet_info(self.wallets, timeout, period=self.timeframe)
+
+        for wallet, info in zip(self.wallets, wallet_info):
+            if info is not None:
+                wallet_data.append(info.to_summary(wallet))  # added for loop to loop through list
                 self.logger.info(f"Fetched data for wallet: {wallet}")
-            except Exception as e:
-                self.logger.error(f"Error fetching data for wallet {wallet}: {e}")
+            else:
+                self.logger.info(f"Failed to fetch data for wallet: {wallet}")
 
         self.logger.info(f"Scanned {len(wallet_data)}")
         return wallet_data

@@ -5,6 +5,7 @@ from typing import List, Optional
 class TagRank(BaseModel):
     fresh_wallet: Optional[int] = None
 
+
 class Risk(BaseModel):
     token_active: Optional[str] = None
     token_honeypot: Optional[str] = None
@@ -85,7 +86,6 @@ class WalletInfoResponse(BaseModel):
             WalletInfo: The wallet data object.
         """
         return self.data
-
 
     def to_summary(self, wallet_address: str, summary_func: Optional[callable] = None) -> dict:
         """
