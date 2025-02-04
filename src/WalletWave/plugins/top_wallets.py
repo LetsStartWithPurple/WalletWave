@@ -56,39 +56,33 @@ class TopWallets(PluginInterface):
             wallet_tag = "smart_degen"
             self.logger.warning(f"Falling back to default values: timeframe={timeframe}, wallet_tag={wallet_tag}")
 
-        filtered_wallets = []
         try:
             # Step 1: Get the top wallets
             self.logger.debug(f"Fetching top wallets with params: timeframe={timeframe}, wallet_tag={wallet_tag}")
-            top_wallets = await self.get_top_wallets(timeframe=timeframe, wallet_tag=wallet_tag)
-            if not top_wallets:
+            top_wallets_response = await self.get_top_wallets(timeframe=timeframe, wallet_tag=wallet_tag)
+            if not top_wallets_response:
                 self.logger.error("No top wallets found.")
                 return []
 
-            self.logger.debug(f"Found {len(top_wallets)} top wallets to analyze")
+            self.logger.debug(f"Found {len(top_wallets_response)} top wallets to analyze")
 
-            wallet_tuples = []
+            # Collect top wallets
+            wallet_addresses = [wallet.wallet_address for wallet in top_wallets_response]
+
 
             # Step 2: Analyze each wallet activity
-            for wallet in top_wallets:
-                wallet_address = wallet.wallet_address
-                self.logger.debug(f"Analyzing wallet: {wallet_address}")
-                wallet_activity = await self.analyze_wallet_activity(wallet_address, period=timeframe)
+            wallet_information = await self.gmgn.get_wallet_info(wallet_addresses, period=timeframe)
 
-                if not wallet_activity:
-                    self.logger.warning(
-                        f"Skipping wallet {wallet_address} due to empty or invalid data: {wallet_activity}"
-                    )
+            wallet_tuples = []
+            for wallet_info, wallet_address in zip(wallet_information, wallet_addresses):
+                if not wallet_info:
+                    self.logger.warning(f"Skipping wallet {wallet_address} due to empty or invalid data")
                     continue
 
-                # log wallet info
-                self.logger.info(wallet_activity.to_summary(
-                    wallet_address, summary_func=custom_summary)
-                )
+                # log wallet info summary
+                self.logger.info(wallet_info.to_summary(wallet_address, summary_func=custom_summary))
+                wallet_tuples.append((wallet_info, wallet_address))
 
-                # create a tuple that combines the activity and wallet address
-                # wallet activity endpoint does not return the wallet address so we will combine it here
-                wallet_tuples.append((wallet_activity, wallet_address))
 
             # Step 3: Filter wallets by winrate
             filtered_wallets = await self.filter_by_winrate(wallet_tuples)
@@ -101,7 +95,7 @@ class TopWallets(PluginInterface):
 
         except Exception as e:
             self.logger.critical(f"Error running plugin: {e}", exc_info=True)
-            return filtered_wallets
+            return []
 
     async def finalize(self) -> None:
         self.logger.info("TopWallets plugin finalized")
