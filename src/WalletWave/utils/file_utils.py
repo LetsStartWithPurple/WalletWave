@@ -33,7 +33,7 @@ def _apply_formatting(item: dict) -> dict:
         elif any(keyword in key for keyword in ["winrate", "pnl", "ratio"]):
             formatted_item[key] = format_percentage(value) if value is not None else value
         elif any(keyword in key for keyword in ["profit", "value", "cost"]):
-            formatted_item[key] = format_currency(value) if value is not None else value
+            formatted_item[key] = format_currency(value) if value is isinstance(value, (float, int)) else value
         elif any(keyword in key for keyword in ["period", "peroid"]):
             formatted_item[key] = format_gmgn_time_period(value) if value else value
         else:

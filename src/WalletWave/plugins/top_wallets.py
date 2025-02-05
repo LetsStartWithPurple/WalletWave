@@ -78,8 +78,8 @@ class TopWallets(PluginInterface):
                     self.logger.warning(f"Skipping wallet {wallet_address} due to empty or invalid data")
                     continue
 
-                # log wallet info summary
-                self.logger.info(wallet_info.to_summary(wallet_address, summary_func=custom_summary))
+                # log wallet info summary (changed to debug so there is less spam in the CLI)
+                self.logger.debug(wallet_info.to_summary(wallet_address, summary_func=custom_summary))
                 wallet_tuples.append((wallet_info, wallet_address))
 
             # Step 3: Filter wallets by winrate

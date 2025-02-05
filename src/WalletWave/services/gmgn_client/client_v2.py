@@ -41,6 +41,12 @@ class Gmgn:
 
     async def _make_request(self, session: AsyncSession, url: str, params: Optional[dict] = None, timeout: int = 0):
         self.logger.debug(f"Preparing request to URL: {url} with params: {params}")
+
+        # Ensure semaphore is set before using it
+        # added a default value, when set to None, was throwing error in plugins
+        if self.semaphore is None:
+            self.semaphore = asyncio.Semaphore(5)
+
         async with self.semaphore:
             try:
                 current_retries = 0

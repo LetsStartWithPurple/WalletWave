@@ -5,6 +5,7 @@ from WalletWave.models.wallets import WalletsResponse
 # from WalletWave.services.gmgn_client.client import Gmgn
 from WalletWave.services.gmgn_client.client_v2 import Gmgn
 from WalletWave.services.gmgn_client.utils.gmgn_endpoints import GmgnEndpoints
+from WalletWave.utils.logging_utils import get_logger
 
 
 class GmgnRepo:
@@ -12,6 +13,7 @@ class GmgnRepo:
         """
         Initializes the GmgnRepo object.
         """
+        self.logger = get_logger("GmgnRepo")
         self.client = Gmgn()
         self.endpoint = GmgnEndpoints
 
@@ -47,10 +49,17 @@ class GmgnRepo:
 
         self.client.queue_request(url, params)
 
-        # Make the request
-        response = await self.client.execute_requests()
+        try:
+            # Make the request
+            response = await self.client.execute_requests()
+            if not response or response[0] is None:
+                self.logger.warning("Response returned empty or None for trending wallets.")
+                return WalletsResponse(code=0, msg="Empty Response", data={"rank": []})
 
-        return WalletsResponse.model_validate(response[0])
+            return WalletsResponse.model_validate(response[0])
+        except Exception as e:
+            self.logger.error(f"Error in get_trending_wallets: {e}", exc_info=True)
+            return WalletsResponse(code=0, msg="Empty Response", data={"rank": []})
 
     async def get_token_info(self, contract_address: str) -> dict:
         if not contract_address:
