@@ -45,7 +45,7 @@ class GmgnRepo:
         # Build the endpoint URL
         url = self.endpoint.get_url(self.endpoint.TRENDING_WALLETS, timeframe=timeframe)
 
-        self.client.queue_request(url, params)
+        self.client.queue_request(url, params, user_parallel_requests)
 
         # Make the request
         response = await self.client.execute_requests()

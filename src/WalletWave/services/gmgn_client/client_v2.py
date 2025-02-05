@@ -12,7 +12,7 @@ from rich.progress import Progress, SpinnerColumn, BarColumn, TextColumn, TimeEl
 
 
 class Gmgn:
-    def __init__(self, max_requests_range: tuple = (1, 10)):
+    def __init__(self, max_requests_range: tuple = (1, 10), ):
         self.logger = get_logger("GMGN_Client_v2")
         self.log_config = LogConfig()
         self.gmgn_logger = self.log_config.get_gmgn_api_logger()
@@ -21,25 +21,25 @@ class Gmgn:
         self.max_requests_range = max_requests_range
         self.max_requests = random.randint(*self.max_requests_range)
         self.error_count = 0
-
-        # limits the amount of async tasks to 10
-        self.user_parallel_requests = 5  # Default value
-
-        while True:
-            try:
-                self.user_parallel_requests = int(input("Number of simultaneous requests to execute (Default 5): "))
-                if self.user_parallel_requests < 0:
-                    continue
-                break
-            except ValueError:
-                continue
-
-        self.semaphore = asyncio.Semaphore(self.user_parallel_requests)
+        self.user_parallel_requests = None
+        self.semaphore = None
 
         self.logger.debug("Initializing impersonation...")
         self.impersonate = "chrome"
-
         self.logger.debug("Initiating Gmgn Client...")
+
+    async def configure_parallel_requests(self):
+        while True:
+            try:
+                self.user_parallel_requests = int(
+                    input("Number of simultaneous requests to execute (Default 5): "))
+                if self.user_parallel_requests > 0:
+                    break
+                print("Number must be 0 or greater")
+            except ValueError:
+                print("Input a valid number please.")
+        print(f"Updated requests to {self.user_parallel_requests}")
+        self.semaphore = asyncio.Semaphore(self.user_parallel_requests)
 
     async def _make_request(self, session: AsyncSession, url: str, params: Optional[dict] = None, timeout: int = 0):
         self.logger.debug(f"Preparing request to URL: {url} with params: {params}")

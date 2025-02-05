@@ -88,7 +88,7 @@ class TopWallets(PluginInterface):
             # log the result
             self.logger.info(f"Filtered {len(filtered_wallets)} wallets.")
 
-            #rate limiter
+            # rate limiter
             return filtered_wallets
 
         except Exception as e:
