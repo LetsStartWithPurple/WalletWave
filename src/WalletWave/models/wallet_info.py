@@ -1,5 +1,5 @@
 from pydantic import BaseModel, Field
-from typing import List, Optional
+from typing import List, Optional, Union
 
 
 class TagRank(BaseModel):
@@ -35,8 +35,8 @@ class WalletInfo(BaseModel):
     realized_profit_7d: float
     realized_profit_30d: float
     all_pnl: float
-    total_profit: float
-    total_profit_pnl: float
+    total_profit: Union[float, str] = None # temp fix for GMGN data conflict occurring Feb 5, 2025
+    total_profit_pnl: Optional[float] = 0.0 # Fix none error which started occurring Feb 5, 2025
     buy_30d: int
     sell_30d: int
     buy_7d: int

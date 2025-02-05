@@ -1,7 +1,7 @@
 from typing import List, Union
 
-from WalletWave.models.wallets import WalletsResponse
 from WalletWave.models.wallet_info import WalletInfoResponse
+from WalletWave.models.wallets import WalletsResponse
 # from WalletWave.services.gmgn_client.client import Gmgn
 from WalletWave.services.gmgn_client.client_v2 import Gmgn
 from WalletWave.services.gmgn_client.utils.gmgn_endpoints import GmgnEndpoints
@@ -45,7 +45,7 @@ class GmgnRepo:
         # Build the endpoint URL
         url = self.endpoint.get_url(self.endpoint.TRENDING_WALLETS, timeframe=timeframe)
 
-        self.client.queue_request(url, params, user_parallel_requests)
+        self.client.queue_request(url, params)
 
         # Make the request
         response = await self.client.execute_requests()
