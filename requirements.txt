@@ -1,10 +1,5 @@
 PyYAML
-fake-useragent
-tls_client
-requests
-click
 colorama
-httpx
 pydantic
 curl_cffi
 rich

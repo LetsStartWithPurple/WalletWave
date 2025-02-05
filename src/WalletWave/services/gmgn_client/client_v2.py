@@ -1,14 +1,12 @@
 import asyncio
 import random
-from typing import List, Tuple, Optional, Callable
+from typing import List, Tuple, Optional
 
 from curl_cffi.requests import AsyncSession
-from curl_cffi.requests.exceptions import HTTPError
+from rich.progress import Progress, SpinnerColumn, BarColumn, TextColumn, TimeElapsedColumn
 
-from WalletWave.services.gmgn_client.utils.agent_mapper import AgentMapper
 from WalletWave.utils.logging_utils import LogConfig
 from WalletWave.utils.logging_utils import get_logger
-from rich.progress import Progress, SpinnerColumn, BarColumn, TextColumn, TimeElapsedColumn
 
 
 class Gmgn:
@@ -129,7 +127,4 @@ class Gmgn:
 
 
 if __name__ == "__main__":
-    agent_mapper = AgentMapper()
-    client, agent = agent_mapper.get_random_client_and_agent()
-    print(f"Client Identifier: {client}")
-    print(f"User-Agent: {agent}")
+    pass
