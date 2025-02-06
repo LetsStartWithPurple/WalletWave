@@ -1,5 +1,5 @@
 # WalletWave
-WalletWave is a Python-based solana wallet scanner, designed to analyze transactions including, but not limited to PNL, trades, and account balances. It is modular, which allows users to extend its functions with custom plugins. It's an additional tool to find Solana wallets that work well with your copy trading strategy. 
+WalletWave is a Python-based solana wallet scanner to boost your copy trade strategy! Designed to analyze transactions including, but not limited to PNL, trades, and account balances. Analyze at lighting speeds by scanning 1oo potentially winning wallets in 2 minutes or less! It is modular, which allows users to extend its functions with custom plugins. It's an additional tool to find Solana wallets that work well with your copy trading strategy. 
 
 > **_DISCLAIMER_**  
 > 
