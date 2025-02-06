@@ -1,3 +1,4 @@
+# Todo: transition to pydantic base model
 
 def validate_path(path):
     if not isinstance(path, str):

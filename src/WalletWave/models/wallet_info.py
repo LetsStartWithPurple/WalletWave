@@ -1,9 +1,10 @@
 from pydantic import BaseModel, Field
-from typing import List, Optional
+from typing import List, Optional, Union
 
 
 class TagRank(BaseModel):
     fresh_wallet: Optional[int] = None
+
 
 class Risk(BaseModel):
     token_active: Optional[str] = None
@@ -34,8 +35,8 @@ class WalletInfo(BaseModel):
     realized_profit_7d: float
     realized_profit_30d: float
     all_pnl: float
-    total_profit: float
-    total_profit_pnl: float
+    total_profit: Union[float, str] = None # temp fix for GMGN data conflict occurring Feb 5, 2025
+    total_profit_pnl: Optional[float] = 0.0 # Fix none error which started occurring Feb 5, 2025
     buy_30d: int
     sell_30d: int
     buy_7d: int
@@ -86,7 +87,6 @@ class WalletInfoResponse(BaseModel):
         """
         return self.data
 
-
     def to_summary(self, wallet_address: str, summary_func: Optional[callable] = None) -> dict:
         """
         Summarizes wallet data. Returns the entire wallet data dictionary if no summary_func is provided.
@@ -94,10 +94,18 @@ class WalletInfoResponse(BaseModel):
         :param wallet_address: The address of the wallet.
         :param summary_func: Optional callable to customize the summary.
         :return: Dictionary summarizing the wallet data.
+            Example:
+                ...
+                "buy_7d": 38,
+                "sell_7d": 60,
+                "buy": 38,
+                "sell": 60,
+                ...
         """
 
         if summary_func is not None:
             return summary_func(wallet_address, self.wallet_data)
         else:
             # return the entire dictionary, including wallet address
+            # Adds "wallet_data" to the dictionary by using **
             return {"wallet_address": wallet_address, **self.wallet_data.model_dump()}

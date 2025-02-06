@@ -1,8 +1,0 @@
-2025-01-31 22:58:39 - WalletWave - INFO - Initializing: Top Wallets
-2025-01-31 22:58:39 - TopWallets - INFO - TopWallets plugin initialized.
-2025-01-31 22:58:39 - WalletWave - INFO - Executing plugin...
-2025-01-31 22:58:57 - GMGN_Client - INFO - Request to https://gmgn.ai/defi/quotation/v1/rank/sol/wallets/7d completed successfully.
-2025-01-31 22:58:57 - gmgn_api - INFO - Request to https://gmgn.ai/defi/quotation/v1/rank/sol/wallets/7d completed successfully.
-2025-01-31 22:59:11 - WalletWave - INFO - Initializing: Top Wallets
-2025-01-31 22:59:11 - TopWallets - INFO - TopWallets plugin initialized.
-2025-01-31 22:59:11 - WalletWave - INFO - Executing plugin...

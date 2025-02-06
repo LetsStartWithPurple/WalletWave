@@ -1,4 +1,6 @@
-from CLI import banner, plugin_manager
+from CLI import banner
+from WalletWave.plugins.utils import plugin_manager
+
 
 def menu(config_manager):
     pm = plugin_manager.PluginManager(config_manager=config_manager)

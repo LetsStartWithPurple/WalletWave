@@ -1,8 +1,8 @@
+from WalletWave.config import ConfigManager
 from WalletWave.plugins.utils.plugin_interface import PluginInterface
 from WalletWave.repositories.gmgn_repo import GmgnRepo
 from WalletWave.utils.logging_utils import get_logger
-from WalletWave.config import ConfigManager
-import sys
+
 
 # Author: LetsStartWithPurple
 # Version: 1.0.1
@@ -11,9 +11,9 @@ class SolanaWalletScanner(PluginInterface):
     def __init__(self, config_manager: ConfigManager):
         super().__init__(config_manager)
         self.gmgn = GmgnRepo()
-        self.logger = get_logger("SolanaWalletScanner")
         self.timeframe = config_manager.get_plugin_setting(self.plugin_class, "timeframe", "7d")
         self.wallets = []
+        self.logger = None        
 
     def get_name(self) -> str:
         # return the name you want to show in the plugin menu
@@ -26,8 +26,9 @@ class SolanaWalletScanner(PluginInterface):
     def get_version(self) -> str:
         return "1.0.1"
 
-    def initialize(self) -> None:
+    async def initialize(self) -> None:
         # Step 1 of plugin lifecycle
+        self.logger = get_logger("SolanaWalletScanner")
         self.logger.info("Solana Wallet Scanner initialized")
 
         # Loop until the user inputs the correct file path
@@ -48,7 +49,7 @@ class SolanaWalletScanner(PluginInterface):
             except Exception as e:
                 print(f"An error occurred: {str(e)}. Please try again.")
 
-    def execute(self) -> list:
+    async def execute(self) -> list:
         while True:
             user_input = input("Type desired timeout between requests in seconds. Press 0 to omit: ").strip()
             try:
@@ -63,24 +64,25 @@ class SolanaWalletScanner(PluginInterface):
 
             except ValueError:
                 self.logger.info(f"'{user_input}' is invalid. Please enter a number 0 or greater")
-
-
+        await self.gmgn.client.configure_parallel_requests()
         # Step 2 execute the plugin
         wallet_data = []
         self.logger.info("Executing Solana Wallet Scanner...")
 
-        for wallet in self.wallets:
-            try:
-                wallet_info = self.gmgn.get_wallet_info(wallet, timeout, period=self.timeframe)
-                wallet_data.append(wallet_info.to_summary(wallet))
+        # Todo: Check why sometimes wallet_info is empty.. which makes .to_summary() fail
+        wallet_info = await self.gmgn.get_wallet_info(self.wallets, timeout, period=self.timeframe)
+
+        for wallet, info in zip(self.wallets, wallet_info):
+            if info is not None:
+                wallet_data.append(info.to_summary(wallet))  # added for loop to loop through list
                 self.logger.info(f"Fetched data for wallet: {wallet}")
-            except Exception as e:
-                self.logger.error(f"Error fetching data for wallet {wallet}: {e}")
+            else:
+                self.logger.info(f"Failed to fetch data for wallet: {wallet}")
 
         self.logger.info(f"Scanned {len(wallet_data)}")
         return wallet_data
 
-    def finalize(self) -> None:
+    async def finalize(self) -> None:
         self.logger.info("Solana Wallet Scanner finalized")
 
     def _load_wallets(self, file_path: str) -> None:

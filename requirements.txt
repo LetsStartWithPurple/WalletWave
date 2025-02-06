@@ -1,8 +1,5 @@
 PyYAML
-fake-useragent
-tls_client
-requests
-click
 colorama
-WalletWave
 pydantic
+curl_cffi
+rich

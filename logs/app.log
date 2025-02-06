@@ -1,0 +1,819 @@
+2025-02-04 16:29:30 - WalletWave - INFO - Initializing: Solana Wallet Scanner
+2025-02-04 16:29:30 - SolanaWalletScanner - INFO - Solana Wallet Scanner initialized
+2025-02-04 16:29:32 - SolanaWalletScanner - INFO - Loaded 16 wallets from test.txt.
+2025-02-04 16:29:32 - SolanaWalletScanner - INFO - Solana Wallet Scanner initialized with 16 wallets
+2025-02-04 16:29:32 - WalletWave - INFO - Executing plugin...
+2025-02-04 16:29:33 - SolanaWalletScanner - INFO - Executing Solana Wallet Scanner...
+2025-02-04 16:29:33 - GMGN_Client_v2 - INFO - Executing 1 queued requests...
+2025-02-04 16:29:37 - GMGN_Client_v2 - ERROR - Received HTTP Unknown for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/6VBWNKezNFrVz9jCh5qrUXz8ZoySLEZvpyBHLqF9R28Y
+2025-02-04 16:29:45 - SolanaWalletScanner - ERROR - Error fetching data for wallet 6VBWNKezNFrVz9jCh5qrUXz8ZoySLEZvpyBHLqF9R28Y: 'NoneType' object has no attribute 'url'
+2025-02-04 16:29:45 - GMGN_Client_v2 - INFO - Executing 2 queued requests...
+2025-02-04 16:29:49 - GMGN_Client_v2 - ERROR - Received HTTP Unknown for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/FW2PJkHDm9HpVcnR2MKbP2urd8u2buJQkQWogxnw7Fja
+2025-02-04 16:29:59 - SolanaWalletScanner - ERROR - Error fetching data for wallet FW2PJkHDm9HpVcnR2MKbP2urd8u2buJQkQWogxnw7Fja: 'NoneType' object has no attribute 'url'
+2025-02-04 16:29:59 - GMGN_Client_v2 - INFO - Executing 3 queued requests...
+2025-02-04 16:30:03 - GMGN_Client_v2 - ERROR - Received HTTP Unknown for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/FDiVPpzjfbwxvjjqUSVrqFcCS7CG8aY9WWnxSsMWuj5W
+2025-02-04 16:30:11 - SolanaWalletScanner - ERROR - Error fetching data for wallet FDiVPpzjfbwxvjjqUSVrqFcCS7CG8aY9WWnxSsMWuj5W: 'NoneType' object has no attribute 'url'
+2025-02-04 16:30:11 - GMGN_Client_v2 - INFO - Executing 4 queued requests...
+2025-02-04 16:30:14 - GMGN_Client_v2 - ERROR - Received HTTP Unknown for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/FDiVPpzjfbwxvjjqUSVrqFcCS7CG8aY9WWnxSsMWuj5W
+2025-02-04 16:30:24 - SolanaWalletScanner - ERROR - Error fetching data for wallet Gvp8oQCJh9iwyDAjW7tSt9J5FismTmBctiBf8xDX6wg8: 'NoneType' object has no attribute 'url'
+2025-02-04 16:30:24 - GMGN_Client_v2 - INFO - Executing 5 queued requests...
+2025-02-04 16:30:27 - GMGN_Client_v2 - ERROR - Received HTTP Unknown for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/6VBWNKezNFrVz9jCh5qrUXz8ZoySLEZvpyBHLqF9R28Y
+2025-02-04 16:30:33 - SolanaWalletScanner - ERROR - Error fetching data for wallet HEmg53AvjtCejY3NgqhF3dff5uJQPaLPiHU8GsJU7WzG: 'NoneType' object has no attribute 'url'
+2025-02-04 16:30:33 - GMGN_Client_v2 - INFO - Executing 6 queued requests...
+2025-02-04 16:30:37 - GMGN_Client_v2 - ERROR - Received HTTP Unknown for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/Gvp8oQCJh9iwyDAjW7tSt9J5FismTmBctiBf8xDX6wg8
+2025-02-04 16:30:46 - SolanaWalletScanner - ERROR - Error fetching data for wallet 5sc5JnefFVyu9AVYHzXNmEBZPXU9Lhq6LhWR5cm9JgoM: 'NoneType' object has no attribute 'url'
+2025-02-04 16:30:46 - GMGN_Client_v2 - INFO - Executing 7 queued requests...
+2025-02-04 16:30:49 - GMGN_Client_v2 - ERROR - Received HTTP Unknown for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/FW2PJkHDm9HpVcnR2MKbP2urd8u2buJQkQWogxnw7Fja
+2025-02-04 16:30:54 - SolanaWalletScanner - ERROR - Error fetching data for wallet 7ACBAs2CmUbsNDEAWMsc46XcBzDjRTbTJzmAzK5tuy2s: 'NoneType' object has no attribute 'url'
+2025-02-04 16:30:54 - GMGN_Client_v2 - INFO - Executing 8 queued requests...
+2025-02-04 16:30:57 - GMGN_Client_v2 - ERROR - Received HTTP Unknown for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/5sc5JnefFVyu9AVYHzXNmEBZPXU9Lhq6LhWR5cm9JgoM
+2025-02-04 16:31:03 - SolanaWalletScanner - ERROR - Error fetching data for wallet 8i5x6j11u7K1mJVrgCqpMj6R5Sv6TZUxvhgLoZAzzVpi: 'NoneType' object has no attribute 'url'
+2025-02-04 16:31:03 - GMGN_Client_v2 - INFO - Executing 9 queued requests...
+2025-02-04 16:31:06 - GMGN_Client_v2 - ERROR - Received HTTP Unknown for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/FW2PJkHDm9HpVcnR2MKbP2urd8u2buJQkQWogxnw7Fja
+2025-02-04 16:31:06 - GMGN_Client_v2 - ERROR - Received HTTP Unknown for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/FDiVPpzjfbwxvjjqUSVrqFcCS7CG8aY9WWnxSsMWuj5W
+2025-02-04 16:44:51 - WalletWave - INFO - Initializing: Solana Wallet Scanner
+2025-02-04 16:44:51 - SolanaWalletScanner - INFO - Solana Wallet Scanner initialized
+2025-02-04 16:44:52 - SolanaWalletScanner - ERROR - Wallet file not found: test.tx
+2025-02-04 16:44:52 - SolanaWalletScanner - ERROR - No wallets loaded. Stopping plugin execution
+2025-02-04 16:44:53 - SolanaWalletScanner - ERROR - Wallet file not found: 
+2025-02-04 16:44:53 - SolanaWalletScanner - ERROR - No wallets loaded. Stopping plugin execution
+2025-02-04 16:44:55 - SolanaWalletScanner - INFO - Loaded 16 wallets from test.txt.
+2025-02-04 16:44:55 - SolanaWalletScanner - INFO - Solana Wallet Scanner initialized with 16 wallets
+2025-02-04 16:44:55 - WalletWave - INFO - Executing plugin...
+2025-02-04 16:44:55 - SolanaWalletScanner - INFO - '' is invalid. Please enter a number 0 or greater
+2025-02-04 16:44:57 - SolanaWalletScanner - INFO - Executing Solana Wallet Scanner...
+2025-02-04 16:44:57 - GMGN_Client_v2 - INFO - Executing 1 queued requests...
+2025-02-04 16:45:01 - GMGN_Client_v2 - ERROR - Received HTTP Unknown for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/6VBWNKezNFrVz9jCh5qrUXz8ZoySLEZvpyBHLqF9R28Y
+2025-02-04 16:45:11 - SolanaWalletScanner - ERROR - Error fetching data for wallet 6VBWNKezNFrVz9jCh5qrUXz8ZoySLEZvpyBHLqF9R28Y: 'NoneType' object has no attribute 'url'
+2025-02-04 16:45:11 - GMGN_Client_v2 - INFO - Executing 2 queued requests...
+2025-02-04 16:45:15 - SolanaWalletScanner - ERROR - Error fetching data for wallet FW2PJkHDm9HpVcnR2MKbP2urd8u2buJQkQWogxnw7Fja: 'list' object has no attribute 'to_summary'
+2025-02-04 16:45:15 - GMGN_Client_v2 - INFO - Executing 1 queued requests...
+2025-02-04 16:45:20 - SolanaWalletScanner - ERROR - Error fetching data for wallet FDiVPpzjfbwxvjjqUSVrqFcCS7CG8aY9WWnxSsMWuj5W: 'list' object has no attribute 'to_summary'
+2025-02-04 16:45:20 - GMGN_Client_v2 - INFO - Executing 1 queued requests...
+2025-02-04 16:45:23 - GMGN_Client_v2 - ERROR - Received HTTP Unknown for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/Gvp8oQCJh9iwyDAjW7tSt9J5FismTmBctiBf8xDX6wg8
+2025-02-04 16:45:32 - SolanaWalletScanner - ERROR - Error fetching data for wallet Gvp8oQCJh9iwyDAjW7tSt9J5FismTmBctiBf8xDX6wg8: 'NoneType' object has no attribute 'url'
+2025-02-04 16:45:32 - GMGN_Client_v2 - INFO - Executing 2 queued requests...
+2025-02-04 16:45:35 - GMGN_Client_v2 - ERROR - Received HTTP Unknown for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/Gvp8oQCJh9iwyDAjW7tSt9J5FismTmBctiBf8xDX6wg8
+2025-02-04 17:06:59 - WalletWave - INFO - Initializing: Solana Wallet Scanner
+2025-02-04 17:06:59 - SolanaWalletScanner - INFO - Solana Wallet Scanner initialized
+2025-02-04 17:07:00 - SolanaWalletScanner - INFO - Loaded 16 wallets from test.txt.
+2025-02-04 17:07:00 - SolanaWalletScanner - INFO - Solana Wallet Scanner initialized with 16 wallets
+2025-02-04 17:07:00 - WalletWave - INFO - Executing plugin...
+2025-02-04 17:07:02 - SolanaWalletScanner - INFO - Executing Solana Wallet Scanner...
+2025-02-04 17:07:02 - GMGN_Client_v2 - INFO - Executing 1 queued requests...
+2025-02-04 17:07:06 - GMGN_Client_v2 - ERROR - Received HTTP Unknown for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/6VBWNKezNFrVz9jCh5qrUXz8ZoySLEZvpyBHLqF9R28Y
+2025-02-04 17:07:11 - SolanaWalletScanner - ERROR - Error fetching data for wallet 6VBWNKezNFrVz9jCh5qrUXz8ZoySLEZvpyBHLqF9R28Y: 'NoneType' object has no attribute 'url'
+2025-02-04 17:07:11 - GMGN_Client_v2 - INFO - Executing 2 queued requests...
+2025-02-04 17:07:14 - GMGN_Client_v2 - ERROR - Received HTTP Unknown for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/FW2PJkHDm9HpVcnR2MKbP2urd8u2buJQkQWogxnw7Fja
+2025-02-04 17:07:20 - SolanaWalletScanner - ERROR - Error fetching data for wallet FW2PJkHDm9HpVcnR2MKbP2urd8u2buJQkQWogxnw7Fja: 'NoneType' object has no attribute 'url'
+2025-02-04 17:07:20 - GMGN_Client_v2 - INFO - Executing 3 queued requests...
+2025-02-04 17:07:23 - GMGN_Client_v2 - ERROR - Received HTTP Unknown for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/6VBWNKezNFrVz9jCh5qrUXz8ZoySLEZvpyBHLqF9R28Y
+2025-02-04 17:07:30 - SolanaWalletScanner - ERROR - Error fetching data for wallet FDiVPpzjfbwxvjjqUSVrqFcCS7CG8aY9WWnxSsMWuj5W: 'NoneType' object has no attribute 'url'
+2025-02-04 17:07:30 - GMGN_Client_v2 - INFO - Executing 4 queued requests...
+2025-02-04 17:07:33 - GMGN_Client_v2 - ERROR - Received HTTP Unknown for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/FW2PJkHDm9HpVcnR2MKbP2urd8u2buJQkQWogxnw7Fja
+2025-02-04 17:07:39 - SolanaWalletScanner - ERROR - Error fetching data for wallet Gvp8oQCJh9iwyDAjW7tSt9J5FismTmBctiBf8xDX6wg8: 'NoneType' object has no attribute 'url'
+2025-02-04 17:07:39 - GMGN_Client_v2 - INFO - Executing 5 queued requests...
+2025-02-04 17:07:40 - GMGN_Client_v2 - ERROR - Received HTTP Unknown for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/HEmg53AvjtCejY3NgqhF3dff5uJQPaLPiHU8GsJU7WzG
+2025-02-04 17:07:47 - SolanaWalletScanner - ERROR - Error fetching data for wallet HEmg53AvjtCejY3NgqhF3dff5uJQPaLPiHU8GsJU7WzG: 'NoneType' object has no attribute 'url'
+2025-02-04 17:07:47 - GMGN_Client_v2 - INFO - Executing 6 queued requests...
+2025-02-04 17:07:49 - GMGN_Client_v2 - ERROR - Received HTTP Unknown for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/FDiVPpzjfbwxvjjqUSVrqFcCS7CG8aY9WWnxSsMWuj5W
+2025-02-04 17:13:56 - WalletWave - INFO - Initializing: Solana Wallet Scanner
+2025-02-04 17:13:56 - SolanaWalletScanner - INFO - Solana Wallet Scanner initialized
+2025-02-04 17:13:58 - WalletWave - ERROR - An error occurred while running the plugin: 
+2025-02-04 17:24:01 - WalletWave - INFO - Initializing: Solana Wallet Scanner
+2025-02-04 17:24:01 - SolanaWalletScanner - INFO - Solana Wallet Scanner initialized
+2025-02-04 17:24:03 - SolanaWalletScanner - INFO - Loaded 16 wallets from test.txt.
+2025-02-04 17:24:03 - SolanaWalletScanner - INFO - Solana Wallet Scanner initialized with 16 wallets
+2025-02-04 17:24:03 - WalletWave - INFO - Executing plugin...
+2025-02-04 17:24:05 - SolanaWalletScanner - INFO - Executing Solana Wallet Scanner...
+2025-02-04 17:24:05 - GMGN_Client_v2 - INFO - Executing 1 queued requests...
+2025-02-04 17:24:06 - GMGN_Client_v2 - ERROR - Received HTTP Unknown for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/6VBWNKezNFrVz9jCh5qrUXz8ZoySLEZvpyBHLqF9R28Y
+2025-02-04 17:24:12 - SolanaWalletScanner - ERROR - Error fetching data for wallet 6VBWNKezNFrVz9jCh5qrUXz8ZoySLEZvpyBHLqF9R28Y: 'NoneType' object has no attribute 'url'
+2025-02-04 17:24:12 - GMGN_Client_v2 - INFO - Executing 2 queued requests...
+2025-02-04 17:27:05 - WalletWave - INFO - Initializing: Solana Wallet Scanner
+2025-02-04 17:27:05 - SolanaWalletScanner - INFO - Solana Wallet Scanner initialized
+2025-02-04 17:27:06 - SolanaWalletScanner - INFO - Loaded 16 wallets from test.txt.
+2025-02-04 17:27:06 - SolanaWalletScanner - INFO - Solana Wallet Scanner initialized with 16 wallets
+2025-02-04 17:27:06 - WalletWave - INFO - Executing plugin...
+2025-02-04 17:27:07 - SolanaWalletScanner - INFO - Executing Solana Wallet Scanner...
+2025-02-04 17:27:07 - GMGN_Client_v2 - INFO - Executing 1 queued requests...
+2025-02-04 17:27:09 - GMGN_Client_v2 - ERROR - Received HTTP Unknown for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/6VBWNKezNFrVz9jCh5qrUXz8ZoySLEZvpyBHLqF9R28Y
+2025-02-04 17:27:17 - SolanaWalletScanner - ERROR - Error fetching data for wallet 6VBWNKezNFrVz9jCh5qrUXz8ZoySLEZvpyBHLqF9R28Y: 'NoneType' object has no attribute 'url'
+2025-02-04 17:27:17 - GMGN_Client_v2 - INFO - Executing 2 queued requests...
+2025-02-04 17:27:19 - GMGN_Client_v2 - ERROR - Received HTTP Unknown for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/FW2PJkHDm9HpVcnR2MKbP2urd8u2buJQkQWogxnw7Fja
+2025-02-04 17:27:28 - SolanaWalletScanner - ERROR - Error fetching data for wallet FW2PJkHDm9HpVcnR2MKbP2urd8u2buJQkQWogxnw7Fja: 'NoneType' object has no attribute 'url'
+2025-02-04 17:27:28 - GMGN_Client_v2 - INFO - Executing 3 queued requests...
+2025-02-04 17:27:30 - GMGN_Client_v2 - ERROR - Received HTTP Unknown for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/6VBWNKezNFrVz9jCh5qrUXz8ZoySLEZvpyBHLqF9R28Y
+2025-02-04 17:30:46 - WalletWave - INFO - Initializing: Solana Wallet Scanner
+2025-02-04 17:30:46 - SolanaWalletScanner - INFO - Solana Wallet Scanner initialized
+2025-02-04 17:30:48 - SolanaWalletScanner - INFO - Loaded 16 wallets from test.txt.
+2025-02-04 17:30:48 - SolanaWalletScanner - INFO - Solana Wallet Scanner initialized with 16 wallets
+2025-02-04 17:30:48 - WalletWave - INFO - Executing plugin...
+2025-02-04 17:30:49 - SolanaWalletScanner - INFO - Executing Solana Wallet Scanner...
+2025-02-04 17:30:49 - GMGN_Client_v2 - INFO - Executing 1 queued requests...
+2025-02-04 17:30:53 - GMGN_Client_v2 - ERROR - Received HTTP Unknown for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/6VBWNKezNFrVz9jCh5qrUXz8ZoySLEZvpyBHLqF9R28Y
+2025-02-04 17:31:02 - SolanaWalletScanner - ERROR - Error fetching data for wallet 6VBWNKezNFrVz9jCh5qrUXz8ZoySLEZvpyBHLqF9R28Y: 'NoneType' object has no attribute 'url'
+2025-02-04 17:31:02 - GMGN_Client_v2 - INFO - Executing 2 queued requests...
+2025-02-04 17:31:04 - GMGN_Client_v2 - ERROR - Received HTTP Unknown for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/FW2PJkHDm9HpVcnR2MKbP2urd8u2buJQkQWogxnw7Fja
+2025-02-04 17:35:00 - WalletWave - INFO - Initializing: Solana Wallet Scanner
+2025-02-04 17:35:00 - SolanaWalletScanner - INFO - Solana Wallet Scanner initialized
+2025-02-04 17:35:02 - SolanaWalletScanner - INFO - Loaded 16 wallets from test.txt.
+2025-02-04 17:35:02 - SolanaWalletScanner - INFO - Solana Wallet Scanner initialized with 16 wallets
+2025-02-04 17:35:02 - WalletWave - INFO - Executing plugin...
+2025-02-04 17:35:03 - SolanaWalletScanner - INFO - Executing Solana Wallet Scanner...
+2025-02-04 17:35:03 - GMGN_Client_v2 - INFO - Executing 1 queued requests...
+2025-02-04 17:35:05 - GMGN_Client_v2 - ERROR - Received HTTP Unknown for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/6VBWNKezNFrVz9jCh5qrUXz8ZoySLEZvpyBHLqF9R28Y
+2025-02-04 17:35:10 - SolanaWalletScanner - ERROR - Error fetching data for wallet 6VBWNKezNFrVz9jCh5qrUXz8ZoySLEZvpyBHLqF9R28Y: 'NoneType' object has no attribute 'url'
+2025-02-04 17:35:10 - GMGN_Client_v2 - INFO - Executing 2 queued requests...
+2025-02-04 17:35:12 - GMGN_Client_v2 - ERROR - Received HTTP Unknown for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/6VBWNKezNFrVz9jCh5qrUXz8ZoySLEZvpyBHLqF9R28Y
+2025-02-04 17:35:19 - SolanaWalletScanner - ERROR - Error fetching data for wallet FW2PJkHDm9HpVcnR2MKbP2urd8u2buJQkQWogxnw7Fja: 'NoneType' object has no attribute 'url'
+2025-02-04 17:35:19 - GMGN_Client_v2 - INFO - Executing 3 queued requests...
+2025-02-04 18:00:05 - WalletWave - INFO - Initializing: Solana Wallet Scanner
+2025-02-04 18:00:05 - SolanaWalletScanner - INFO - Solana Wallet Scanner initialized
+2025-02-04 18:00:07 - SolanaWalletScanner - INFO - Loaded 16 wallets from test.txt.
+2025-02-04 18:00:07 - SolanaWalletScanner - INFO - Solana Wallet Scanner initialized with 16 wallets
+2025-02-04 18:00:07 - WalletWave - INFO - Executing plugin...
+2025-02-04 18:00:07 - SolanaWalletScanner - INFO - Executing Solana Wallet Scanner...
+2025-02-04 18:00:07 - GMGN_Client_v2 - INFO - Executing 1 queued requests...
+2025-02-04 18:00:09 - GMGN_Client_v2 - ERROR - Received HTTP No response for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/6VBWNKezNFrVz9jCh5qrUXz8ZoySLEZvpyBHLqF9R28Y
+2025-02-04 18:00:14 - SolanaWalletScanner - ERROR - Error fetching data for wallet 6VBWNKezNFrVz9jCh5qrUXz8ZoySLEZvpyBHLqF9R28Y: 'NoneType' object has no attribute 'url'
+2025-02-04 18:00:14 - GMGN_Client_v2 - INFO - Executing 2 queued requests...
+2025-02-04 18:00:17 - GMGN_Client_v2 - ERROR - Received HTTP No response for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/FW2PJkHDm9HpVcnR2MKbP2urd8u2buJQkQWogxnw7Fja
+2025-02-04 18:00:17 - GMGN_Client_v2 - ERROR - Received HTTP No response for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/6VBWNKezNFrVz9jCh5qrUXz8ZoySLEZvpyBHLqF9R28Y
+2025-02-04 18:00:25 - SolanaWalletScanner - ERROR - Error fetching data for wallet FW2PJkHDm9HpVcnR2MKbP2urd8u2buJQkQWogxnw7Fja: 'NoneType' object has no attribute 'url'
+2025-02-04 18:00:25 - GMGN_Client_v2 - INFO - Executing 3 queued requests...
+2025-02-04 18:00:27 - GMGN_Client_v2 - ERROR - Received HTTP No response for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/6VBWNKezNFrVz9jCh5qrUXz8ZoySLEZvpyBHLqF9R28Y
+2025-02-04 18:00:28 - GMGN_Client_v2 - ERROR - Received HTTP No response for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/FW2PJkHDm9HpVcnR2MKbP2urd8u2buJQkQWogxnw7Fja
+2025-02-04 18:00:30 - GMGN_Client_v2 - ERROR - Received HTTP No response for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/FDiVPpzjfbwxvjjqUSVrqFcCS7CG8aY9WWnxSsMWuj5W
+2025-02-04 18:00:36 - SolanaWalletScanner - ERROR - Error fetching data for wallet FDiVPpzjfbwxvjjqUSVrqFcCS7CG8aY9WWnxSsMWuj5W: 'NoneType' object has no attribute 'url'
+2025-02-04 18:00:36 - GMGN_Client_v2 - INFO - Executing 4 queued requests...
+2025-02-04 18:00:37 - GMGN_Client_v2 - ERROR - Received HTTP No response for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/FDiVPpzjfbwxvjjqUSVrqFcCS7CG8aY9WWnxSsMWuj5W
+2025-02-04 18:00:38 - GMGN_Client_v2 - ERROR - Received HTTP No response for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/Gvp8oQCJh9iwyDAjW7tSt9J5FismTmBctiBf8xDX6wg8
+2025-02-04 18:00:39 - GMGN_Client_v2 - ERROR - Received HTTP No response for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/6VBWNKezNFrVz9jCh5qrUXz8ZoySLEZvpyBHLqF9R28Y
+2025-02-04 18:00:39 - GMGN_Client_v2 - ERROR - Received HTTP No response for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/FW2PJkHDm9HpVcnR2MKbP2urd8u2buJQkQWogxnw7Fja
+2025-02-04 18:00:45 - SolanaWalletScanner - ERROR - Error fetching data for wallet Gvp8oQCJh9iwyDAjW7tSt9J5FismTmBctiBf8xDX6wg8: 'NoneType' object has no attribute 'url'
+2025-02-04 18:00:45 - GMGN_Client_v2 - INFO - Executing 5 queued requests...
+2025-02-04 18:00:46 - GMGN_Client_v2 - ERROR - Received HTTP No response for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/FW2PJkHDm9HpVcnR2MKbP2urd8u2buJQkQWogxnw7Fja
+2025-02-04 18:00:47 - GMGN_Client_v2 - ERROR - Received HTTP No response for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/6VBWNKezNFrVz9jCh5qrUXz8ZoySLEZvpyBHLqF9R28Y
+2025-02-04 18:07:17 - WalletWave - INFO - Initializing: Solana Wallet Scanner
+2025-02-04 18:07:17 - SolanaWalletScanner - INFO - Solana Wallet Scanner initialized
+2025-02-04 18:07:19 - SolanaWalletScanner - INFO - Loaded 16 wallets from test.txt.
+2025-02-04 18:07:19 - SolanaWalletScanner - INFO - Solana Wallet Scanner initialized with 16 wallets
+2025-02-04 18:07:19 - WalletWave - INFO - Executing plugin...
+2025-02-04 18:07:21 - SolanaWalletScanner - INFO - Executing Solana Wallet Scanner...
+2025-02-04 18:07:21 - GMGN_Client_v2 - INFO - Executing 1 queued requests...
+2025-02-04 18:07:34 - SolanaWalletScanner - ERROR - Error fetching data for wallet 6VBWNKezNFrVz9jCh5qrUXz8ZoySLEZvpyBHLqF9R28Y: 'NoneType' object has no attribute 'url'
+2025-02-04 18:07:34 - GMGN_Client_v2 - INFO - Executing 2 queued requests...
+2025-02-04 18:07:43 - SolanaWalletScanner - ERROR - Error fetching data for wallet FW2PJkHDm9HpVcnR2MKbP2urd8u2buJQkQWogxnw7Fja: 'NoneType' object has no attribute 'url'
+2025-02-04 18:07:43 - GMGN_Client_v2 - INFO - Executing 3 queued requests...
+2025-02-04 18:07:49 - SolanaWalletScanner - ERROR - Error fetching data for wallet FDiVPpzjfbwxvjjqUSVrqFcCS7CG8aY9WWnxSsMWuj5W: 'NoneType' object has no attribute 'url'
+2025-02-04 18:07:49 - GMGN_Client_v2 - INFO - Executing 4 queued requests...
+2025-02-04 18:08:01 - SolanaWalletScanner - ERROR - Error fetching data for wallet Gvp8oQCJh9iwyDAjW7tSt9J5FismTmBctiBf8xDX6wg8: 'NoneType' object has no attribute 'url'
+2025-02-04 18:08:01 - GMGN_Client_v2 - INFO - Executing 5 queued requests...
+2025-02-04 18:08:10 - SolanaWalletScanner - ERROR - Error fetching data for wallet HEmg53AvjtCejY3NgqhF3dff5uJQPaLPiHU8GsJU7WzG: 'NoneType' object has no attribute 'url'
+2025-02-04 18:08:10 - GMGN_Client_v2 - INFO - Executing 6 queued requests...
+2025-02-04 20:37:36 - WalletWave - INFO - Initializing: Solana Wallet Scanner
+2025-02-04 20:37:36 - SolanaWalletScanner - INFO - Solana Wallet Scanner initialized
+2025-02-04 20:37:38 - SolanaWalletScanner - INFO - Loaded 16 wallets from test.txt.
+2025-02-04 20:37:38 - SolanaWalletScanner - INFO - Solana Wallet Scanner initialized with 16 wallets
+2025-02-04 20:37:38 - WalletWave - INFO - Executing plugin...
+2025-02-04 20:37:40 - SolanaWalletScanner - INFO - Executing Solana Wallet Scanner...
+2025-02-04 20:37:40 - GMGN_Client_v2 - INFO - Executing 16 queued requests...
+2025-02-04 20:37:44 - GMGN_Client_v2 - ERROR - Received HTTP Unknown for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/4B6i3z4aAGWwwixdUJb92Kxkd3PgcHbUrt2Zi7LP1ndK : HTTP Error 403: 
+2025-02-04 20:37:45 - GMGN_Client_v2 - ERROR - Received HTTP Unknown for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/6VBWNKezNFrVz9jCh5qrUXz8ZoySLEZvpyBHLqF9R28Y : HTTP Error 403: 
+2025-02-04 20:37:45 - GMGN_Client_v2 - ERROR - Received HTTP Unknown for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/6LJfRoevujggKxNRMsb9f8PfhcjujRshzXwgG7HbmaTm : HTTP Error 403: 
+2025-02-04 20:37:45 - GMGN_Client_v2 - ERROR - Received HTTP Unknown for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/FDiVPpzjfbwxvjjqUSVrqFcCS7CG8aY9WWnxSsMWuj5W : HTTP Error 403: 
+2025-02-04 20:37:45 - GMGN_Client_v2 - ERROR - Received HTTP Unknown for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/HEmg53AvjtCejY3NgqhF3dff5uJQPaLPiHU8GsJU7WzG : HTTP Error 403: 
+2025-02-04 20:37:45 - GMGN_Client_v2 - ERROR - Received HTTP Unknown for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/5sc5JnefFVyu9AVYHzXNmEBZPXU9Lhq6LhWR5cm9JgoM : HTTP Error 403: 
+2025-02-04 20:37:45 - GMGN_Client_v2 - ERROR - Received HTTP Unknown for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/CjWX6z2ujwCEWX1b3NV5xTDWfqvUfWJRUzJ2zj2rwLfk : HTTP Error 403: 
+2025-02-04 20:37:47 - GMGN_Client_v2 - ERROR - Received HTTP Unknown for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/3E5QmNWkXHixHJKtsgahc4L1WR2sWQ44Ayd4iorVZZfN : HTTP Error 403: 
+2025-02-04 20:37:50 - WalletWave - ERROR - An error occurred while running the plugin: 'NoneType' object has no attribute 'url'
+2025-02-04 20:37:50 - GMGN_Client_v2 - ERROR - Received HTTP Unknown for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/6n8qjrofokMVKk6mMWuSxfYrehR9jS6mrnJ5NFq8iyqj : HTTP Error 403: 
+2025-02-04 20:37:50 - GMGN_Client_v2 - ERROR - Received HTTP Unknown for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/8i5x6j11u7K1mJVrgCqpMj6R5Sv6TZUxvhgLoZAzzVpi : HTTP Error 0: OK
+2025-02-04 20:40:14 - WalletWave - INFO - Initializing: Solana Wallet Scanner
+2025-02-04 20:40:14 - SolanaWalletScanner - INFO - Solana Wallet Scanner initialized
+2025-02-04 20:40:16 - SolanaWalletScanner - INFO - Loaded 16 wallets from test.txt.
+2025-02-04 20:40:16 - SolanaWalletScanner - INFO - Solana Wallet Scanner initialized with 16 wallets
+2025-02-04 20:40:16 - WalletWave - INFO - Executing plugin...
+2025-02-04 20:40:17 - SolanaWalletScanner - INFO - Executing Solana Wallet Scanner...
+2025-02-04 20:40:17 - GMGN_Client_v2 - INFO - Executing 16 queued requests...
+2025-02-04 20:40:22 - WalletWave - ERROR - An error occurred while running the plugin: 'NoneType' object has no attribute 'status_code'
+2025-02-04 20:40:22 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-2' coro=<Gmgn._make_request() done, defined at C:\Users\orhei\Desktop\WalletWave\src\WalletWave\services\gmgn_client\client_v2.py:34> exception=AttributeError("'NoneType' object has no attribute 'status_code'")>
+Traceback (most recent call last):
+  File "C:\Users\orhei\Desktop\WalletWave\src\WalletWave\services\gmgn_client\client_v2.py", line 42, in _make_request
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\orhei\Desktop\WalletWave\venv\Lib\site-packages\curl_cffi\requests\models.py", line 146, in raise_for_status
+    raise HTTPError(f"HTTP Error {self.status_code}: {self.reason}")
+curl_cffi.requests.exceptions.HTTPError: HTTP Error 0: OK
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\orhei\Desktop\WalletWave\src\WalletWave\services\gmgn_client\client_v2.py", line 46, in _make_request
+    status_code = e.response.status_code
+                  ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'status_code'
+2025-02-04 20:40:22 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-4' coro=<Gmgn._make_request() done, defined at C:\Users\orhei\Desktop\WalletWave\src\WalletWave\services\gmgn_client\client_v2.py:34> exception=AttributeError("'NoneType' object has no attribute 'status_code'")>
+Traceback (most recent call last):
+  File "C:\Users\orhei\Desktop\WalletWave\src\WalletWave\services\gmgn_client\client_v2.py", line 42, in _make_request
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\orhei\Desktop\WalletWave\venv\Lib\site-packages\curl_cffi\requests\models.py", line 146, in raise_for_status
+    raise HTTPError(f"HTTP Error {self.status_code}: {self.reason}")
+curl_cffi.requests.exceptions.HTTPError: HTTP Error 0: OK
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\orhei\Desktop\WalletWave\src\WalletWave\services\gmgn_client\client_v2.py", line 46, in _make_request
+    status_code = e.response.status_code
+                  ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'status_code'
+2025-02-04 20:40:22 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-5' coro=<Gmgn._make_request() done, defined at C:\Users\orhei\Desktop\WalletWave\src\WalletWave\services\gmgn_client\client_v2.py:34> exception=AttributeError("'NoneType' object has no attribute 'status_code'")>
+Traceback (most recent call last):
+  File "C:\Users\orhei\Desktop\WalletWave\src\WalletWave\services\gmgn_client\client_v2.py", line 42, in _make_request
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\orhei\Desktop\WalletWave\venv\Lib\site-packages\curl_cffi\requests\models.py", line 146, in raise_for_status
+    raise HTTPError(f"HTTP Error {self.status_code}: {self.reason}")
+curl_cffi.requests.exceptions.HTTPError: HTTP Error 0: Connection Established
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\orhei\Desktop\WalletWave\src\WalletWave\services\gmgn_client\client_v2.py", line 46, in _make_request
+    status_code = e.response.status_code
+                  ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'status_code'
+2025-02-04 20:40:22 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-6' coro=<Gmgn._make_request() done, defined at C:\Users\orhei\Desktop\WalletWave\src\WalletWave\services\gmgn_client\client_v2.py:34> exception=AttributeError("'NoneType' object has no attribute 'status_code'")>
+Traceback (most recent call last):
+  File "C:\Users\orhei\Desktop\WalletWave\src\WalletWave\services\gmgn_client\client_v2.py", line 42, in _make_request
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\orhei\Desktop\WalletWave\venv\Lib\site-packages\curl_cffi\requests\models.py", line 146, in raise_for_status
+    raise HTTPError(f"HTTP Error {self.status_code}: {self.reason}")
+curl_cffi.requests.exceptions.HTTPError: HTTP Error 0: Connection Established
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\orhei\Desktop\WalletWave\src\WalletWave\services\gmgn_client\client_v2.py", line 46, in _make_request
+    status_code = e.response.status_code
+                  ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'status_code'
+2025-02-04 20:40:22 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-7' coro=<Gmgn._make_request() done, defined at C:\Users\orhei\Desktop\WalletWave\src\WalletWave\services\gmgn_client\client_v2.py:34> exception=AttributeError("'NoneType' object has no attribute 'status_code'")>
+Traceback (most recent call last):
+  File "C:\Users\orhei\Desktop\WalletWave\src\WalletWave\services\gmgn_client\client_v2.py", line 42, in _make_request
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\orhei\Desktop\WalletWave\venv\Lib\site-packages\curl_cffi\requests\models.py", line 146, in raise_for_status
+    raise HTTPError(f"HTTP Error {self.status_code}: {self.reason}")
+curl_cffi.requests.exceptions.HTTPError: HTTP Error 0: OK
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\orhei\Desktop\WalletWave\src\WalletWave\services\gmgn_client\client_v2.py", line 46, in _make_request
+    status_code = e.response.status_code
+                  ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'status_code'
+2025-02-04 20:40:22 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-8' coro=<Gmgn._make_request() done, defined at C:\Users\orhei\Desktop\WalletWave\src\WalletWave\services\gmgn_client\client_v2.py:34> exception=AttributeError("'NoneType' object has no attribute 'status_code'")>
+Traceback (most recent call last):
+  File "C:\Users\orhei\Desktop\WalletWave\src\WalletWave\services\gmgn_client\client_v2.py", line 42, in _make_request
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\orhei\Desktop\WalletWave\venv\Lib\site-packages\curl_cffi\requests\models.py", line 146, in raise_for_status
+    raise HTTPError(f"HTTP Error {self.status_code}: {self.reason}")
+curl_cffi.requests.exceptions.HTTPError: HTTP Error 0: OK
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\orhei\Desktop\WalletWave\src\WalletWave\services\gmgn_client\client_v2.py", line 46, in _make_request
+    status_code = e.response.status_code
+                  ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'status_code'
+2025-02-04 20:40:22 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-9' coro=<Gmgn._make_request() done, defined at C:\Users\orhei\Desktop\WalletWave\src\WalletWave\services\gmgn_client\client_v2.py:34> exception=AttributeError("'NoneType' object has no attribute 'status_code'")>
+Traceback (most recent call last):
+  File "C:\Users\orhei\Desktop\WalletWave\src\WalletWave\services\gmgn_client\client_v2.py", line 42, in _make_request
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\orhei\Desktop\WalletWave\venv\Lib\site-packages\curl_cffi\requests\models.py", line 146, in raise_for_status
+    raise HTTPError(f"HTTP Error {self.status_code}: {self.reason}")
+curl_cffi.requests.exceptions.HTTPError: HTTP Error 0: OK
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\orhei\Desktop\WalletWave\src\WalletWave\services\gmgn_client\client_v2.py", line 46, in _make_request
+    status_code = e.response.status_code
+                  ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'status_code'
+2025-02-04 20:40:22 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-10' coro=<Gmgn._make_request() done, defined at C:\Users\orhei\Desktop\WalletWave\src\WalletWave\services\gmgn_client\client_v2.py:34> exception=AttributeError("'NoneType' object has no attribute 'status_code'")>
+Traceback (most recent call last):
+  File "C:\Users\orhei\Desktop\WalletWave\src\WalletWave\services\gmgn_client\client_v2.py", line 42, in _make_request
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\orhei\Desktop\WalletWave\venv\Lib\site-packages\curl_cffi\requests\models.py", line 146, in raise_for_status
+    raise HTTPError(f"HTTP Error {self.status_code}: {self.reason}")
+curl_cffi.requests.exceptions.HTTPError: HTTP Error 0: Connection Established
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\orhei\Desktop\WalletWave\src\WalletWave\services\gmgn_client\client_v2.py", line 46, in _make_request
+    status_code = e.response.status_code
+                  ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'status_code'
+2025-02-04 20:40:22 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-11' coro=<Gmgn._make_request() done, defined at C:\Users\orhei\Desktop\WalletWave\src\WalletWave\services\gmgn_client\client_v2.py:34> exception=AttributeError("'NoneType' object has no attribute 'status_code'")>
+Traceback (most recent call last):
+  File "C:\Users\orhei\Desktop\WalletWave\src\WalletWave\services\gmgn_client\client_v2.py", line 42, in _make_request
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\orhei\Desktop\WalletWave\venv\Lib\site-packages\curl_cffi\requests\models.py", line 146, in raise_for_status
+    raise HTTPError(f"HTTP Error {self.status_code}: {self.reason}")
+curl_cffi.requests.exceptions.HTTPError: HTTP Error 0: OK
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\orhei\Desktop\WalletWave\src\WalletWave\services\gmgn_client\client_v2.py", line 46, in _make_request
+    status_code = e.response.status_code
+                  ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'status_code'
+2025-02-04 20:40:46 - WalletWave - INFO - Initializing: Solana Wallet Scanner
+2025-02-04 20:40:46 - SolanaWalletScanner - INFO - Solana Wallet Scanner initialized
+2025-02-04 20:40:47 - SolanaWalletScanner - INFO - Loaded 16 wallets from test.txt.
+2025-02-04 20:40:47 - SolanaWalletScanner - INFO - Solana Wallet Scanner initialized with 16 wallets
+2025-02-04 20:40:47 - WalletWave - INFO - Executing plugin...
+2025-02-04 20:40:48 - SolanaWalletScanner - INFO - Executing Solana Wallet Scanner...
+2025-02-04 20:40:48 - GMGN_Client_v2 - INFO - Executing 16 queued requests...
+2025-02-04 20:40:53 - WalletWave - ERROR - An error occurred while running the plugin: 'NoneType' object has no attribute 'status_code'
+2025-02-04 20:40:53 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-2' coro=<Gmgn._make_request() done, defined at C:\Users\orhei\Desktop\WalletWave\src\WalletWave\services\gmgn_client\client_v2.py:34> exception=AttributeError("'NoneType' object has no attribute 'status_code'")>
+Traceback (most recent call last):
+  File "C:\Users\orhei\Desktop\WalletWave\src\WalletWave\services\gmgn_client\client_v2.py", line 42, in _make_request
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\orhei\Desktop\WalletWave\venv\Lib\site-packages\curl_cffi\requests\models.py", line 146, in raise_for_status
+    raise HTTPError(f"HTTP Error {self.status_code}: {self.reason}")
+curl_cffi.requests.exceptions.HTTPError: HTTP Error 0: OK
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\orhei\Desktop\WalletWave\src\WalletWave\services\gmgn_client\client_v2.py", line 46, in _make_request
+    status_code = e.response.status_code if e else "No response"
+                  ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'status_code'
+2025-02-04 20:40:53 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-3' coro=<Gmgn._make_request() done, defined at C:\Users\orhei\Desktop\WalletWave\src\WalletWave\services\gmgn_client\client_v2.py:34> exception=AttributeError("'NoneType' object has no attribute 'status_code'")>
+Traceback (most recent call last):
+  File "C:\Users\orhei\Desktop\WalletWave\src\WalletWave\services\gmgn_client\client_v2.py", line 42, in _make_request
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\orhei\Desktop\WalletWave\venv\Lib\site-packages\curl_cffi\requests\models.py", line 146, in raise_for_status
+    raise HTTPError(f"HTTP Error {self.status_code}: {self.reason}")
+curl_cffi.requests.exceptions.HTTPError: HTTP Error 0: Connection Established
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\orhei\Desktop\WalletWave\src\WalletWave\services\gmgn_client\client_v2.py", line 46, in _make_request
+    status_code = e.response.status_code if e else "No response"
+                  ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'status_code'
+2025-02-04 20:40:53 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-4' coro=<Gmgn._make_request() done, defined at C:\Users\orhei\Desktop\WalletWave\src\WalletWave\services\gmgn_client\client_v2.py:34> exception=AttributeError("'NoneType' object has no attribute 'status_code'")>
+Traceback (most recent call last):
+  File "C:\Users\orhei\Desktop\WalletWave\src\WalletWave\services\gmgn_client\client_v2.py", line 42, in _make_request
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\orhei\Desktop\WalletWave\venv\Lib\site-packages\curl_cffi\requests\models.py", line 146, in raise_for_status
+    raise HTTPError(f"HTTP Error {self.status_code}: {self.reason}")
+curl_cffi.requests.exceptions.HTTPError: HTTP Error 0: Connection Established
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\orhei\Desktop\WalletWave\src\WalletWave\services\gmgn_client\client_v2.py", line 46, in _make_request
+    status_code = e.response.status_code if e else "No response"
+                  ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'status_code'
+2025-02-04 20:40:53 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-5' coro=<Gmgn._make_request() done, defined at C:\Users\orhei\Desktop\WalletWave\src\WalletWave\services\gmgn_client\client_v2.py:34> exception=AttributeError("'NoneType' object has no attribute 'status_code'")>
+Traceback (most recent call last):
+  File "C:\Users\orhei\Desktop\WalletWave\src\WalletWave\services\gmgn_client\client_v2.py", line 42, in _make_request
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\orhei\Desktop\WalletWave\venv\Lib\site-packages\curl_cffi\requests\models.py", line 146, in raise_for_status
+    raise HTTPError(f"HTTP Error {self.status_code}: {self.reason}")
+curl_cffi.requests.exceptions.HTTPError: HTTP Error 0: Connection Established
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\orhei\Desktop\WalletWave\src\WalletWave\services\gmgn_client\client_v2.py", line 46, in _make_request
+    status_code = e.response.status_code if e else "No response"
+                  ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'status_code'
+2025-02-04 20:40:53 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-6' coro=<Gmgn._make_request() done, defined at C:\Users\orhei\Desktop\WalletWave\src\WalletWave\services\gmgn_client\client_v2.py:34> exception=AttributeError("'NoneType' object has no attribute 'status_code'")>
+Traceback (most recent call last):
+  File "C:\Users\orhei\Desktop\WalletWave\src\WalletWave\services\gmgn_client\client_v2.py", line 42, in _make_request
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\orhei\Desktop\WalletWave\venv\Lib\site-packages\curl_cffi\requests\models.py", line 146, in raise_for_status
+    raise HTTPError(f"HTTP Error {self.status_code}: {self.reason}")
+curl_cffi.requests.exceptions.HTTPError: HTTP Error 0: Connection Established
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\orhei\Desktop\WalletWave\src\WalletWave\services\gmgn_client\client_v2.py", line 46, in _make_request
+    status_code = e.response.status_code if e else "No response"
+                  ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'status_code'
+2025-02-04 20:40:53 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-7' coro=<Gmgn._make_request() done, defined at C:\Users\orhei\Desktop\WalletWave\src\WalletWave\services\gmgn_client\client_v2.py:34> exception=AttributeError("'NoneType' object has no attribute 'status_code'")>
+Traceback (most recent call last):
+  File "C:\Users\orhei\Desktop\WalletWave\src\WalletWave\services\gmgn_client\client_v2.py", line 42, in _make_request
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\orhei\Desktop\WalletWave\venv\Lib\site-packages\curl_cffi\requests\models.py", line 146, in raise_for_status
+    raise HTTPError(f"HTTP Error {self.status_code}: {self.reason}")
+curl_cffi.requests.exceptions.HTTPError: HTTP Error 0: OK
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\orhei\Desktop\WalletWave\src\WalletWave\services\gmgn_client\client_v2.py", line 46, in _make_request
+    status_code = e.response.status_code if e else "No response"
+                  ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'status_code'
+2025-02-04 20:40:53 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-8' coro=<Gmgn._make_request() done, defined at C:\Users\orhei\Desktop\WalletWave\src\WalletWave\services\gmgn_client\client_v2.py:34> exception=AttributeError("'NoneType' object has no attribute 'status_code'")>
+Traceback (most recent call last):
+  File "C:\Users\orhei\Desktop\WalletWave\src\WalletWave\services\gmgn_client\client_v2.py", line 42, in _make_request
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\orhei\Desktop\WalletWave\venv\Lib\site-packages\curl_cffi\requests\models.py", line 146, in raise_for_status
+    raise HTTPError(f"HTTP Error {self.status_code}: {self.reason}")
+curl_cffi.requests.exceptions.HTTPError: HTTP Error 0: OK
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\orhei\Desktop\WalletWave\src\WalletWave\services\gmgn_client\client_v2.py", line 46, in _make_request
+    status_code = e.response.status_code if e else "No response"
+                  ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'status_code'
+2025-02-04 20:40:53 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-10' coro=<Gmgn._make_request() done, defined at C:\Users\orhei\Desktop\WalletWave\src\WalletWave\services\gmgn_client\client_v2.py:34> exception=AttributeError("'NoneType' object has no attribute 'status_code'")>
+Traceback (most recent call last):
+  File "C:\Users\orhei\Desktop\WalletWave\src\WalletWave\services\gmgn_client\client_v2.py", line 42, in _make_request
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\orhei\Desktop\WalletWave\venv\Lib\site-packages\curl_cffi\requests\models.py", line 146, in raise_for_status
+    raise HTTPError(f"HTTP Error {self.status_code}: {self.reason}")
+curl_cffi.requests.exceptions.HTTPError: HTTP Error 0: OK
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\orhei\Desktop\WalletWave\src\WalletWave\services\gmgn_client\client_v2.py", line 46, in _make_request
+    status_code = e.response.status_code if e else "No response"
+                  ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'status_code'
+2025-02-04 20:40:53 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-11' coro=<Gmgn._make_request() done, defined at C:\Users\orhei\Desktop\WalletWave\src\WalletWave\services\gmgn_client\client_v2.py:34> exception=AttributeError("'NoneType' object has no attribute 'status_code'")>
+Traceback (most recent call last):
+  File "C:\Users\orhei\Desktop\WalletWave\src\WalletWave\services\gmgn_client\client_v2.py", line 42, in _make_request
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\orhei\Desktop\WalletWave\venv\Lib\site-packages\curl_cffi\requests\models.py", line 146, in raise_for_status
+    raise HTTPError(f"HTTP Error {self.status_code}: {self.reason}")
+curl_cffi.requests.exceptions.HTTPError: HTTP Error 0: Connection Established
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\orhei\Desktop\WalletWave\src\WalletWave\services\gmgn_client\client_v2.py", line 46, in _make_request
+    status_code = e.response.status_code if e else "No response"
+                  ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'status_code'
+2025-02-04 20:42:48 - WalletWave - INFO - Initializing: Solana Wallet Scanner
+2025-02-04 20:42:48 - SolanaWalletScanner - INFO - Solana Wallet Scanner initialized
+2025-02-04 20:42:49 - SolanaWalletScanner - INFO - Loaded 16 wallets from test.txt.
+2025-02-04 20:42:49 - SolanaWalletScanner - INFO - Solana Wallet Scanner initialized with 16 wallets
+2025-02-04 20:42:49 - WalletWave - INFO - Executing plugin...
+2025-02-04 20:42:50 - SolanaWalletScanner - INFO - Executing Solana Wallet Scanner...
+2025-02-04 20:42:50 - GMGN_Client_v2 - INFO - Executing 16 queued requests...
+2025-02-04 20:42:55 - GMGN_Client_v2 - ERROR - Failed https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/8i5x6j11u7K1mJVrgCqpMj6R5Sv6TZUxvhgLoZAzzVpi: Expecting value: line 1 column 1 (char 0)
+2025-02-04 20:42:55 - WalletWave - ERROR - An error occurred while running the plugin: 'NoneType' object has no attribute 'url'
+2025-02-04 20:42:55 - GMGN_Client_v2 - ERROR - Failed https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/HEmg53AvjtCejY3NgqhF3dff5uJQPaLPiHU8GsJU7WzG: Expecting value: line 1 column 1 (char 0)
+2025-02-04 20:42:55 - GMGN_Client_v2 - ERROR - Failed https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/6VBWNKezNFrVz9jCh5qrUXz8ZoySLEZvpyBHLqF9R28Y: Expecting value: line 1 column 1 (char 0)
+2025-02-04 20:42:55 - GMGN_Client_v2 - ERROR - Failed https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/CjWX6z2ujwCEWX1b3NV5xTDWfqvUfWJRUzJ2zj2rwLfk: Expecting value: line 1 column 1 (char 0)
+2025-02-04 20:42:55 - GMGN_Client_v2 - ERROR - Failed https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/5sc5JnefFVyu9AVYHzXNmEBZPXU9Lhq6LhWR5cm9JgoM: Expecting value: line 1 column 1 (char 0)
+2025-02-04 20:42:55 - GMGN_Client_v2 - ERROR - Failed https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/4B6i3z4aAGWwwixdUJb92Kxkd3PgcHbUrt2Zi7LP1ndK: Expecting value: line 1 column 1 (char 0)
+2025-02-04 20:42:55 - GMGN_Client_v2 - ERROR - Failed https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/3E5QmNWkXHixHJKtsgahc4L1WR2sWQ44Ayd4iorVZZfN: Expecting value: line 1 column 1 (char 0)
+2025-02-04 20:42:55 - GMGN_Client_v2 - ERROR - Failed https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/FDiVPpzjfbwxvjjqUSVrqFcCS7CG8aY9WWnxSsMWuj5W: Expecting value: line 1 column 1 (char 0)
+2025-02-04 20:42:55 - GMGN_Client_v2 - ERROR - Failed https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/6LJfRoevujggKxNRMsb9f8PfhcjujRshzXwgG7HbmaTm: Expecting value: line 1 column 1 (char 0)
+2025-02-04 20:43:19 - WalletWave - INFO - Initializing: Solana Wallet Scanner
+2025-02-04 20:43:19 - SolanaWalletScanner - INFO - Solana Wallet Scanner initialized
+2025-02-04 20:43:21 - SolanaWalletScanner - INFO - Loaded 16 wallets from test.txt.
+2025-02-04 20:43:21 - SolanaWalletScanner - INFO - Solana Wallet Scanner initialized with 16 wallets
+2025-02-04 20:43:21 - WalletWave - INFO - Executing plugin...
+2025-02-04 20:43:23 - SolanaWalletScanner - INFO - Executing Solana Wallet Scanner...
+2025-02-04 20:43:23 - GMGN_Client_v2 - INFO - Executing 16 queued requests...
+2025-02-04 20:43:28 - GMGN_Client_v2 - ERROR - Received HTTP Unknown for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/FDiVPpzjfbwxvjjqUSVrqFcCS7CG8aY9WWnxSsMWuj5W : HTTP Error 403: 
+2025-02-04 20:43:28 - GMGN_Client_v2 - ERROR - Received HTTP Unknown for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/5sc5JnefFVyu9AVYHzXNmEBZPXU9Lhq6LhWR5cm9JgoM : HTTP Error 403: 
+2025-02-04 20:43:28 - GMGN_Client_v2 - ERROR - Received HTTP Unknown for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/3E5QmNWkXHixHJKtsgahc4L1WR2sWQ44Ayd4iorVZZfN : HTTP Error 403: 
+2025-02-04 20:43:28 - GMGN_Client_v2 - ERROR - Received HTTP Unknown for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/6LJfRoevujggKxNRMsb9f8PfhcjujRshzXwgG7HbmaTm : HTTP Error 403: 
+2025-02-04 20:43:28 - GMGN_Client_v2 - ERROR - Received HTTP Unknown for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/8i5x6j11u7K1mJVrgCqpMj6R5Sv6TZUxvhgLoZAzzVpi : HTTP Error 403: 
+2025-02-04 20:43:28 - GMGN_Client_v2 - ERROR - Received HTTP Unknown for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/CjWX6z2ujwCEWX1b3NV5xTDWfqvUfWJRUzJ2zj2rwLfk : HTTP Error 403: 
+2025-02-04 20:43:28 - GMGN_Client_v2 - ERROR - Received HTTP Unknown for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/4B6i3z4aAGWwwixdUJb92Kxkd3PgcHbUrt2Zi7LP1ndK : HTTP Error 403: 
+2025-02-04 20:43:28 - GMGN_Client_v2 - ERROR - Received HTTP Unknown for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/6VBWNKezNFrVz9jCh5qrUXz8ZoySLEZvpyBHLqF9R28Y : HTTP Error 403: 
+2025-02-04 20:43:29 - GMGN_Client_v2 - ERROR - Received HTTP Unknown for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/HEmg53AvjtCejY3NgqhF3dff5uJQPaLPiHU8GsJU7WzG : HTTP Error 403: 
+2025-02-04 20:43:33 - WalletWave - ERROR - An error occurred while running the plugin: 'NoneType' object has no attribute 'url'
+2025-02-04 20:43:33 - GMGN_Client_v2 - ERROR - Received HTTP Unknown for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/6n8qjrofokMVKk6mMWuSxfYrehR9jS6mrnJ5NFq8iyqj : HTTP Error 0: OK
+2025-02-04 20:50:16 - WalletWave - INFO - Initializing: Solana Wallet Scanner
+2025-02-04 20:50:16 - SolanaWalletScanner - INFO - Solana Wallet Scanner initialized
+2025-02-04 20:50:18 - SolanaWalletScanner - INFO - Loaded 16 wallets from test.txt.
+2025-02-04 20:50:18 - SolanaWalletScanner - INFO - Solana Wallet Scanner initialized with 16 wallets
+2025-02-04 20:50:18 - WalletWave - INFO - Executing plugin...
+2025-02-04 20:50:19 - SolanaWalletScanner - INFO - Executing Solana Wallet Scanner...
+2025-02-04 20:50:19 - GMGN_Client_v2 - INFO - Executing 16 queued requests...
+2025-02-04 20:50:24 - GMGN_Client_v2 - ERROR - Received HTTP Unknown for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/5sc5JnefFVyu9AVYHzXNmEBZPXU9Lhq6LhWR5cm9JgoM : HTTP Error 403: 
+2025-02-04 20:50:24 - GMGN_Client_v2 - ERROR - Received HTTP Unknown for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/4B6i3z4aAGWwwixdUJb92Kxkd3PgcHbUrt2Zi7LP1ndK : HTTP Error 403: 
+2025-02-04 20:50:25 - GMGN_Client_v2 - ERROR - Received HTTP Unknown for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/CjWX6z2ujwCEWX1b3NV5xTDWfqvUfWJRUzJ2zj2rwLfk : HTTP Error 403: 
+2025-02-04 20:50:29 - WalletWave - ERROR - An error occurred while running the plugin: 'NoneType' object has no attribute 'url'
+2025-02-04 20:58:00 - WalletWave - INFO - Initializing: Solana Wallet Scanner
+2025-02-04 20:58:00 - SolanaWalletScanner - INFO - Solana Wallet Scanner initialized
+2025-02-04 20:58:02 - SolanaWalletScanner - INFO - Loaded 16 wallets from test.txt.
+2025-02-04 20:58:02 - SolanaWalletScanner - INFO - Solana Wallet Scanner initialized with 16 wallets
+2025-02-04 20:58:02 - WalletWave - INFO - Executing plugin...
+2025-02-04 20:58:03 - SolanaWalletScanner - INFO - Executing Solana Wallet Scanner...
+2025-02-04 20:58:03 - GMGN_Client_v2 - INFO - Executing 16 queued requests...
+2025-02-04 20:58:07 - GMGN_Client_v2 - ERROR - Received HTTP Unknown for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/4B6i3z4aAGWwwixdUJb92Kxkd3PgcHbUrt2Zi7LP1ndK : HTTP Error 403: 
+2025-02-04 20:58:07 - GMGN_Client_v2 - ERROR - Received HTTP Unknown for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/5sc5JnefFVyu9AVYHzXNmEBZPXU9Lhq6LhWR5cm9JgoM : HTTP Error 403: 
+2025-02-04 20:58:35 - SolanaWalletScanner - INFO - Fetched data for wallet: 6VBWNKezNFrVz9jCh5qrUXz8ZoySLEZvpyBHLqF9R28Y
+2025-02-04 20:58:35 - SolanaWalletScanner - INFO - Fetched data for wallet: FW2PJkHDm9HpVcnR2MKbP2urd8u2buJQkQWogxnw7Fja
+2025-02-04 20:58:35 - WalletWave - ERROR - An error occurred while running the plugin: 'NoneType' object has no attribute 'to_summary'
+2025-02-04 20:59:30 - WalletWave - INFO - Initializing: Solana Wallet Scanner
+2025-02-04 20:59:30 - SolanaWalletScanner - INFO - Solana Wallet Scanner initialized
+2025-02-04 20:59:32 - SolanaWalletScanner - INFO - Loaded 16 wallets from test.txt.
+2025-02-04 20:59:32 - SolanaWalletScanner - INFO - Solana Wallet Scanner initialized with 16 wallets
+2025-02-04 20:59:32 - WalletWave - INFO - Executing plugin...
+2025-02-04 20:59:32 - SolanaWalletScanner - INFO - Executing Solana Wallet Scanner...
+2025-02-04 20:59:32 - GMGN_Client_v2 - INFO - Executing 16 queued requests...
+2025-02-04 20:59:36 - GMGN_Client_v2 - ERROR - Received HTTP Unknown for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/CjWX6z2ujwCEWX1b3NV5xTDWfqvUfWJRUzJ2zj2rwLfk : HTTP Error 403: 
+2025-02-04 21:00:00 - SolanaWalletScanner - INFO - Fetched data for wallet: 6VBWNKezNFrVz9jCh5qrUXz8ZoySLEZvpyBHLqF9R28Y
+2025-02-04 21:00:00 - SolanaWalletScanner - INFO - Fetched data for wallet: FW2PJkHDm9HpVcnR2MKbP2urd8u2buJQkQWogxnw7Fja
+2025-02-04 21:00:00 - SolanaWalletScanner - INFO - Fetched data for wallet: FDiVPpzjfbwxvjjqUSVrqFcCS7CG8aY9WWnxSsMWuj5W
+2025-02-04 21:00:00 - SolanaWalletScanner - INFO - Fetched data for wallet: Gvp8oQCJh9iwyDAjW7tSt9J5FismTmBctiBf8xDX6wg8
+2025-02-04 21:00:00 - SolanaWalletScanner - INFO - Fetched data for wallet: HEmg53AvjtCejY3NgqhF3dff5uJQPaLPiHU8GsJU7WzG
+2025-02-04 21:00:00 - WalletWave - ERROR - An error occurred while running the plugin: 'NoneType' object has no attribute 'to_summary'
+2025-02-04 21:10:16 - WalletWave - INFO - Initializing: Solana Wallet Scanner
+2025-02-04 21:10:16 - SolanaWalletScanner - INFO - Solana Wallet Scanner initialized
+2025-02-04 21:10:17 - SolanaWalletScanner - INFO - Loaded 16 wallets from test.txt.
+2025-02-04 21:10:17 - SolanaWalletScanner - INFO - Solana Wallet Scanner initialized with 16 wallets
+2025-02-04 21:10:17 - WalletWave - INFO - Executing plugin...
+2025-02-04 21:10:18 - SolanaWalletScanner - INFO - Executing Solana Wallet Scanner...
+2025-02-04 21:10:18 - GMGN_Client_v2 - INFO - Executing 16 queued requests...
+2025-02-04 21:10:23 - GMGN_Client_v2 - ERROR - Received HTTP Unknown for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/4B6i3z4aAGWwwixdUJb92Kxkd3PgcHbUrt2Zi7LP1ndK : HTTP Error 403: 
+2025-02-04 21:10:23 - GMGN_Client_v2 - ERROR - Received HTTP Unknown for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/CjWX6z2ujwCEWX1b3NV5xTDWfqvUfWJRUzJ2zj2rwLfk : HTTP Error 403: 
+2025-02-04 21:10:24 - GMGN_Client_v2 - ERROR - Received HTTP Unknown for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/5sc5JnefFVyu9AVYHzXNmEBZPXU9Lhq6LhWR5cm9JgoM : HTTP Error 403: 
+2025-02-04 21:10:34 - GMGN_Client_v2 - ERROR - Received HTTP Unknown for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/3E5QmNWkXHixHJKtsgahc4L1WR2sWQ44Ayd4iorVZZfN : HTTP Error 403: 
+2025-02-04 21:10:34 - GMGN_Client_v2 - ERROR - Received HTTP Unknown for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/FDiVPpzjfbwxvjjqUSVrqFcCS7CG8aY9WWnxSsMWuj5W : HTTP Error 403: 
+2025-02-04 21:10:43 - GMGN_Client_v2 - ERROR - Received HTTP Unknown for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/6LJfRoevujggKxNRMsb9f8PfhcjujRshzXwgG7HbmaTm : HTTP Error 403: 
+2025-02-04 21:10:43 - GMGN_Client_v2 - ERROR - Received HTTP Unknown for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/6n8qjrofokMVKk6mMWuSxfYrehR9jS6mrnJ5NFq8iyqj : HTTP Error 403: 
+2025-02-04 21:10:58 - GMGN_Client_v2 - ERROR - Received HTTP Unknown for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/HighDYcKVXpYJdukBXNdHZ8Kb5qZnR8Hn6aYuWS1SSnu : HTTP Error 403: 
+2025-02-04 21:10:58 - GMGN_Client_v2 - ERROR - Received HTTP Unknown for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/7ACBAs2CmUbsNDEAWMsc46XcBzDjRTbTJzmAzK5tuy2s : HTTP Error 403: 
+2025-02-04 21:11:06 - GMGN_Client_v2 - ERROR - Received HTTP Unknown for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/D9A1wCMf2QNfFWThBPaPXFb3m1AzaqNUrzBvZKKL6Cp4 : HTTP Error 403: 
+2025-02-04 21:11:13 - SolanaWalletScanner - INFO - Failed to fetch data for wallet: 6VBWNKezNFrVz9jCh5qrUXz8ZoySLEZvpyBHLqF9R28Y
+2025-02-04 21:11:13 - SolanaWalletScanner - INFO - Failed to fetch data for wallet: FW2PJkHDm9HpVcnR2MKbP2urd8u2buJQkQWogxnw7Fja
+2025-02-04 21:11:13 - SolanaWalletScanner - INFO - Failed to fetch data for wallet: FDiVPpzjfbwxvjjqUSVrqFcCS7CG8aY9WWnxSsMWuj5W
+2025-02-04 21:11:13 - SolanaWalletScanner - INFO - Failed to fetch data for wallet: Gvp8oQCJh9iwyDAjW7tSt9J5FismTmBctiBf8xDX6wg8
+2025-02-04 21:11:13 - SolanaWalletScanner - INFO - Fetched data for wallet: HEmg53AvjtCejY3NgqhF3dff5uJQPaLPiHU8GsJU7WzG
+2025-02-04 21:11:13 - SolanaWalletScanner - INFO - Failed to fetch data for wallet: 5sc5JnefFVyu9AVYHzXNmEBZPXU9Lhq6LhWR5cm9JgoM
+2025-02-04 21:11:13 - SolanaWalletScanner - INFO - Fetched data for wallet: 7ACBAs2CmUbsNDEAWMsc46XcBzDjRTbTJzmAzK5tuy2s
+2025-02-04 21:11:13 - SolanaWalletScanner - INFO - Failed to fetch data for wallet: 8i5x6j11u7K1mJVrgCqpMj6R5Sv6TZUxvhgLoZAzzVpi
+2025-02-04 21:11:13 - SolanaWalletScanner - INFO - Failed to fetch data for wallet: 4B6i3z4aAGWwwixdUJb92Kxkd3PgcHbUrt2Zi7LP1ndK
+2025-02-04 21:11:13 - SolanaWalletScanner - INFO - Fetched data for wallet: HighDYcKVXpYJdukBXNdHZ8Kb5qZnR8Hn6aYuWS1SSnu
+2025-02-04 21:11:13 - SolanaWalletScanner - INFO - Fetched data for wallet: 3E5QmNWkXHixHJKtsgahc4L1WR2sWQ44Ayd4iorVZZfN
+2025-02-04 21:11:13 - SolanaWalletScanner - INFO - Fetched data for wallet: D9A1wCMf2QNfFWThBPaPXFb3m1AzaqNUrzBvZKKL6Cp4
+2025-02-04 21:11:13 - SolanaWalletScanner - INFO - Fetched data for wallet: 9Sv7Jj5Mu4F8hfevURdrPvA3CLjuuMpXBisoesrLvKEv
+2025-02-04 21:11:13 - SolanaWalletScanner - INFO - Failed to fetch data for wallet: CjWX6z2ujwCEWX1b3NV5xTDWfqvUfWJRUzJ2zj2rwLfk
+2025-02-04 21:11:13 - SolanaWalletScanner - INFO - Failed to fetch data for wallet: 6LJfRoevujggKxNRMsb9f8PfhcjujRshzXwgG7HbmaTm
+2025-02-04 21:11:13 - SolanaWalletScanner - INFO - Failed to fetch data for wallet: 6n8qjrofokMVKk6mMWuSxfYrehR9jS6mrnJ5NFq8iyqj
+2025-02-04 21:11:13 - SolanaWalletScanner - INFO - Scanned 6
+2025-02-04 21:11:13 - WalletWave - INFO - Exporting plugin results..
+2025-02-04 21:11:13 - WalletWave - INFO - Exporting wallet data...
+2025-02-04 21:11:13 - FileUtils - INFO - Exporting 6 entries to csv format.
+2025-02-04 21:11:13 - FileUtils - INFO - Data exported successfully to data\wallet_list_20250204_211113.csv
+2025-02-04 21:11:13 - WalletWave - INFO - Finalizing plugin...
+2025-02-04 21:11:13 - SolanaWalletScanner - INFO - Solana Wallet Scanner finalized
+2025-02-04 22:16:55 - WalletWave - INFO - Initializing: Solana Wallet Scanner
+2025-02-04 22:16:55 - SolanaWalletScanner - INFO - Solana Wallet Scanner initialized
+2025-02-04 22:16:56 - SolanaWalletScanner - INFO - Loaded 16 wallets from test.txt.
+2025-02-04 22:16:56 - SolanaWalletScanner - INFO - Solana Wallet Scanner initialized with 16 wallets
+2025-02-04 22:16:56 - WalletWave - INFO - Executing plugin...
+2025-02-04 22:16:57 - SolanaWalletScanner - INFO - Executing Solana Wallet Scanner...
+2025-02-04 22:16:57 - GMGN_Client_v2 - INFO - Executing 16 queued requests...
+2025-02-04 22:17:03 - GMGN_Client_v2 - ERROR - Received HTTP Unknown for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/6LJfRoevujggKxNRMsb9f8PfhcjujRshzXwgG7HbmaTm : HTTP Error 403: 
+2025-02-04 22:17:03 - GMGN_Client_v2 - ERROR - Received HTTP Unknown for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/4B6i3z4aAGWwwixdUJb92Kxkd3PgcHbUrt2Zi7LP1ndK : HTTP Error 403: 
+2025-02-04 22:17:03 - GMGN_Client_v2 - ERROR - Received HTTP Unknown for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/HEmg53AvjtCejY3NgqhF3dff5uJQPaLPiHU8GsJU7WzG : HTTP Error 403: 
+2025-02-04 22:17:30 - SolanaWalletScanner - INFO - Failed to fetch data for wallet: 6VBWNKezNFrVz9jCh5qrUXz8ZoySLEZvpyBHLqF9R28Y
+2025-02-04 22:17:30 - SolanaWalletScanner - INFO - Failed to fetch data for wallet: FW2PJkHDm9HpVcnR2MKbP2urd8u2buJQkQWogxnw7Fja
+2025-02-04 22:17:30 - SolanaWalletScanner - INFO - Failed to fetch data for wallet: FDiVPpzjfbwxvjjqUSVrqFcCS7CG8aY9WWnxSsMWuj5W
+2025-02-04 22:17:30 - SolanaWalletScanner - INFO - Fetched data for wallet: Gvp8oQCJh9iwyDAjW7tSt9J5FismTmBctiBf8xDX6wg8
+2025-02-04 22:17:30 - SolanaWalletScanner - INFO - Fetched data for wallet: HEmg53AvjtCejY3NgqhF3dff5uJQPaLPiHU8GsJU7WzG
+2025-02-04 22:17:30 - SolanaWalletScanner - INFO - Fetched data for wallet: 5sc5JnefFVyu9AVYHzXNmEBZPXU9Lhq6LhWR5cm9JgoM
+2025-02-04 22:17:30 - SolanaWalletScanner - INFO - Fetched data for wallet: 7ACBAs2CmUbsNDEAWMsc46XcBzDjRTbTJzmAzK5tuy2s
+2025-02-04 22:17:30 - SolanaWalletScanner - INFO - Fetched data for wallet: 8i5x6j11u7K1mJVrgCqpMj6R5Sv6TZUxvhgLoZAzzVpi
+2025-02-04 22:17:30 - SolanaWalletScanner - INFO - Fetched data for wallet: 4B6i3z4aAGWwwixdUJb92Kxkd3PgcHbUrt2Zi7LP1ndK
+2025-02-04 22:17:30 - SolanaWalletScanner - INFO - Fetched data for wallet: HighDYcKVXpYJdukBXNdHZ8Kb5qZnR8Hn6aYuWS1SSnu
+2025-02-04 22:17:30 - SolanaWalletScanner - INFO - Fetched data for wallet: 3E5QmNWkXHixHJKtsgahc4L1WR2sWQ44Ayd4iorVZZfN
+2025-02-04 22:17:30 - SolanaWalletScanner - INFO - Fetched data for wallet: D9A1wCMf2QNfFWThBPaPXFb3m1AzaqNUrzBvZKKL6Cp4
+2025-02-04 22:17:30 - SolanaWalletScanner - INFO - Fetched data for wallet: 9Sv7Jj5Mu4F8hfevURdrPvA3CLjuuMpXBisoesrLvKEv
+2025-02-04 22:17:30 - SolanaWalletScanner - INFO - Fetched data for wallet: CjWX6z2ujwCEWX1b3NV5xTDWfqvUfWJRUzJ2zj2rwLfk
+2025-02-04 22:17:30 - SolanaWalletScanner - INFO - Fetched data for wallet: 6LJfRoevujggKxNRMsb9f8PfhcjujRshzXwgG7HbmaTm
+2025-02-04 22:17:30 - SolanaWalletScanner - INFO - Fetched data for wallet: 6n8qjrofokMVKk6mMWuSxfYrehR9jS6mrnJ5NFq8iyqj
+2025-02-04 22:17:30 - SolanaWalletScanner - INFO - Scanned 13
+2025-02-04 22:17:30 - WalletWave - INFO - Exporting plugin results..
+2025-02-04 22:17:30 - WalletWave - INFO - Exporting wallet data...
+2025-02-04 22:17:30 - FileUtils - INFO - Exporting 13 entries to csv format.
+2025-02-04 22:17:30 - FileUtils - INFO - Data exported successfully to data\wallet_list_20250204_221730.csv
+2025-02-04 22:17:30 - WalletWave - INFO - Finalizing plugin...
+2025-02-04 22:17:30 - SolanaWalletScanner - INFO - Solana Wallet Scanner finalized
+2025-02-04 22:18:04 - WalletWave - INFO - Initializing: Solana Wallet Scanner
+2025-02-04 22:18:04 - SolanaWalletScanner - INFO - Solana Wallet Scanner initialized
+2025-02-04 22:18:06 - SolanaWalletScanner - INFO - Loaded 16 wallets from test.txt.
+2025-02-04 22:18:06 - SolanaWalletScanner - INFO - Solana Wallet Scanner initialized with 16 wallets
+2025-02-04 22:18:06 - WalletWave - INFO - Executing plugin...
+2025-02-04 22:18:07 - SolanaWalletScanner - INFO - Executing Solana Wallet Scanner...
+2025-02-04 22:18:07 - GMGN_Client_v2 - INFO - Executing 16 queued requests...
+2025-02-04 22:18:12 - GMGN_Client_v2 - ERROR - Failed https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/HEmg53AvjtCejY3NgqhF3dff5uJQPaLPiHU8GsJU7WzG: No response received
+2025-02-04 22:18:12 - GMGN_Client_v2 - INFO - retrying 1 for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/HEmg53AvjtCejY3NgqhF3dff5uJQPaLPiHU8GsJU7WzG
+2025-02-04 22:18:12 - GMGN_Client_v2 - ERROR - Failed https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/6LJfRoevujggKxNRMsb9f8PfhcjujRshzXwgG7HbmaTm: No response received
+2025-02-04 22:18:12 - GMGN_Client_v2 - INFO - retrying 1 for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/6LJfRoevujggKxNRMsb9f8PfhcjujRshzXwgG7HbmaTm
+2025-02-04 22:18:12 - GMGN_Client_v2 - ERROR - Failed https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/4B6i3z4aAGWwwixdUJb92Kxkd3PgcHbUrt2Zi7LP1ndK: No response received
+2025-02-04 22:18:12 - GMGN_Client_v2 - INFO - retrying 1 for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/4B6i3z4aAGWwwixdUJb92Kxkd3PgcHbUrt2Zi7LP1ndK
+2025-02-04 22:18:36 - SolanaWalletScanner - INFO - Fetched data for wallet: 6VBWNKezNFrVz9jCh5qrUXz8ZoySLEZvpyBHLqF9R28Y
+2025-02-04 22:18:36 - SolanaWalletScanner - INFO - Fetched data for wallet: FW2PJkHDm9HpVcnR2MKbP2urd8u2buJQkQWogxnw7Fja
+2025-02-04 22:18:36 - SolanaWalletScanner - INFO - Fetched data for wallet: FDiVPpzjfbwxvjjqUSVrqFcCS7CG8aY9WWnxSsMWuj5W
+2025-02-04 22:18:36 - SolanaWalletScanner - INFO - Fetched data for wallet: Gvp8oQCJh9iwyDAjW7tSt9J5FismTmBctiBf8xDX6wg8
+2025-02-04 22:18:36 - SolanaWalletScanner - INFO - Fetched data for wallet: HEmg53AvjtCejY3NgqhF3dff5uJQPaLPiHU8GsJU7WzG
+2025-02-04 22:18:36 - SolanaWalletScanner - INFO - Fetched data for wallet: 5sc5JnefFVyu9AVYHzXNmEBZPXU9Lhq6LhWR5cm9JgoM
+2025-02-04 22:18:36 - SolanaWalletScanner - INFO - Fetched data for wallet: 7ACBAs2CmUbsNDEAWMsc46XcBzDjRTbTJzmAzK5tuy2s
+2025-02-04 22:18:36 - SolanaWalletScanner - INFO - Fetched data for wallet: 8i5x6j11u7K1mJVrgCqpMj6R5Sv6TZUxvhgLoZAzzVpi
+2025-02-04 22:18:36 - SolanaWalletScanner - INFO - Fetched data for wallet: 4B6i3z4aAGWwwixdUJb92Kxkd3PgcHbUrt2Zi7LP1ndK
+2025-02-04 22:18:36 - SolanaWalletScanner - INFO - Fetched data for wallet: HighDYcKVXpYJdukBXNdHZ8Kb5qZnR8Hn6aYuWS1SSnu
+2025-02-04 22:18:36 - SolanaWalletScanner - INFO - Fetched data for wallet: 3E5QmNWkXHixHJKtsgahc4L1WR2sWQ44Ayd4iorVZZfN
+2025-02-04 22:18:36 - SolanaWalletScanner - INFO - Fetched data for wallet: D9A1wCMf2QNfFWThBPaPXFb3m1AzaqNUrzBvZKKL6Cp4
+2025-02-04 22:18:36 - SolanaWalletScanner - INFO - Fetched data for wallet: 9Sv7Jj5Mu4F8hfevURdrPvA3CLjuuMpXBisoesrLvKEv
+2025-02-04 22:18:36 - SolanaWalletScanner - INFO - Fetched data for wallet: CjWX6z2ujwCEWX1b3NV5xTDWfqvUfWJRUzJ2zj2rwLfk
+2025-02-04 22:18:36 - SolanaWalletScanner - INFO - Fetched data for wallet: 6LJfRoevujggKxNRMsb9f8PfhcjujRshzXwgG7HbmaTm
+2025-02-04 22:18:36 - SolanaWalletScanner - INFO - Fetched data for wallet: 6n8qjrofokMVKk6mMWuSxfYrehR9jS6mrnJ5NFq8iyqj
+2025-02-04 22:18:36 - SolanaWalletScanner - INFO - Scanned 16
+2025-02-04 22:18:36 - WalletWave - INFO - Exporting plugin results..
+2025-02-04 22:18:36 - WalletWave - INFO - Exporting wallet data...
+2025-02-04 22:18:36 - FileUtils - INFO - Exporting 16 entries to csv format.
+2025-02-04 22:18:36 - FileUtils - INFO - Data exported successfully to data\wallet_list_20250204_221836.csv
+2025-02-04 22:18:36 - WalletWave - INFO - Finalizing plugin...
+2025-02-04 22:18:36 - SolanaWalletScanner - INFO - Solana Wallet Scanner finalized
+2025-02-05 12:11:23 - WalletWave - INFO - Initializing: Solana Wallet Scanner
+2025-02-05 12:11:23 - SolanaWalletScanner - INFO - Solana Wallet Scanner initialized
+2025-02-05 12:11:25 - SolanaWalletScanner - INFO - Loaded 16 wallets from test.txt.
+2025-02-05 12:11:25 - SolanaWalletScanner - INFO - Solana Wallet Scanner initialized with 16 wallets
+2025-02-05 12:11:25 - WalletWave - INFO - Executing plugin...
+2025-02-05 12:11:27 - SolanaWalletScanner - INFO - Executing Solana Wallet Scanner...
+2025-02-05 12:11:27 - GMGN_Client_v2 - INFO - Executing 16 queued requests...
+2025-02-05 12:11:30 - GMGN_Client_v2 - ERROR - Failed https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/Gvp8oQCJh9iwyDAjW7tSt9J5FismTmBctiBf8xDX6wg8: No response received
+2025-02-05 12:11:30 - GMGN_Client_v2 - INFO - retrying 1 for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/Gvp8oQCJh9iwyDAjW7tSt9J5FismTmBctiBf8xDX6wg8
+2025-02-05 12:11:30 - GMGN_Client_v2 - ERROR - Failed https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/4B6i3z4aAGWwwixdUJb92Kxkd3PgcHbUrt2Zi7LP1ndK: No response received
+2025-02-05 12:11:30 - GMGN_Client_v2 - INFO - retrying 1 for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/4B6i3z4aAGWwwixdUJb92Kxkd3PgcHbUrt2Zi7LP1ndK
+2025-02-05 12:11:30 - GMGN_Client_v2 - ERROR - Failed https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/D9A1wCMf2QNfFWThBPaPXFb3m1AzaqNUrzBvZKKL6Cp4: No response received
+2025-02-05 12:11:30 - GMGN_Client_v2 - INFO - retrying 1 for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/D9A1wCMf2QNfFWThBPaPXFb3m1AzaqNUrzBvZKKL6Cp4
+2025-02-05 12:11:31 - GMGN_Client_v2 - ERROR - Failed https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/7ACBAs2CmUbsNDEAWMsc46XcBzDjRTbTJzmAzK5tuy2s: No response received
+2025-02-05 12:11:31 - GMGN_Client_v2 - INFO - retrying 1 for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/7ACBAs2CmUbsNDEAWMsc46XcBzDjRTbTJzmAzK5tuy2s
+2025-02-05 13:00:42 - WalletWave - INFO - Initializing: Solana Wallet Scanner
+2025-02-05 13:00:42 - SolanaWalletScanner - INFO - Solana Wallet Scanner initialized
+2025-02-05 13:00:44 - SolanaWalletScanner - INFO - Loaded 16 wallets from test.txt.
+2025-02-05 13:00:44 - SolanaWalletScanner - INFO - Solana Wallet Scanner initialized with 16 wallets
+2025-02-05 13:00:44 - WalletWave - INFO - Executing plugin...
+2025-02-05 13:00:46 - SolanaWalletScanner - INFO - Executing Solana Wallet Scanner...
+2025-02-05 13:00:46 - GMGN_Client_v2 - INFO - Executing 16 queued requests...
+2025-02-05 13:00:50 - GMGN_Client_v2 - ERROR - Failed https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/FDiVPpzjfbwxvjjqUSVrqFcCS7CG8aY9WWnxSsMWuj5W: No response received
+2025-02-05 13:00:50 - GMGN_Client_v2 - INFO - retrying 1 for https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/FDiVPpzjfbwxvjjqUSVrqFcCS7CG8aY9WWnxSsMWuj5W
+2025-02-05 13:01:02 - GMGN_Client_v2 - ERROR - Validation failed for response: {'code': 0, 'msg': 'success', 'data': {'twitter_bind': False, 'twitter_fans_num': 0, 'twitter_username': None, 'twitter_name': None, 'ens': None, 'avatar': None, 'name': None, 'eth_balance': '0.91885697700000000000', 'sol_balance': '0.91885697700000000000', 'trx_balance': '0.91885697700000000000', 'balance': '0.91885697700000000000', 'total_value': 1036.9010307928374, 'unrealized_profit': '-1915.3955319828369227156520268', 'unrealized_pnl': -0.208312041603075, 'realized_profit': 2505.285495152467, 'pnl': 0.7339348822394407, 'pnl_1d': 0, 'pnl_7d': 0.7339348822394407, 'pnl_30d': 1.5580455649660148, 'realized_profit_1d': 0, 'realized_profit_7d': 42.35836122936, 'realized_profit_30d': 2505.285495152467, 'winrate': 1, 'all_pnl': 0.7145678641098373, 'total_profit': '2767.0071830244574-1915.3955319828369227156520268', 'total_profit_pnl': None, 'buy_1d': 1, 'sell_1d': 0, 'buy_30d': 77, 'sell_30d': 39, 'buy_7d': 12, 'sell_7d': 2, 'buy': 12, 'sell': 2, 'history_bought_cost': 193.95902448732, 'token_avg_cost': 27.708432069617142, 'token_sold_avg_profit': 6.0511944613371424, 'token_num': 7, 'profit_num': 1, 'pnl_lt_minus_dot5_num': 0, 'pnl_minus_dot5_0x_num': 0, 'pnl_lt_2x_num': 7, 'pnl_2x_5x_num': 0, 'pnl_gt_5x_num': 0, 'last_active_timestamp': 1738619687, 'tags': ['photon'], 'tag_rank': {'photon': None}, 'followers_count': 0, 'is_contract': False, 'updated_at': 1738619687, 'refresh_requested_at': None, 'avg_holding_peroid': 399130.14285714284, 'risk': {'token_active': '10', 'token_honeypot': '0', 'token_honeypot_ratio': 0, 'no_buy_hold': '1', 'no_buy_hold_ratio': 0.09090909090909091, 'sell_pass_buy': '0', 'sell_pass_buy_ratio': 0, 'fast_tx': '0', 'fast_tx_ratio': 0}}}, error: 2 validation errors for WalletInfoResponse
+data.total_profit
+  Input should be a valid number, unable to parse string as a number [type=float_parsing, input_value='2767.0071830244574-1915....55319828369227156520268', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.10/v/float_parsing
+data.total_profit_pnl
+  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.10/v/float_type
+2025-02-05 13:01:02 - GMGN_Client_v2 - ERROR - Validation failed for response: {'code': 0, 'msg': 'success', 'data': {'twitter_bind': False, 'twitter_fans_num': 0, 'twitter_username': None, 'twitter_name': None, 'ens': None, 'avatar': None, 'name': None, 'eth_balance': '0.88466831200000000000', 'sol_balance': '0.88466831200000000000', 'trx_balance': '0.88466831200000000000', 'balance': '0.88466831200000000000', 'total_value': 374.0390650087913, 'unrealized_profit': '-148.4462724818122530266812', 'unrealized_pnl': -0.0005975333621588234, 'realized_profit': 3003.518054673568, 'pnl': 0.14504042486256177, 'pnl_1d': 0, 'pnl_7d': 0.14504042486256177, 'pnl_30d': 0.01243869527553538, 'realized_profit_1d': 0, 'realized_profit_7d': 80.53344152587336, 'realized_profit_30d': 3003.518054673568, 'winrate': 0.2857142857142857, 'all_pnl': 0.01793464551528334, 'total_profit': '3916.1675303284414-148.4462724818122530266812', 'total_profit_pnl': None, 'buy_1d': 0, 'sell_1d': 0, 'buy_30d': 134, 'sell_30d': 134, 'buy_7d': 21, 'sell_7d': 23, 'buy': 21, 'sell': 23, 'history_bought_cost': 613.6584616790499, 'token_avg_cost': 36.09755656935587, 'token_sold_avg_profit': 0.021219255796873338, 'token_num': 18, 'profit_num': 4, 'pnl_lt_minus_dot5_num': 8, 'pnl_minus_dot5_0x_num': 3, 'pnl_lt_2x_num': 6, 'pnl_2x_5x_num': 1, 'pnl_gt_5x_num': 0, 'last_active_timestamp': 1738229909, 'tags': [], 'tag_rank': {}, 'followers_count': 0, 'is_contract': False, 'updated_at': 1738501777, 'refresh_requested_at': None, 'avg_holding_peroid': 86060.64285714286, 'risk': {'token_active': '17', 'token_honeypot': '0', 'token_honeypot_ratio': 0, 'no_buy_hold': '16', 'no_buy_hold_ratio': 0.48484848484848486, 'sell_pass_buy': '1', 'sell_pass_buy_ratio': 0.058823529411764705, 'fast_tx': '1', 'fast_tx_ratio': 0.058823529411764705}}}, error: 2 validation errors for WalletInfoResponse
+data.total_profit
+  Input should be a valid number, unable to parse string as a number [type=float_parsing, input_value='3916.1675303284414-148.4462724818122530266812', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.10/v/float_parsing
+data.total_profit_pnl
+  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.10/v/float_type
+2025-02-05 13:01:02 - GMGN_Client_v2 - ERROR - Validation failed for response: {'code': 0, 'msg': 'success', 'data': {'twitter_bind': False, 'twitter_fans_num': 0, 'twitter_username': None, 'twitter_name': None, 'ens': None, 'avatar': None, 'name': None, 'eth_balance': '13.10350970800000000000', 'sol_balance': '13.10350970800000000000', 'trx_balance': '13.10350970800000000000', 'balance': '13.10350970800000000000', 'total_value': 4879.470989269712, 'unrealized_profit': '-2337.2737484293076644525772', 'unrealized_pnl': -0.02110264393976168, 'realized_profit': 17469.518710291275, 'pnl': 3.230132204020946, 'pnl_1d': 0, 'pnl_7d': 3.230132204020946, 'pnl_30d': 1.060345780079976, 'realized_profit_1d': 0, 'realized_profit_7d': 990.0997015359404, 'realized_profit_30d': 17469.518710291275, 'winrate': 0.58, 'all_pnl': 0.36984930771828484, 'total_profit': '39487.30086700129-2337.2737484293076644525772', 'total_profit_pnl': None, 'buy_1d': 0, 'sell_1d': 0, 'buy_30d': 108, 'sell_30d': 150, 'buy_7d': 1, 'sell_7d': 6, 'buy': 1, 'sell': 6, 'history_bought_cost': 2596.5078699116, 'token_avg_cost': 649.1269674779, 'token_sold_avg_profit': 247.5249253839851, 'token_num': 4, 'profit_num': 58, 'pnl_lt_minus_dot5_num': 0, 'pnl_minus_dot5_0x_num': 1, 'pnl_lt_2x_num': 2, 'pnl_2x_5x_num': 1, 'pnl_gt_5x_num': 0, 'last_active_timestamp': 1738501725, 'tags': ['bullx'], 'tag_rank': {'bullx': 1}, 'followers_count': 0, 'is_contract': False, 'updated_at': 1738684693, 'refresh_requested_at': None, 'avg_holding_peroid': 160905.5, 'risk': {'token_active': '2', 'token_honeypot': '0', 'token_honeypot_ratio': 0, 'no_buy_hold': '4', 'no_buy_hold_ratio': 0.6666666666666666, 'sell_pass_buy': '0', 'sell_pass_buy_ratio': 0, 'fast_tx': '0', 'fast_tx_ratio': 0}}}, error: 2 validation errors for WalletInfoResponse
+data.total_profit
+  Input should be a valid number, unable to parse string as a number [type=float_parsing, input_value='39487.30086700129-2337.2737484293076644525772', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.10/v/float_parsing
+data.total_profit_pnl
+  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.10/v/float_type
+2025-02-05 13:01:02 - GMGN_Client_v2 - ERROR - Validation failed for response: {'code': 0, 'msg': 'success', 'data': {'twitter_bind': False, 'twitter_fans_num': 0, 'twitter_username': None, 'twitter_name': None, 'ens': None, 'avatar': None, 'name': None, 'eth_balance': '1.04548499500000000000', 'sol_balance': '1.04548499500000000000', 'trx_balance': '1.04548499500000000000', 'balance': '1.04548499500000000000', 'total_value': 1514.4334726745508, 'unrealized_profit': '-1391.1890220092969435154517824', 'unrealized_pnl': -0.40776767547534043, 'realized_profit': 124.07696355401964, 'pnl': 1.04811107577778, 'pnl_1d': 0, 'pnl_7d': 1.04811107577778, 'pnl_30d': 0.8741629564228625, 'realized_profit_1d': 0, 'realized_profit_7d': 51.98578530304, 'realized_profit_30d': 124.07696355401964, 'winrate': 1, 'all_pnl': 1.3721552141375166, 'total_profit': '575.8868281069869-1391.1890220092969435154517824', 'total_profit_pnl': None, 'buy_1d': 0, 'sell_1d': 0, 'buy_30d': 34, 'sell_30d': 16, 'buy_7d': 1, 'sell_7d': 1, 'buy': 1, 'sell': 1, 'history_bought_cost': 199.17505, 'token_avg_cost': 99.587525, 'token_sold_avg_profit': 0.12003182937667974, 'token_num': 2, 'profit_num': 2, 'pnl_lt_minus_dot5_num': 0, 'pnl_minus_dot5_0x_num': 0, 'pnl_lt_2x_num': 2, 'pnl_2x_5x_num': 0, 'pnl_gt_5x_num': 0, 'last_active_timestamp': 1738360602, 'tags': ['bullx'], 'tag_rank': {'bullx': None}, 'followers_count': 0, 'is_contract': False, 'updated_at': 1738684919, 'refresh_requested_at': None, 'avg_holding_peroid': 824951.5, 'risk': {'token_active': '2', 'token_honeypot': '0', 'token_honeypot_ratio': 0, 'no_buy_hold': '2', 'no_buy_hold_ratio': 0.5, 'sell_pass_buy': '0', 'sell_pass_buy_ratio': 0, 'fast_tx': '0', 'fast_tx_ratio': 0}}}, error: 2 validation errors for WalletInfoResponse
+data.total_profit
+  Input should be a valid number, unable to parse string as a number [type=float_parsing, input_value='575.8868281069869-1391.1890220092969435154517824', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.10/v/float_parsing
+data.total_profit_pnl
+  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.10/v/float_type
+2025-02-05 13:01:02 - GMGN_Client_v2 - ERROR - Validation failed for response: {'code': 0, 'msg': 'success', 'data': {'twitter_bind': False, 'twitter_fans_num': 0, 'twitter_username': None, 'twitter_name': None, 'ens': None, 'avatar': None, 'name': None, 'eth_balance': '0.94408517100000000000', 'sol_balance': '0.94408517100000000000', 'trx_balance': '0.94408517100000000000', 'balance': '0.94408517100000000000', 'total_value': 2668.3388792345468, 'unrealized_profit': '-713.5189934337770193597522196', 'unrealized_pnl': -0.0035699996268215065, 'realized_profit': 2402.4951182735554, 'pnl': 0.3520554632969426, 'pnl_1d': 1.6683748474866584, 'pnl_7d': 0.3520554632969426, 'pnl_30d': 0.058444006199707584, 'realized_profit_1d': 16.675018804192586, 'realized_profit_7d': 188.52859402746353, 'realized_profit_30d': 2402.4951182735554, 'winrate': 0.6666666666666666, 'all_pnl': -0.005658003859133871, 'total_profit': '-913.5023780035536-713.5189934337770193597522196', 'total_profit_pnl': None, 'buy_1d': 1, 'sell_1d': 3, 'buy_30d': 145, 'sell_30d': 114, 'buy_7d': 7, 'sell_7d': 20, 'buy': 7, 'sell': 20, 'history_bought_cost': 7540.881564633139, 'token_avg_cost': 628.4067970527616, 'token_sold_avg_profit': 0.21176950598330838, 'token_num': 12, 'profit_num': 7, 'pnl_lt_minus_dot5_num': 2, 'pnl_minus_dot5_0x_num': 3, 'pnl_lt_2x_num': 5, 'pnl_2x_5x_num': 2, 'pnl_gt_5x_num': 0, 'last_active_timestamp': 1738676467, 'tags': [], 'tag_rank': {}, 'followers_count': 0, 'is_contract': False, 'updated_at': 1738676467, 'refresh_requested_at': None, 'avg_holding_peroid': 338587.0909090909, 'risk': {'token_active': '12', 'token_honeypot': '1', 'token_honeypot_ratio': 0.08333333333333333, 'no_buy_hold': '19', 'no_buy_hold_ratio': 0.6129032258064516, 'sell_pass_buy': '2', 'sell_pass_buy_ratio': 0.16666666666666666, 'fast_tx': '0', 'fast_tx_ratio': 0}}}, error: 2 validation errors for WalletInfoResponse
+data.total_profit
+  Input should be a valid number, unable to parse string as a number [type=float_parsing, input_value='-913.5023780035536-713.5189934337770193597522196', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.10/v/float_parsing
+data.total_profit_pnl
+  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.10/v/float_type
+2025-02-05 13:01:02 - GMGN_Client_v2 - ERROR - Validation failed for response: {'code': 0, 'msg': 'success', 'data': {'twitter_bind': False, 'twitter_fans_num': 0, 'twitter_username': None, 'twitter_name': None, 'ens': None, 'avatar': None, 'name': None, 'eth_balance': '0.01701192900000000000', 'sol_balance': '0.01701192900000000000', 'trx_balance': '0.01701192900000000000', 'balance': '0.01701192900000000000', 'total_value': 633.2061097696502, 'unrealized_profit': '13.1456446541050214468250246', 'unrealized_pnl': 0.0017355096168727715, 'realized_profit': 184.55296800006408, 'pnl': -0.3001280330050497, 'pnl_1d': -0.018351559411473227, 'pnl_7d': -0.3001280330050497, 'pnl_30d': 0.039317048618949996, 'realized_profit_1d': -2.4646276281315997, 'realized_profit_7d': -615.3695212421427, 'realized_profit_30d': 184.55296800006408, 'winrate': 0.2222222222222222, 'all_pnl': 0.14396671238323966, 'total_profit': '960.422159681404313.1456446541050214468250246', 'total_profit_pnl': None, 'buy_1d': 11, 'sell_1d': 14, 'buy_30d': 78, 'sell_30d': 95, 'buy_7d': 43, 'sell_7d': 38, 'buy': 43, 'sell': 38, 'history_bought_cost': 2999.6135926270267, 'token_avg_cost': 299.9613592627027, 'token_sold_avg_profit': -61.53695212421427, 'token_num': 10, 'profit_num': 2, 'pnl_lt_minus_dot5_num': 1, 'pnl_minus_dot5_0x_num': 5, 'pnl_lt_2x_num': 4, 'pnl_2x_5x_num': 0, 'pnl_gt_5x_num': 0, 'last_active_timestamp': 1738678892, 'tags': ['gmgn'], 'tag_rank': {'gmgn': None}, 'followers_count': 0, 'is_contract': False, 'updated_at': 1738678892, 'refresh_requested_at': None, 'avg_holding_peroid': 289696.8888888889, 'risk': {'token_active': '18', 'token_honeypot': '0', 'token_honeypot_ratio': 0, 'no_buy_hold': '6', 'no_buy_hold_ratio': 0.25, 'sell_pass_buy': '1', 'sell_pass_buy_ratio': 0.05555555555555555, 'fast_tx': '0', 'fast_tx_ratio': 0}}}, error: 2 validation errors for WalletInfoResponse
+data.total_profit
+  Input should be a valid number, unable to parse string as a number [type=float_parsing, input_value='960.422159681404313.1456446541050214468250246', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.10/v/float_parsing
+data.total_profit_pnl
+  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.10/v/float_type
+2025-02-05 13:01:02 - GMGN_Client_v2 - ERROR - Validation failed for response: {'code': 0, 'msg': 'success', 'data': {'twitter_bind': False, 'twitter_fans_num': 0, 'twitter_username': None, 'twitter_name': None, 'ens': None, 'avatar': None, 'name': None, 'eth_balance': '3.24479410400000000000', 'sol_balance': '3.24479410400000000000', 'trx_balance': '3.24479410400000000000', 'balance': '3.24479410400000000000', 'total_value': 755.452948581805, 'unrealized_profit': '-2073.4816280386071061592896635', 'unrealized_pnl': -0.03515885968628642, 'realized_profit': 1551.2122860168524, 'pnl': -0.25990468937723804, 'pnl_1d': 0.1726774349635176, 'pnl_7d': -0.25990468937723804, 'pnl_30d': 0.05113706348041335, 'realized_profit_1d': 159.2150687134, 'realized_profit_7d': -1894.2739629883724, 'realized_profit_30d': 1551.2122860168524, 'winrate': 0.625, 'all_pnl': -0.0215224762131196, 'total_profit': '-1136.6373247120475-2073.4816280386071061592896635', 'total_profit_pnl': None, 'buy_1d': 6, 'sell_1d': 6, 'buy_30d': 86, 'sell_30d': 137, 'buy_7d': 19, 'sell_7d': 43, 'buy': 19, 'sell': 43, 'history_bought_cost': 1284.700428, 'token_avg_cost': 160.5875535, 'token_sold_avg_profit': -236.78424537354655, 'token_num': 8, 'profit_num': 5, 'pnl_lt_minus_dot5_num': 1, 'pnl_minus_dot5_0x_num': 2, 'pnl_lt_2x_num': 5, 'pnl_2x_5x_num': 0, 'pnl_gt_5x_num': 0, 'last_active_timestamp': 1738651343, 'tags': ['photon'], 'tag_rank': {'photon': None}, 'followers_count': 0, 'is_contract': False, 'updated_at': 1738651343, 'refresh_requested_at': None, 'avg_holding_peroid': 670.5, 'risk': {'token_active': '17', 'token_honeypot': '0', 'token_honeypot_ratio': 0, 'no_buy_hold': '12', 'no_buy_hold_ratio': 0.41379310344827586, 'sell_pass_buy': '0', 'sell_pass_buy_ratio': 0, 'fast_tx': '0', 'fast_tx_ratio': 0}}}, error: 2 validation errors for WalletInfoResponse
+data.total_profit
+  Input should be a valid number, unable to parse string as a number [type=float_parsing, input_value='-1136.6373247120475-2073...16280386071061592896635', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.10/v/float_parsing
+data.total_profit_pnl
+  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.10/v/float_type
+2025-02-05 13:01:02 - GMGN_Client_v2 - ERROR - Validation failed for response: {'code': 0, 'msg': 'success', 'data': {'twitter_bind': False, 'twitter_fans_num': 0, 'twitter_username': None, 'twitter_name': None, 'ens': None, 'avatar': None, 'name': None, 'eth_balance': '0.92508452000000000000', 'sol_balance': '0.92508452000000000000', 'trx_balance': '0.92508452000000000000', 'balance': '0.92508452000000000000', 'total_value': 8617.799645834595, 'unrealized_profit': '-4492.692614608580931017544', 'unrealized_pnl': -0.030277974717878575, 'realized_profit': 13099.134117864129, 'pnl': 0.09348259929972669, 'pnl_1d': -0.07752116942565863, 'pnl_7d': 0.09348259929972669, 'pnl_30d': 0.09498792284856918, 'realized_profit_1d': -2656.306285074476, 'realized_profit_7d': 12778.244567247728, 'realized_profit_30d': 13099.134117864129, 'winrate': 0.5789473684210527, 'all_pnl': 0.09498792284856916, 'total_profit': '13099.134117864129-4492.692614608580931017544', 'total_profit_pnl': None, 'buy_1d': 29, 'sell_1d': 40, 'buy_30d': 147, 'sell_30d': 217, 'buy_7d': 146, 'sell_7d': 216, 'buy': 146, 'sell': 216, 'history_bought_cost': 130685.74269299998, 'token_avg_cost': 6878.196983842104, 'token_sold_avg_profit': 672.5391877498804, 'token_num': 19, 'profit_num': 11, 'pnl_lt_minus_dot5_num': 1, 'pnl_minus_dot5_0x_num': 7, 'pnl_lt_2x_num': 10, 'pnl_2x_5x_num': 1, 'pnl_gt_5x_num': 0, 'last_active_timestamp': 1738703480, 'tags': [], 'tag_rank': {'fresh_wallet': 598}, 'followers_count': 0, 'is_contract': False, 'updated_at': 1738703480, 'refresh_requested_at': None, 'avg_holding_peroid': 40026.94736842105, 'risk': {'token_active': '36', 'token_honeypot': '0', 'token_honeypot_ratio': 0, 'no_buy_hold': '3', 'no_buy_hold_ratio': 0.07692307692307693, 'sell_pass_buy': '0', 'sell_pass_buy_ratio': 0, 'fast_tx': '1', 'fast_tx_ratio': 0.027777777777777776}}}, error: 2 validation errors for WalletInfoResponse
+data.total_profit
+  Input should be a valid number, unable to parse string as a number [type=float_parsing, input_value='13099.134117864129-4492.692614608580931017544', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.10/v/float_parsing
+data.total_profit_pnl
+  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.10/v/float_type
+2025-02-05 13:01:02 - GMGN_Client_v2 - ERROR - Validation failed for response: {'code': 0, 'msg': 'success', 'data': {'twitter_bind': False, 'twitter_fans_num': 0, 'twitter_username': None, 'twitter_name': None, 'ens': None, 'avatar': None, 'name': None, 'eth_balance': '0.09393305700000000000', 'sol_balance': '0.09393305700000000000', 'trx_balance': '0.09393305700000000000', 'balance': '0.09393305700000000000', 'total_value': 1992.095505032771, 'unrealized_profit': '-4014.366426680684176882005', 'unrealized_pnl': -0.036082226691973716, 'realized_profit': -2528.9253150597424, 'pnl': -0.5721165179030854, 'pnl_1d': -0.2823046155671525, 'pnl_7d': -0.5721165179030854, 'pnl_30d': -0.0862234460655823, 'realized_profit_1d': -1256.9884105324406, 'realized_profit_7d': -6698.020082071805, 'realized_profit_30d': -2528.9253150597424, 'winrate': 0.07692307692307693, 'all_pnl': -0.0006828938235332147, 'total_profit': '-68.91218994218453-4014.366426680684176882005', 'total_profit_pnl': None, 'buy_1d': 9, 'sell_1d': 12, 'buy_30d': 109, 'sell_30d': 91, 'buy_7d': 16, 'sell_7d': 25, 'buy': 16, 'sell': 25, 'history_bought_cost': 16974.90978142112, 'token_avg_cost': 1060.93186133882, 'token_sold_avg_profit': -1.0677570320787604, 'token_num': 17, 'profit_num': 4, 'pnl_lt_minus_dot5_num': 10, 'pnl_minus_dot5_0x_num': 2, 'pnl_lt_2x_num': 5, 'pnl_2x_5x_num': 0, 'pnl_gt_5x_num': 0, 'last_active_timestamp': 1738756033, 'tags': [], 'tag_rank': {}, 'followers_count': 0, 'is_contract': False, 'updated_at': 1738756033, 'refresh_requested_at': None, 'avg_holding_peroid': 3726209.5714285714, 'risk': {'token_active': '17', 'token_honeypot': '0', 'token_honeypot_ratio': 0, 'no_buy_hold': '27', 'no_buy_hold_ratio': 0.6136363636363636, 'sell_pass_buy': '8', 'sell_pass_buy_ratio': 0.47058823529411764, 'fast_tx': '1', 'fast_tx_ratio': 0.058823529411764705}}}, error: 2 validation errors for WalletInfoResponse
+data.total_profit
+  Input should be a valid number, unable to parse string as a number [type=float_parsing, input_value='-68.91218994218453-4014.366426680684176882005', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.10/v/float_parsing
+data.total_profit_pnl
+  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.10/v/float_type
+2025-02-05 13:01:02 - GMGN_Client_v2 - ERROR - Validation failed for response: {'code': 0, 'msg': 'success', 'data': {'twitter_bind': False, 'twitter_fans_num': 0, 'twitter_username': None, 'twitter_name': None, 'ens': None, 'avatar': None, 'name': None, 'eth_balance': '11.16122916800000000000', 'sol_balance': '11.16122916800000000000', 'trx_balance': '11.16122916800000000000', 'balance': '11.16122916800000000000', 'total_value': 6552.561984112264, 'unrealized_profit': '67.9362017484976761760513', 'unrealized_pnl': 0.00019725216995863094, 'realized_profit': 29560.135237113947, 'pnl': 0.24654050705975644, 'pnl_1d': 0.4984735319584038, 'pnl_7d': 0.24654050705975644, 'pnl_30d': 0.49415613225892185, 'realized_profit_1d': 1779.2727287173248, 'realized_profit_7d': 4314.370256027774, 'realized_profit_30d': 29560.135237113947, 'winrate': 0.7741935483870968, 'all_pnl': 0.20632508560502888, 'total_profit': '70728.7943923482867.9362017484976761760513', 'total_profit_pnl': None, 'buy_1d': 14, 'sell_1d': 21, 'buy_30d': 156, 'sell_30d': 238, 'buy_7d': 38, 'sell_7d': 52, 'buy': 38, 'sell': 52, 'history_bought_cost': 17364.829178449734, 'token_avg_cost': 542.6509118265542, 'token_sold_avg_profit': 134.82407050086795, 'token_num': 32, 'profit_num': 24, 'pnl_lt_minus_dot5_num': 1, 'pnl_minus_dot5_0x_num': 7, 'pnl_lt_2x_num': 23, 'pnl_2x_5x_num': 1, 'pnl_gt_5x_num': 0, 'last_active_timestamp': 1738742475, 'tags': [], 'tag_rank': {}, 'followers_count': 0, 'is_contract': False, 'updated_at': 1738742475, 'refresh_requested_at': None, 'avg_holding_peroid': 2255.34375, 'risk': {'token_active': '27', 'token_honeypot': '0', 'token_honeypot_ratio': 0, 'no_buy_hold': '557', 'no_buy_hold_ratio': 0.9537671232876712, 'sell_pass_buy': '0', 'sell_pass_buy_ratio': 0, 'fast_tx': '7', 'fast_tx_ratio': 0.25925925925925924}}}, error: 2 validation errors for WalletInfoResponse
+data.total_profit
+  Input should be a valid number, unable to parse string as a number [type=float_parsing, input_value='70728.7943923482867.9362017484976761760513', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.10/v/float_parsing
+data.total_profit_pnl
+  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.10/v/float_type
+2025-02-05 13:01:02 - GMGN_Client_v2 - ERROR - Validation failed for response: {'code': 0, 'msg': 'success', 'data': {'twitter_bind': False, 'twitter_fans_num': 0, 'twitter_username': None, 'twitter_name': None, 'ens': None, 'avatar': None, 'name': None, 'eth_balance': '4.84547203700000000000', 'sol_balance': '4.84547203700000000000', 'trx_balance': '4.84547203700000000000', 'balance': '4.84547203700000000000', 'total_value': 6708.671180205679, 'unrealized_profit': '-1860.088786622430987321034626', 'unrealized_pnl': -0.011148506065090677, 'realized_profit': 12611.22816426782, 'pnl': -0.1737994333559974, 'pnl_1d': -0.28526112410612947, 'pnl_7d': -0.1737994333559974, 'pnl_30d': 0.42887213430410553, 'realized_profit_1d': -301.13107901205, 'realized_profit_7d': -283.74462118237, 'realized_profit_30d': 12611.22816426782, 'winrate': 0.375, 'all_pnl': 0.24789833592293395, 'total_profit': '38025.04199432032-1860.088786622430987321034626', 'total_profit_pnl': None, 'buy_1d': 15, 'sell_1d': 8, 'buy_30d': 80, 'sell_30d': 66, 'buy_7d': 24, 'sell_7d': 13, 'buy': 24, 'sell': 13, 'history_bought_cost': 9289.03317988654, 'token_avg_cost': 844.4575618078674, 'token_sold_avg_profit': -25.794965562033635, 'token_num': 11, 'profit_num': 3, 'pnl_lt_minus_dot5_num': 2, 'pnl_minus_dot5_0x_num': 5, 'pnl_lt_2x_num': 4, 'pnl_2x_5x_num': 0, 'pnl_gt_5x_num': 0, 'last_active_timestamp': 1738594758, 'tags': ['bluechip_owner'], 'tag_rank': {'bluechip_owner': None}, 'followers_count': 0, 'is_contract': False, 'updated_at': 1738594758, 'refresh_requested_at': None, 'avg_holding_peroid': 1026209.9090909091, 'risk': {'token_active': '10', 'token_honeypot': '0', 'token_honeypot_ratio': 0, 'no_buy_hold': '2', 'no_buy_hold_ratio': 0.16666666666666666, 'sell_pass_buy': '0', 'sell_pass_buy_ratio': 0, 'fast_tx': '0', 'fast_tx_ratio': 0}}}, error: 2 validation errors for WalletInfoResponse
+data.total_profit
+  Input should be a valid number, unable to parse string as a number [type=float_parsing, input_value='38025.04199432032-1860.088786622430987321034626', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.10/v/float_parsing
+data.total_profit_pnl
+  Input should be a valid number [type=float_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.10/v/float_type
+2025-02-05 13:01:02 - SolanaWalletScanner - INFO - Failed to fetch data for wallet: 6VBWNKezNFrVz9jCh5qrUXz8ZoySLEZvpyBHLqF9R28Y
+2025-02-05 13:01:02 - SolanaWalletScanner - INFO - Failed to fetch data for wallet: FW2PJkHDm9HpVcnR2MKbP2urd8u2buJQkQWogxnw7Fja
+2025-02-05 13:01:02 - SolanaWalletScanner - INFO - Failed to fetch data for wallet: FDiVPpzjfbwxvjjqUSVrqFcCS7CG8aY9WWnxSsMWuj5W
+2025-02-05 13:01:02 - SolanaWalletScanner - INFO - Fetched data for wallet: Gvp8oQCJh9iwyDAjW7tSt9J5FismTmBctiBf8xDX6wg8
+2025-02-05 13:01:02 - SolanaWalletScanner - INFO - Failed to fetch data for wallet: HEmg53AvjtCejY3NgqhF3dff5uJQPaLPiHU8GsJU7WzG
+2025-02-05 13:01:02 - SolanaWalletScanner - INFO - Fetched data for wallet: 5sc5JnefFVyu9AVYHzXNmEBZPXU9Lhq6LhWR5cm9JgoM
+2025-02-05 13:01:02 - SolanaWalletScanner - INFO - Fetched data for wallet: 7ACBAs2CmUbsNDEAWMsc46XcBzDjRTbTJzmAzK5tuy2s
+2025-02-05 13:01:02 - SolanaWalletScanner - INFO - Failed to fetch data for wallet: 8i5x6j11u7K1mJVrgCqpMj6R5Sv6TZUxvhgLoZAzzVpi
+2025-02-05 13:01:02 - SolanaWalletScanner - INFO - Failed to fetch data for wallet: 4B6i3z4aAGWwwixdUJb92Kxkd3PgcHbUrt2Zi7LP1ndK
+2025-02-05 13:01:02 - SolanaWalletScanner - INFO - Failed to fetch data for wallet: HighDYcKVXpYJdukBXNdHZ8Kb5qZnR8Hn6aYuWS1SSnu
+2025-02-05 13:01:02 - SolanaWalletScanner - INFO - Failed to fetch data for wallet: 3E5QmNWkXHixHJKtsgahc4L1WR2sWQ44Ayd4iorVZZfN
+2025-02-05 13:01:02 - SolanaWalletScanner - INFO - Fetched data for wallet: D9A1wCMf2QNfFWThBPaPXFb3m1AzaqNUrzBvZKKL6Cp4
+2025-02-05 13:01:02 - SolanaWalletScanner - INFO - Failed to fetch data for wallet: 9Sv7Jj5Mu4F8hfevURdrPvA3CLjuuMpXBisoesrLvKEv
+2025-02-05 13:01:02 - SolanaWalletScanner - INFO - Failed to fetch data for wallet: CjWX6z2ujwCEWX1b3NV5xTDWfqvUfWJRUzJ2zj2rwLfk
+2025-02-05 13:01:02 - SolanaWalletScanner - INFO - Fetched data for wallet: 6LJfRoevujggKxNRMsb9f8PfhcjujRshzXwgG7HbmaTm
+2025-02-05 13:01:02 - SolanaWalletScanner - INFO - Failed to fetch data for wallet: 6n8qjrofokMVKk6mMWuSxfYrehR9jS6mrnJ5NFq8iyqj
+2025-02-05 13:01:02 - SolanaWalletScanner - INFO - Scanned 5
+2025-02-05 13:01:02 - WalletWave - INFO - Exporting plugin results..
+2025-02-05 13:01:02 - WalletWave - INFO - Exporting wallet data...
+2025-02-05 13:01:02 - FileUtils - INFO - Exporting 5 entries to csv format.
+2025-02-05 13:01:02 - FileUtils - INFO - Data exported successfully to data\wallet_list_20250205_130102.csv
+2025-02-05 13:01:02 - WalletWave - INFO - Finalizing plugin...
+2025-02-05 13:01:02 - SolanaWalletScanner - INFO - Solana Wallet Scanner finalized

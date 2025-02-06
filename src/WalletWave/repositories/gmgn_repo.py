@@ -1,19 +1,23 @@
-from WalletWave.utils.gmgn_client.schemas import WalletsResponse, WalletInfoResponse
-from WalletWave.utils.gmgn_client.client import Gmgn
-from WalletWave.utils.gmgn_client.utils.gmgn_endpoints import GmgnEndpoints
+from typing import List, Union
 
-from datetime import datetime
+from WalletWave.models.wallet_info import WalletInfoResponse
+from WalletWave.models.wallets import WalletsResponse
+# from WalletWave.services.gmgn_client.client import Gmgn
+from WalletWave.services.gmgn_client.client_v2 import Gmgn
+from WalletWave.services.gmgn_client.utils.gmgn_endpoints import GmgnEndpoints
+from WalletWave.utils.logging_utils import get_logger
+
 
 class GmgnRepo:
     def __init__(self):
         """
         Initializes the GmgnRepo object.
         """
+        self.logger = get_logger("GmgnRepo")
         self.client = Gmgn()
         self.endpoint = GmgnEndpoints
 
-
-    def get_trending_wallets(self, timeframe: str, wallet_tag: str, order: str = "desc") -> WalletsResponse:
+    async def get_trending_wallets(self, timeframe: str, wallet_tag: str, order: str = "desc") -> WalletsResponse:
         """
         Fetches trending wallets for a given timeframe and wallet tag.
 
@@ -42,43 +46,75 @@ class GmgnRepo:
 
         # Build the endpoint URL
         url = self.endpoint.get_url(self.endpoint.TRENDING_WALLETS, timeframe=timeframe)
-        
-        # Make the request
-        response = self.client.make_request(url, params=params)
 
-        return WalletsResponse.model_validate(response)
+        self.client.queue_request(url, params)
 
-    def get_token_info(self, contract_address: str) -> dict:
+        try:
+            # Make the request
+            response = await self.client.execute_requests()
+            if not response or response[0] is None:
+                self.logger.warning("Response returned empty or None for trending wallets.")
+                return WalletsResponse(code=0, msg="Empty Response", data={"rank": []})
+
+            return WalletsResponse.model_validate(response[0])
+        except Exception as e:
+            self.logger.error(f"Error in get_trending_wallets: {e}", exc_info=True)
+            return WalletsResponse(code=0, msg="Empty Response", data={"rank": []})
+
+    async def get_token_info(self, contract_address: str) -> dict:
         if not contract_address:
             raise ValueError("Must provide a contract address")
         url = self.endpoint.get_url(self.endpoint.TOKEN_INFO, contract_address=contract_address)
+        # Queue the request
+        return self.client.queue_request(url)
 
-        #make request
-        return self.client.make_request(url)
-
-    def get_wallet_info(self, wallet_address: str, timeout: int = 0, period: str = "7d") -> WalletInfoResponse:
+    async def get_wallet_info(
+            self,
+            wallet_address: Union[str, List[str]],
+            timeout: int = 0,
+            period: str = "7d") -> List[Union[WalletInfoResponse, None]]: # Returns a list where each element can be a WalletInfoResponse or None
+        # todo: document that lists of wallets can now be sent to get_wallet_info
+        # todo: document that returning it as a list will keep return type consistent. plugin developers don't need to worry about str or list, it will always be a list
         valid_periods = ["7d", "30d"]
         if not wallet_address:
             raise ValueError("Must provide a wallet address")
         if period not in valid_periods:
             raise ValueError(f"Invalid period: {period}")
 
+        # convert wallet_address to list
+        if isinstance(wallet_address, str):
+            wallet_address = [wallet_address]
+
         params = {"period": period}
 
-        # build the endpoint url
-        #url = self.endpoint.get_url(self.endpoint.WALLET_INFO, wallet_address=wallet_address)
-        
-        # Easier 
-        url = f"https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/{wallet_address}"
-        
-        #make request
-        response = self.client.make_request(url, timeout, params)
-        print(f"Request was made at {datetime.now()}")
-        return WalletInfoResponse.model_validate(response)
+        # Easier
+        for wallet in wallet_address:
+            url = f"https://gmgn.ai/defi/quotation/v1/smartmoney/sol/walletNew/{wallet}"
+            # Append the request to later on parallelize it
+            self.client.queue_request(url, params, timeout)
+
+        # Returns 
+        return self._validate_wallet_info(
+            await self.client.execute_requests()
+        )
+
+    def _validate_wallet_info(self, response: List[dict]) -> list:
+        # todo add docstring
+        # todo maybe switch to pandas for better data manipulation?
+        results = []
+        for r in response:
+            if r:
+                try:
+                    validated = WalletInfoResponse.model_validate(r)
+                    results.append(validated)
+                except Exception as e:
+                    # Log failure for this wallet.
+                    self.client.logger.error(f"Validation failed for response: {r}, error: {e}")
+                    results.append(None)
+            else:
+                results.append(None)
+        return results
+
 
 if __name__ == "__main__":
-    repo = GmgnRepo()
-    test = repo.get_trending_wallets("7d", "smart_degen")
-
-    for wallet in test.rank:
-        print(f"Address: {wallet.wallet_address}")
+    pass

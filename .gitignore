@@ -7,3 +7,5 @@ __pycache__/
 *.pyc
 /src/WalletWave/logs/
 *.egg-info
+/build/
+*.csv

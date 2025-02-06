@@ -1,12 +1,11 @@
-import time
 from typing import List
 
+from WalletWave.config import ConfigManager
 from WalletWave.plugins.utils.plugin_interface import PluginInterface
 from WalletWave.repositories.gmgn_repo import GmgnRepo
-from WalletWave.utils.logging_utils import get_logger
-from WalletWave.config import ConfigManager
-
 from WalletWave.utils.config_validators import *
+from WalletWave.utils.logging_utils import get_logger
+
 
 # Author: LetsStartWithPurple
 # Version: 2.0.0
@@ -41,10 +40,10 @@ class TopWallets(PluginInterface):
     def get_version(self) -> str:
         return "2.0.0"
 
-    def initialize(self) -> None:
+    async def initialize(self) -> None:
         self.logger.info("TopWallets plugin initialized.")
 
-    def execute(self) -> any:
+    async def execute(self) -> any:
         """
         Execute the plugin
         """
@@ -57,58 +56,50 @@ class TopWallets(PluginInterface):
             wallet_tag = "smart_degen"
             self.logger.warning(f"Falling back to default values: timeframe={timeframe}, wallet_tag={wallet_tag}")
 
-        filtered_wallets = []
         try:
             # Step 1: Get the top wallets
             self.logger.debug(f"Fetching top wallets with params: timeframe={timeframe}, wallet_tag={wallet_tag}")
-            top_wallets = self.get_top_wallets(timeframe=timeframe, wallet_tag=wallet_tag)
-            if not top_wallets:
+            top_wallets_response = await self.get_top_wallets(timeframe=timeframe, wallet_tag=wallet_tag)
+            if not top_wallets_response:
                 self.logger.error("No top wallets found.")
                 return []
 
-            self.logger.debug(f"Found {len(top_wallets)} top wallets to analyze")
+            self.logger.debug(f"Found {len(top_wallets_response)} top wallets to analyze")
 
-            wallet_tuples = []
+            # Collect top wallets
+            wallet_addresses = [wallet.wallet_address for wallet in top_wallets_response]
 
             # Step 2: Analyze each wallet activity
-            for wallet in top_wallets:
-                wallet_address = wallet.wallet_address
-                self.logger.debug(f"Analyzing wallet: {wallet_address}")
-                wallet_activity = self.analyze_wallet_activity(wallet_address, period=timeframe)
+            wallet_information = await self.gmgn.get_wallet_info(wallet_addresses, period=timeframe)
 
-                if not wallet_activity:
-                    self.logger.warning(
-                        f"Skipping wallet {wallet_address} due to empty or invalid data: {wallet_activity}"
-                    )
+            wallet_tuples = []
+            for wallet_info, wallet_address in zip(wallet_information, wallet_addresses):
+                if not wallet_info:
+                    self.logger.warning(f"Skipping wallet {wallet_address} due to empty or invalid data")
                     continue
 
-                # log wallet info
-                self.logger.info(wallet_activity.to_summary(
-                    wallet_address, summary_func=custom_summary)
-                )
-
-                # create a tuple that combines the activity and wallet address
-                # wallet activity endpoint does not return the wallet address so we will combine it here
-                wallet_tuples.append((wallet_activity, wallet_address))
+                # log wallet info summary (changed to debug so there is less spam in the CLI)
+                self.logger.debug(wallet_info.to_summary(wallet_address, summary_func=custom_summary))
+                wallet_tuples.append((wallet_info, wallet_address))
 
             # Step 3: Filter wallets by winrate
-            filtered_wallets = self.filter_by_winrate(wallet_tuples)
+            filtered_wallets = await self.filter_by_winrate(wallet_tuples)
 
             # log the result
             self.logger.info(f"Filtered {len(filtered_wallets)} wallets.")
 
-            time.sleep(1) #rate limiter
+            # rate limiter
             return filtered_wallets
 
         except Exception as e:
             self.logger.critical(f"Error running plugin: {e}", exc_info=True)
-            return filtered_wallets
+            return []
 
-    def finalize(self) -> None:
+    async def finalize(self) -> None:
         self.logger.info("TopWallets plugin finalized")
 
     #custom function
-    def analyze_wallet_activity(self, wallet_address, period="7d"):
+    async def analyze_wallet_activity(self, wallet_address, period="7d"):
         """
         Analyze recent trading activity of a wallet using the getWalletInfo endpoint.
 
@@ -118,13 +109,13 @@ class TopWallets(PluginInterface):
         """
         self.logger.debug(f"Analyzing wallet {wallet_address} for period {period}")
         try:
-            response = self.gmgn.get_wallet_info(wallet_address=wallet_address, period=period)
-            return response
+            response = await self.gmgn.get_wallet_info(wallet_address=wallet_address, period=period)
+            return response if response else None
         except Exception as e:
             self.logger.error(f"Error analyzing: {e}")
 
-    #custom function
-    def get_top_wallets(self, timeframe="7d", wallet_tag="smart_degen"):
+    # Custom Function
+    async def get_top_wallets(self, timeframe="7d", wallet_tag="smart_degen"):
         """
         Fetch top performing wallets using the getTrendingWallets endpoint.
 
@@ -134,13 +125,13 @@ class TopWallets(PluginInterface):
         """
         self.logger.debug(f"Fetching trending wallets: timeframe={timeframe}, tag={wallet_tag}")
         try:
-            response = self.gmgn.get_trending_wallets(timeframe, wallet_tag)
-            return response.rank
+            response = await self.gmgn.get_trending_wallets(timeframe, wallet_tag)
+            return response.rank if response else []
         except Exception as e:
             self.logger.error(f"Error fetching top wallets: {e}")
 
     # custom function
-    def filter_by_winrate(self, wallet_tuples: List[tuple]) -> List[dict]:
+    async def filter_by_winrate(self, wallet_tuples: List[tuple]) -> List[dict]:
         """
         Filters wallets based on win rate and converts the result to a list of dictionaries.
 

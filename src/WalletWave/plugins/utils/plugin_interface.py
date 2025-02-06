@@ -39,7 +39,7 @@ class PluginInterface(ABC):
         pass
 
     @abstractmethod
-    def initialize(self) -> None:
+    async def initialize(self) -> None:
         """
         Called once to initialize the plugin with the given configuration.
         Plugins should fetch their configuration directly from the ConfigManager.
@@ -47,7 +47,7 @@ class PluginInterface(ABC):
         pass
 
     @abstractmethod
-    def execute(self) -> List[Union[Dict, Any]]:
+    async def execute(self) -> List[Union[Dict, Any]]:
         """
         Executes the plugin's main functionality.
         Plugins should handle all logic internally and return the processes data
@@ -56,7 +56,7 @@ class PluginInterface(ABC):
         pass
 
     @abstractmethod
-    def finalize(self) -> None:
+    async def finalize(self) -> None:
         """
         Called when the plugin is being unloaded to clean up resources.
         """

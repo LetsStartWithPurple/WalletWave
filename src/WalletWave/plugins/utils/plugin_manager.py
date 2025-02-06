@@ -1,7 +1,6 @@
 import importlib
-import logging
-import os
 import inspect
+import os
 from pathlib import Path
 
 from WalletWave.plugins.utils.plugin_interface import PluginInterface
@@ -13,7 +12,7 @@ class PluginManager:
     Manages plugins: loading, selecting, and executing them.
     """
 
-    def __init__(self, plugin_directory: str = None, config_manager=None):
+    def __init__(self, config_manager=None):
         """
         Initialize the plugin manager with the directory containing plugins.
         """
@@ -21,8 +20,8 @@ class PluginManager:
 
         root = Path(__file__).resolve().parent.parent
 
-        self.plugin_directory = root / "WalletWave" / "plugins"
-        self.debug_logger = get_logger(f"Pluggins path is {self.plugin_directory}")
+        self.plugin_directory = root
+        self.debug_logger = get_logger(f"Plugins path is {self.plugin_directory}")
         self.config_manager = config_manager
         self.plugins = []
 
