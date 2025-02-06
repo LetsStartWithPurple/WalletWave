@@ -1,10 +1,10 @@
 from typing import List, Union
 
-from WalletWave.models.wallet_info import WalletInfoResponse
-from WalletWave.models.wallets import WalletsResponse
+from WalletWave.api.models.gmgn.wallet_info import WalletInfoResponse
+from WalletWave.api.models.gmgn.wallets import WalletsResponse
 # from WalletWave.services.gmgn_client.client import Gmgn
-from WalletWave.services.gmgn_client.client_v2 import Gmgn
-from WalletWave.services.gmgn_client.utils.gmgn_endpoints import GmgnEndpoints
+from WalletWave.api.clients.client_v2 import Gmgn
+from WalletWave.api.endpoints.gmgn_endpoints import GmgnEndpoints
 from WalletWave.utils.logging_utils import get_logger
 
 
