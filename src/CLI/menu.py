@@ -11,7 +11,7 @@ def menu(config_manager):
     while True:
         print("\n1. List Plugins")
         print("2. Run Plugin")
-        print("0. Exit")
+        print("0. Exit\n")
 
         try:
             choice = int(input("Enter your choice: "))

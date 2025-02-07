@@ -2,6 +2,7 @@ from typing import List, Union
 
 from WalletWave.api.models.gmgn.wallet_info import WalletInfoResponse
 from WalletWave.api.models.gmgn.wallets import WalletsResponse
+from WalletWave.api.models.gmgn.early_buyers import EarlyBuyersResponse
 # from WalletWave.services.gmgn_client.client import Gmgn
 from WalletWave.api.clients.client_v2 import Gmgn
 from WalletWave.api.endpoints.gmgn_endpoints import GmgnEndpoints
@@ -48,14 +49,15 @@ class GmgnRepo:
         try:
             # Make the request
             response = await self.client.execute_requests()
+            print(response)
             if not response or response[0] is None:
                 self.logger.warning("Response returned empty or None for early buyers.")
-                return WalletsResponse(code=0, msg="Empty Response", data={"rank": []})
+                return EarlyBuyersResponse(code=0, msg="Empty Response", data={"rank": []})
 
-            return WalletsResponse.model_validate(response[0])
+            return EarlyBuyersResponse.model_validate(response[0])
         except Exception as e:
             self.logger.error(f"Error in get_early_buyers: {e}", exc_info=True)
-            return WalletsResponse(code=0, msg="Empty Response", data={"rank": []})
+            return EarlyBuyersResponse(code=0, msg="Empty Response", data={"rank": []})
 
     async def get_trending_wallets(self, timeframe: str, wallet_tag: str, order: str = "desc") -> WalletsResponse:
         """

@@ -2,7 +2,6 @@ from typing import List
 from WalletWave.config import ConfigManager
 from WalletWave.plugins.utils.plugin_interface import PluginInterface
 from WalletWave.repositories.gmgn_repo import GmgnRepo
-from WalletWave.utils.config_validators import *
 from WalletWave.utils.logging_utils import get_logger
 
 
@@ -73,6 +72,9 @@ class EarlyBuyers(PluginInterface):
     def get_version(self) -> str:
         return "1.0.0"
 
+    async def initialize(self) -> None:
+        self.logger.info("Early Buyers plugin initialized.")
+
     async def execute(self) -> list:
         """
         Execute the plugin
@@ -112,3 +114,5 @@ class EarlyBuyers(PluginInterface):
     # 3. Analyze the data?
     # 4. Put it together
     # 5. Write it to output file
+    async def finalize(self) -> None:
+        self.logger.info("Solana Wallet Scanner finalized")

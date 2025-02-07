@@ -37,7 +37,7 @@ class PluginManager:
             if file.endswith(".py") and file != "__init__.py":
                 module_name = file[:-3]  # Remove the .py extension
                 try:
-                    #Dynamically import the plugin
+                    # Dynamically import the plugin
                     module = importlib.import_module(f"WalletWave.plugins.{module_name}")
                     for _, obj in inspect.getmembers(module, inspect.isclass):
                         if issubclass(obj, PluginInterface) and obj is not PluginInterface:
