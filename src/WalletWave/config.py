@@ -4,7 +4,7 @@ import os
 import yaml
 from yaml import YAMLError
 
-from WalletWave.utils.config_validators import *
+from WalletWave.utils.settings.program_settings_model import ProgramSettings
 from WalletWave.utils.logging_utils import get_logger
 
 
@@ -47,29 +47,31 @@ class ConfigManager:
             return {}
 
 
-    def _merge_configurations(self):
+    def _merge_configurations(self) -> ProgramSettings:
         """
         Config file and command-line arguments merger
 
         Command line args take precedence over config file settings
 
-        :return: A dictionary containing the final merged configuration
-
-
+        :return: ProgramSettings basemodel with either the settings from user stored in it or default values
         """
         program_settings = self._config_data.get("program_settings", {})
-        return {
-            "export_path": validate_path(
-                self._args.export_path if self._args and self._args.export_path else program_settings.get("export_path", "data")
-            ),
-            "export_format": validate_export_format(
-                self._args.export_format if self._args and self._args.export_format else program_settings.get("export_format", "csv")
-            ),
-            "export_enabled": validate_export_enabled(
-              program_settings.get("export_enabled", True) #defaults to True
-            ),
-            "logging_level": program_settings.get("logging_level", "INFO")
-        }
+
+        if program_settings:
+            settings = {
+                "export_path": self._args.export_path if self._args and self._args.export_path
+                else program_settings.get("export_path", "data"),
+                "export_format": self._args.export_format if self._args and self._args.export_format
+                else program_settings.get("export_format", "csv"),
+                "export_enabled": self._args.export_enabled if self._args and self._args.export_enabled
+                else program_settings.get("export_enabled", True), #defaults to True
+                "logging_level": program_settings.get("logging_level", "INFO"),
+            }
+            return ProgramSettings.model_validate(settings)
+        else:
+            self.logger.warning("No configuration settings found. Using default settings...")
+            defaults = ProgramSettings()
+            return defaults.model_dump()
 
     def _load_plugin_settings(self):
         """
@@ -121,43 +123,32 @@ class ConfigManager:
         self.logger.warning(f"No plugin settings with {name} found, proceeding without plugin settings")
         return {}
 
-
     # --- CONFIGURATION PROPERTIES ---
 
     @property
     def export_path(self):
         """ Return the export path setting. """
-        return self._final_config["export_path"]
+        return self._final_config.path
 
     @export_path.setter
     def export_path(self, new_path):
         """ Set and validate a new export path """
-        self._final_config["export_path"] = validate_path(new_path)
-
-    @property
-    def verbose(self):
-        """ Return the verbose setting (logging level) """
-        return self._final_config["verbose"]
-
-    @verbose.setter
-    def verbose(self, verbose):
-        """ Set and validate the verbose mode setting """
-        self._final_config["verbose"] = validate_verbose(verbose)
+        self._final_config = self._final_config.model_copy(update={"export_path": new_path})
 
     @property
     def export_format(self):
         """ Return the export format setting. """
-        return self._final_config["export_format"]
+        return self._final_config.export_format
 
     @export_format.setter
     def export_format(self, export_format):
         """ Set and validate a new export format"""
-        self._final_config["export_format"] = validate_export_format(export_format)
+        self._final_config = self._final_config.model_copy(update={"export_format": export_format})
 
     @property
     def export_enabled(self):
         """ Return whether exporting is enabled. """
-        return self._final_config["export_enabled"]
+        return self._final_config.export_enabled
 
     @property
     def config(self):
@@ -172,8 +163,8 @@ def parse_args():
     parser = argparse.ArgumentParser(description="Smart Money Follower Configuration")
     parser.add_argument("--config", type=str, default=default_config_path, help="Path to the config file")
     parser.add_argument("--export_path", type=str, help="Path to export files")
-    parser.add_argument("-v", "--verbose", action="store_true", help="Enable debug logging")
     parser.add_argument("--export-format", type=str, choices=["csv", "txt"], help="Export format (csv or txt)")
+    parser.add_argument("--export_enabled", type=bool, default=True, help="Enable or Disable exporting data")
     return parser.parse_args()
 
 if __name__ == "__main__":

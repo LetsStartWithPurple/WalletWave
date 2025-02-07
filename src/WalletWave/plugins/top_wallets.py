@@ -3,7 +3,6 @@ from typing import List
 from WalletWave.config import ConfigManager
 from WalletWave.plugins.utils.plugin_interface import PluginInterface
 from WalletWave.repositories.gmgn_repo import GmgnRepo
-from WalletWave.utils.config_validators import *
 from WalletWave.utils.logging_utils import get_logger
 
 
