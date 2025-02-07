@@ -100,7 +100,10 @@ source .venv/bin/activate
 ```bash
 walletwave 
 ```
- ---  
+
+#### Preview Linux Install
+
+![Linux Install](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExc3d2bXVyeHFjMXBnYTVhZ2RscTVqZWY4bm1kaG93cHh6eW5ndmY4MSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Bbw9TR9Ymo7cYDRcEL/giphy.gif)
 
 # Plugin Development  
 > See [Plugin Development Wiki](https://github.com/LetsStartWithPurple/WalletWave/wiki/2.-Plugin-Development) 
