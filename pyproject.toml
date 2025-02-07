@@ -1,6 +1,6 @@
 [project]
 name='WalletWave'
-version='2.1.2'
+version='2.2.0'
 description='CLI program to analyze SOLANA wallets for copy trading'
 authors = [
     {name = "LetsStartWithPurple", email = "LetsStartWithPurple@gmail.com"},
