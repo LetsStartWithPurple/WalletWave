@@ -64,12 +64,13 @@ class SolanaWalletScanner(PluginInterface):
 
             except ValueError:
                 self.logger.info(f"'{user_input}' is invalid. Please enter a number 0 or greater")
+
         await self.gmgn.client.configure_parallel_requests()
+
         # Step 2 execute the plugin
         wallet_data = []
         self.logger.info("Executing Solana Wallet Scanner...")
 
-        # Todo: Check why sometimes wallet_info is empty.. which makes .to_summary() fail
         wallet_info = await self.gmgn.get_wallet_info(self.wallets, timeout, period=self.timeframe)
 
         for wallet, info in zip(self.wallets, wallet_info):

@@ -33,3 +33,6 @@ plugin_settings:
 
   SolanaWalletScanner:
     timeframe: "7d"
+
+  TokenEarlyBuyers:
+    limit: 50

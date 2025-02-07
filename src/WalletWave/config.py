@@ -46,7 +46,6 @@ class ConfigManager:
             self.logger.error(f"Failed to parse YAML in config file '{self._config_path}': {e}")
             return {}
 
-
     def _merge_configurations(self):
         """
         Config file and command-line arguments merger
@@ -54,8 +53,6 @@ class ConfigManager:
         Command line args take precedence over config file settings
 
         :return: A dictionary containing the final merged configuration
-
-
         """
         program_settings = self._config_data.get("program_settings", {})
         return {
@@ -66,7 +63,7 @@ class ConfigManager:
                 self._args.export_format if self._args and self._args.export_format else program_settings.get("export_format", "csv")
             ),
             "export_enabled": validate_export_enabled(
-              program_settings.get("export_enabled", True) #defaults to True
+              program_settings.get("export_enabled", True) # Defaults to True
             ),
             "logging_level": program_settings.get("logging_level", "INFO")
         }
@@ -189,7 +186,7 @@ if __name__ == "__main__":
     print(f"Export Path: {config_manager.export_path}")
     print(f"Export Format: {config_manager.export_format}")
 
-    #plugin settings
+    # plugin settings
     # get via attributes
     plugin_settings = config_manager.TopWallets
     print(plugin_settings.get("timeframe"))

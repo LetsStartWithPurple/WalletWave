@@ -17,6 +17,46 @@ class GmgnRepo:
         self.client = Gmgn()
         self.endpoint = GmgnEndpoints
 
+    async def get_early_buyers(self, token_address: str, limit: int = 50):
+        """
+        Todo: Add Validation for returned data?
+        Fetches the early buyers of a token
+
+        Args:
+            token_address (str): The token's contract address (CA from now on) of which we want to retrieve the early buyers
+            limit: How many wallet addresses (buyers) we want to retrieve. Will be 50 by default
+
+        Returns:
+            WalletsResponse: The response from the GMGN API containing trending wallet data.
+
+        Raises:
+            ValueError: If the provided CA or limit is invalid.
+        """
+        valid_limits = [50, 100, 150, 200]
+        if limit not in valid_limits or not isinstance(token_address, str):
+            raise ValueError("Invalid limit or token_address")
+
+        params = {
+            "limit": limit,
+            "revert": "true"
+        }
+
+        url = f"https://gmgn.ai/api/v1/token_trades/sol/{token_address}?limit={limit}&maker=&revert=true"
+
+        self.client.queue_request(url, params)
+
+        try:
+            # Make the request
+            response = await self.client.execute_requests()
+            if not response or response[0] is None:
+                self.logger.warning("Response returned empty or None for early buyers.")
+                return WalletsResponse(code=0, msg="Empty Response", data={"rank": []})
+
+            return WalletsResponse.model_validate(response[0])
+        except Exception as e:
+            self.logger.error(f"Error in get_early_buyers: {e}", exc_info=True)
+            return WalletsResponse(code=0, msg="Empty Response", data={"rank": []})
+
     async def get_trending_wallets(self, timeframe: str, wallet_tag: str, order: str = "desc") -> WalletsResponse:
         """
         Fetches trending wallets for a given timeframe and wallet tag.

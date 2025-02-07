@@ -26,7 +26,7 @@ class TopWallets(PluginInterface):
 
     def __init__(self, config_manager: ConfigManager):
         super().__init__(config_manager)
-        self.plugin_settings = config_manager.TopWallets #dynamically get plugin settings
+        self.plugin_settings = config_manager.TopWallets # Dynamically get plugin settings
         self.gmgn = GmgnRepo()
         self.logger = get_logger("TopWallets")
         self.logger.debug("Initializing TOPWALLETS")
