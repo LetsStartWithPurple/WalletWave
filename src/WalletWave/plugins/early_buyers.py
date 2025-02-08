@@ -3,10 +3,13 @@ from WalletWave.config import ConfigManager
 from WalletWave.plugins.utils.plugin_interface import PluginInterface
 from WalletWave.repositories.gmgn_repo import GmgnRepo
 from WalletWave.utils.logging_utils import get_logger
-
+from WalletWave.api.models.gmgn.early_buyers import EarlyBuyersResponse
+from collections import defaultdict
+import csv
 
 # Author: viksant
 # Version: 1.0.0
+
 
 class EarlyBuyers(PluginInterface):
     """
@@ -17,11 +20,12 @@ class EarlyBuyers(PluginInterface):
 
     Useful Params (in the URL) for filtering data:
         # limit: How many traders will display. 100 by default
-        # revert: if true, shows the first buyers of a given token. If false, the latest. Obviously, this should be true.
+        # revert: if true, shows the first buyers of a given token. If false, the latest. Obviously, this should be always true.
 
     Notes:
         - The overall point of this is retrieving the early buyers of a token, buy/sell txs and total profit they made.. the rest is unnecessary in my opinion.
-        - Probably ask the users how many early traders does he want to retrieve: 50,100,150,200, etc (with a fixed amount & a limit)
+        - Probably ask the users how many early wallets/traders does he want to retrieve: 50,100,150,200, etc (with a fixed amount & a limit)
+
     IMPORTANT: This retrieves only one buy/sell tx per time. A wallet can have many buys & sells at the same time..
 
     Url returns (most useful fields):
@@ -30,7 +34,7 @@ class EarlyBuyers(PluginInterface):
         "quote_amount": "1.97668999700000000000", -> Tx value in Solana
         "amount_usd": "477.07413077595000000000", -> Sell tx value amount in Dolars
         "timestamp": 1737207340, -> When did he perform the TX
-        "event": "sell",
+        "event": "sell", -> Very important, as it determines what happened
         "total_trade": 2 -> How many txs did the wallet perform regarding the given token
         "buy_cost_usd": "389.95654670448000000000" -> Purchase price
         "balance": "0", -> Remaining tokens
@@ -51,6 +55,10 @@ class EarlyBuyers(PluginInterface):
         7. Realized Profit
         8. Unrealized Profit
         9. Total profit
+
+    Important: Sometines, within the established limits, we might miss a wallet's buy/sell.
+    Example: This wallet -> 3LfX4Nm7ipyPs6p5jUEqdMpAihTchz9x6URjB9Dyk8L3 bought and sold once the token EH6SNJFmpLKo8oLuk3VMR7h1acg2tEvSzJwHDx51moon,
+             but in the 50 limit, only shows a buy.. idk how to workaround this yet..
     """
     def __init__(self, config_manager: ConfigManager):
         super().__init__(config_manager)
@@ -87,14 +95,14 @@ class EarlyBuyers(PluginInterface):
             revert = self.plugin_settings.get("revert")
             while True:
                 # Todo: ask the user to set the limit..
-                user_input_ca = input("Enter Token's CA").strip()
-                # Will handle mainly Pump.fun and Ray/Meteora tokens's length, which is 43-44 chars
+                user_input_ca = input("Enter Token's CA: ").strip()
+                # Will handle mainly Pump.fun and Raydium's/Meteora's tokens length, which is 43-44 chars
                 if len(user_input_ca) == 43 or len(user_input_ca) == 44:
                     contract_address = user_input_ca
                     break
                 else:
                     # Todo: In the future, check if the CA is valid by using some Blockchain API calls.
-                    #       DexScreener's API does suffice too, but has a 300 req/min limit.
+                    #       DexScreener's API could suffice too, but has a 300 req/min limit.
                     #       For now, we'll assume that the pasted CA is correct.
                     self.logger.info(f"'{user_input_ca}' is invalid. Please enter a valid CA")
 
@@ -108,11 +116,76 @@ class EarlyBuyers(PluginInterface):
         try:
             self.logger.info(f"Fetching early buyers with limit={limit}")
             early_buyers = await self.gmgn.get_early_buyers(contract_address, self.limit)
+            print(self._analyze_returned_buyers(early_buyers))
         except Exception as e:
             self.logger.critical(f"Error running plugin: {e}", exc_info=True)
             return []
-    # 3. Analyze the data?
-    # 4. Put it together
-    # 5. Write it to output file
+
+    # 2. Analyze the data & Put it together
+    def _analyze_returned_buyers(self, early_buyers: EarlyBuyersResponse) -> any:
+        maker_stats = defaultdict(lambda: {
+            'total_buys': 0,
+            'total_sells': 0,
+            'total_transactions': 0,
+            'total_tokens_bought': 0.0,
+            'total_tokens_sold': 0.0,
+            'remaining_tokens': 0.0,
+            'volume_buys_usd': 0.0,
+            'volume_sells_usd': 0.0,
+            'realized_profit': 0.0,
+            'unrealized_profit': 0.0,
+            'total_profit': 0.0,
+            'roi': 0.0
+        })
+        if EarlyBuyersResponse:
+            try:
+                buyer_data_dictionary = defaultdict(list)
+
+                # Group Transactions for each wallet
+                for tx in early_buyers.buyer_data.history:
+                    buyer_data_dictionary[tx.maker].append(tx)
+
+                # Now, for each wallet, get their individual stats
+                for wallet, transactions in buyer_data_dictionary.items():
+                    for tx in transactions:
+                        if tx.event == "buy":
+                            maker_stats[wallet]['total_buys'] += 1
+                            maker_stats[wallet]['total_transactions'] += 1
+                            maker_stats[wallet]['total_tokens_bought'] += round(float(tx.base_amount), 2)
+                            maker_stats[wallet]['volume_buys_usd'] += round(float(tx.amount_usd), 2)
+                            maker_stats[wallet]['total_profit'] += round(float(tx.amount_usd), 2)
+                        elif tx.event == "sell":
+                            maker_stats[wallet]['total_sells'] += 1
+                            maker_stats[wallet]['total_transactions'] += 1
+                            maker_stats[wallet]['total_tokens_sold'] += round(float(tx.base_amount), 2)
+                            maker_stats[wallet]['volume_sells_usd'] += round(float(tx.amount_usd), 2)
+                            maker_stats[wallet]['total_profit'] -= round(float(tx.amount_usd), 2)
+
+                        # Apparently, these numbers do not change based on tx.event
+                        maker_stats[wallet]['realized_profit'] += round(float(tx.realized_profit), 2)
+                        maker_stats[wallet]['unrealized_profit'] += round(float(tx.unrealized_profit), 2)
+                        maker_stats[wallet]['total_profit'] = maker_stats[wallet]['realized_profit'] + maker_stats[wallet]['unrealized_profit']
+                        if maker_stats[wallet]['volume_sells_usd'] > 0 and maker_stats[wallet]['volume_buys_usd'] > 0:
+                            maker_stats[wallet]['roi'] = round((((maker_stats[wallet]['volume_buys_usd'] - maker_stats[wallet]['volume_sells_usd']) / maker_stats[wallet]['volume_buys_usd']) * 100), 2)
+                        else:
+                            maker_stats[wallet]['roi'] = 0
+                # 3. Write it to output file
+                fields = ['wallet', 'total_buys', 'total_sells', 'total_transactions', 'total_tokens_bought',
+                          'total_tokens_sold',
+                          'remaining_tokens', 'volume_buys_usd', 'volume_sells_usd', 'realized_profit',
+                          'unrealized_profit',
+                          'total_profit', 'roi']
+
+                with open('early_buyers.csv', 'w', newline='') as f:
+                    writer = csv.DictWriter(f, fieldnames=fields)
+                    writer.writeheader()
+                    for wallet, stats in maker_stats.items():
+                        writer.writerow({
+                            'wallet': wallet,
+                            **stats  # Unpacks all stats
+                        })
+            except Exception as e:
+                self.logger.critical(f"Error while parsing early buyers data: {e}")
+
     async def finalize(self) -> None:
         self.logger.info("Solana Wallet Scanner finalized")

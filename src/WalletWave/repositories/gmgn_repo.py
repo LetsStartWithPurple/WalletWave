@@ -34,22 +34,21 @@ class GmgnRepo:
             ValueError: If the provided CA or limit is invalid.
         """
         valid_limits = [50, 100, 150, 200]
-        if limit not in valid_limits or not isinstance(token_address, str):
-            raise ValueError("Invalid limit or token_address")
+        if not valid_limits or not isinstance(token_address, str):
+            raise ValueError("token_address is not a string..")
 
         params = {
             "limit": limit,
             "revert": "true"
         }
 
-        url = f"https://gmgn.ai/api/v1/token_trades/sol/{token_address}?limit={limit}&maker=&revert=true"
+        url = f"https://gmgn.ai/api/v1/token_trades/sol/{token_address}?limit=50&maker=&revert=true"
 
         self.client.queue_request(url, params)
 
         try:
             # Make the request
             response = await self.client.execute_requests()
-            print(response)
             if not response or response[0] is None:
                 self.logger.warning("Response returned empty or None for early buyers.")
                 return EarlyBuyersResponse(code=0, msg="Empty Response", data={"rank": []})

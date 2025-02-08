@@ -17,3 +17,722 @@ ValueError: Invalid limit or token_address
 2025-02-07 22:43:07 - FileUtils - WARNING - No data to export
 2025-02-07 22:43:07 - WalletWave - INFO - Finalizing plugin...
 2025-02-07 22:43:07 - Early Buyers - INFO - Solana Wallet Scanner finalized
+2025-02-08 16:59:45 - WalletWave - INFO - Initializing: Early Token Buyers
+2025-02-08 16:59:45 - Early Buyers - INFO - Early Buyers plugin initialized.
+2025-02-08 16:59:45 - WalletWave - INFO - Executing plugin...
+2025-02-08 16:59:46 - Early Buyers - CRITICAL - Config validation error: 
+2025-02-08 16:59:46 - Early Buyers - WARNING - Falling back to default values: limit=50
+2025-02-08 16:59:46 - Early Buyers - INFO - Fetching early buyers with limit=50
+2025-02-08 16:59:46 - Early Buyers - CRITICAL - Error running plugin: Invalid limit or token_address
+Traceback (most recent call last):
+  File "C:\Users\orhei\Desktop\WalletWave\src\WalletWave\plugins\early_buyers.py", line 110, in execute
+    early_buyers = await self.gmgn.get_early_buyers(contract_address, self.limit)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhei\Desktop\WalletWave\src\WalletWave\repositories\gmgn_repo.py", line 38, in get_early_buyers
+    raise ValueError("Invalid limit or token_address")
+ValueError: Invalid limit or token_address
+2025-02-08 16:59:46 - WalletWave - INFO - Exporting plugin results..
+2025-02-08 16:59:46 - WalletWave - INFO - Exporting wallet data...
+2025-02-08 16:59:46 - FileUtils - WARNING - No data to export
+2025-02-08 16:59:46 - WalletWave - INFO - Finalizing plugin...
+2025-02-08 16:59:46 - Early Buyers - INFO - Solana Wallet Scanner finalized
+2025-02-08 17:00:16 - WalletWave - INFO - Initializing: Solana Wallet Scanner
+2025-02-08 17:00:16 - SolanaWalletScanner - INFO - Solana Wallet Scanner initialized
+2025-02-08 17:00:19 - WalletWave - ERROR - An error occurred while running the plugin: 
+2025-02-08 17:00:23 - WalletWave - INFO - Initializing: Top Wallets
+2025-02-08 17:00:23 - TopWallets - INFO - TopWallets plugin initialized.
+2025-02-08 17:00:23 - WalletWave - INFO - Executing plugin...
+2025-02-08 17:00:23 - GMGN_Client_v2 - INFO - Executing 1 queued requests...
+2025-02-08 17:00:26 - GMGN_Client_v2 - INFO - Executing 100 queued requests...
+2025-02-08 17:00:39 - WalletWave - INFO - Initializing: Early Token Buyers
+2025-02-08 17:00:39 - Early Buyers - INFO - Early Buyers plugin initialized.
+2025-02-08 17:00:39 - WalletWave - INFO - Executing plugin...
+2025-02-08 17:01:10 - Early Buyers - INFO - Fetching early buyers with limit=50
+2025-02-08 17:01:10 - Early Buyers - CRITICAL - Error running plugin: Invalid limit or token_address
+Traceback (most recent call last):
+  File "C:\Users\orhei\Desktop\WalletWave\src\WalletWave\plugins\early_buyers.py", line 110, in execute
+    early_buyers = await self.gmgn.get_early_buyers(contract_address, self.limit)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhei\Desktop\WalletWave\src\WalletWave\repositories\gmgn_repo.py", line 38, in get_early_buyers
+    raise ValueError("Invalid limit or token_address")
+ValueError: Invalid limit or token_address
+2025-02-08 17:01:10 - WalletWave - INFO - Exporting plugin results..
+2025-02-08 17:01:10 - WalletWave - INFO - Exporting wallet data...
+2025-02-08 17:01:10 - FileUtils - WARNING - No data to export
+2025-02-08 17:01:10 - WalletWave - INFO - Finalizing plugin...
+2025-02-08 17:01:10 - Early Buyers - INFO - Solana Wallet Scanner finalized
+2025-02-08 17:03:30 - WalletWave - INFO - Initializing: Early Token Buyers
+2025-02-08 17:03:30 - Early Buyers - INFO - Early Buyers plugin initialized.
+2025-02-08 17:03:30 - WalletWave - INFO - Executing plugin...
+2025-02-08 17:03:48 - Early Buyers - INFO - Fetching early buyers with limit=50
+2025-02-08 17:03:48 - GMGN_Client_v2 - INFO - Executing 1 queued requests...
+2025-02-08 17:03:53 - GmgnRepo - ERROR - Error in get_early_buyers: 31 validation errors for EarlyBuyersResponse
+msg
+  Field required [type=missing, input_value={'code': 0, 'reason': '',...xOTE0MzMwMDExMDAwMQ=='}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.maker
+  Field required [type=missing, input_value={'history': [{'maker': 'Y...kxOTE0MzMwMDExMDAwMQ=='}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.base_amount
+  Field required [type=missing, input_value={'history': [{'maker': 'Y...kxOTE0MzMwMDExMDAwMQ=='}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.quote_amount
+  Field required [type=missing, input_value={'history': [{'maker': 'Y...kxOTE0MzMwMDExMDAwMQ=='}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.quote_symbol
+  Field required [type=missing, input_value={'history': [{'maker': 'Y...kxOTE0MzMwMDExMDAwMQ=='}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.quote_address
+  Field required [type=missing, input_value={'history': [{'maker': 'Y...kxOTE0MzMwMDExMDAwMQ=='}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.amount_usd
+  Field required [type=missing, input_value={'history': [{'maker': 'Y...kxOTE0MzMwMDExMDAwMQ=='}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.timestamp
+  Field required [type=missing, input_value={'history': [{'maker': 'Y...kxOTE0MzMwMDExMDAwMQ=='}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.event
+  Field required [type=missing, input_value={'history': [{'maker': 'Y...kxOTE0MzMwMDExMDAwMQ=='}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.tx_hash
+  Field required [type=missing, input_value={'history': [{'maker': 'Y...kxOTE0MzMwMDExMDAwMQ=='}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.price_usd
+  Field required [type=missing, input_value={'history': [{'maker': 'Y...kxOTE0MzMwMDExMDAwMQ=='}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.total_trade
+  Field required [type=missing, input_value={'history': [{'maker': 'Y...kxOTE0MzMwMDExMDAwMQ=='}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.id
+  Field required [type=missing, input_value={'history': [{'maker': 'Y...kxOTE0MzMwMDExMDAwMQ=='}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.is_following
+  Field required [type=missing, input_value={'history': [{'maker': 'Y...kxOTE0MzMwMDExMDAwMQ=='}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.is_open_or_close
+  Field required [type=missing, input_value={'history': [{'maker': 'Y...kxOTE0MzMwMDExMDAwMQ=='}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.buy_cost_usd
+  Field required [type=missing, input_value={'history': [{'maker': 'Y...kxOTE0MzMwMDExMDAwMQ=='}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.balance
+  Field required [type=missing, input_value={'history': [{'maker': 'Y...kxOTE0MzMwMDExMDAwMQ=='}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.cost
+  Field required [type=missing, input_value={'history': [{'maker': 'Y...kxOTE0MzMwMDExMDAwMQ=='}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.history_bought_amount
+  Field required [type=missing, input_value={'history': [{'maker': 'Y...kxOTE0MzMwMDExMDAwMQ=='}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.history_sold_income
+  Field required [type=missing, input_value={'history': [{'maker': 'Y...kxOTE0MzMwMDExMDAwMQ=='}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.history_sold_amount
+  Field required [type=missing, input_value={'history': [{'maker': 'Y...kxOTE0MzMwMDExMDAwMQ=='}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.realized_profit
+  Field required [type=missing, input_value={'history': [{'maker': 'Y...kxOTE0MzMwMDExMDAwMQ=='}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.unrealized_profit
+  Field required [type=missing, input_value={'history': [{'maker': 'Y...kxOTE0MzMwMDExMDAwMQ=='}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.maker_tags
+  Field required [type=missing, input_value={'history': [{'maker': 'Y...kxOTE0MzMwMDExMDAwMQ=='}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.maker_token_tags
+  Field required [type=missing, input_value={'history': [{'maker': 'Y...kxOTE0MzMwMDExMDAwMQ=='}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.maker_name
+  Field required [type=missing, input_value={'history': [{'maker': 'Y...kxOTE0MzMwMDExMDAwMQ=='}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.maker_twitter_username
+  Field required [type=missing, input_value={'history': [{'maker': 'Y...kxOTE0MzMwMDExMDAwMQ=='}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.maker_twitter_name
+  Field required [type=missing, input_value={'history': [{'maker': 'Y...kxOTE0MzMwMDExMDAwMQ=='}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.maker_avatar
+  Field required [type=missing, input_value={'history': [{'maker': 'Y...kxOTE0MzMwMDExMDAwMQ=='}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.maker_ens
+  Field required [type=missing, input_value={'history': [{'maker': 'Y...kxOTE0MzMwMDExMDAwMQ=='}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.token_address
+  Field required [type=missing, input_value={'history': [{'maker': 'Y...kxOTE0MzMwMDExMDAwMQ=='}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+Traceback (most recent call last):
+  File "C:\Users\orhei\Desktop\WalletWave\src\WalletWave\repositories\gmgn_repo.py", line 57, in get_early_buyers
+    return EarlyBuyersResponse.model_validate(response[0])
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\orhei\Desktop\WalletWave\venv\Lib\site-packages\pydantic\main.py", line 627, in model_validate
+    return cls.__pydantic_validator__.validate_python(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        obj, strict=strict, from_attributes=from_attributes, context=context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+pydantic_core._pydantic_core.ValidationError: 31 validation errors for EarlyBuyersResponse
+msg
+  Field required [type=missing, input_value={'code': 0, 'reason': '',...xOTE0MzMwMDExMDAwMQ=='}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.maker
+  Field required [type=missing, input_value={'history': [{'maker': 'Y...kxOTE0MzMwMDExMDAwMQ=='}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.base_amount
+  Field required [type=missing, input_value={'history': [{'maker': 'Y...kxOTE0MzMwMDExMDAwMQ=='}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.quote_amount
+  Field required [type=missing, input_value={'history': [{'maker': 'Y...kxOTE0MzMwMDExMDAwMQ=='}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.quote_symbol
+  Field required [type=missing, input_value={'history': [{'maker': 'Y...kxOTE0MzMwMDExMDAwMQ=='}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.quote_address
+  Field required [type=missing, input_value={'history': [{'maker': 'Y...kxOTE0MzMwMDExMDAwMQ=='}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.amount_usd
+  Field required [type=missing, input_value={'history': [{'maker': 'Y...kxOTE0MzMwMDExMDAwMQ=='}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.timestamp
+  Field required [type=missing, input_value={'history': [{'maker': 'Y...kxOTE0MzMwMDExMDAwMQ=='}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.event
+  Field required [type=missing, input_value={'history': [{'maker': 'Y...kxOTE0MzMwMDExMDAwMQ=='}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.tx_hash
+  Field required [type=missing, input_value={'history': [{'maker': 'Y...kxOTE0MzMwMDExMDAwMQ=='}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.price_usd
+  Field required [type=missing, input_value={'history': [{'maker': 'Y...kxOTE0MzMwMDExMDAwMQ=='}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.total_trade
+  Field required [type=missing, input_value={'history': [{'maker': 'Y...kxOTE0MzMwMDExMDAwMQ=='}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.id
+  Field required [type=missing, input_value={'history': [{'maker': 'Y...kxOTE0MzMwMDExMDAwMQ=='}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.is_following
+  Field required [type=missing, input_value={'history': [{'maker': 'Y...kxOTE0MzMwMDExMDAwMQ=='}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.is_open_or_close
+  Field required [type=missing, input_value={'history': [{'maker': 'Y...kxOTE0MzMwMDExMDAwMQ=='}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.buy_cost_usd
+  Field required [type=missing, input_value={'history': [{'maker': 'Y...kxOTE0MzMwMDExMDAwMQ=='}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.balance
+  Field required [type=missing, input_value={'history': [{'maker': 'Y...kxOTE0MzMwMDExMDAwMQ=='}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.cost
+  Field required [type=missing, input_value={'history': [{'maker': 'Y...kxOTE0MzMwMDExMDAwMQ=='}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.history_bought_amount
+  Field required [type=missing, input_value={'history': [{'maker': 'Y...kxOTE0MzMwMDExMDAwMQ=='}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.history_sold_income
+  Field required [type=missing, input_value={'history': [{'maker': 'Y...kxOTE0MzMwMDExMDAwMQ=='}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.history_sold_amount
+  Field required [type=missing, input_value={'history': [{'maker': 'Y...kxOTE0MzMwMDExMDAwMQ=='}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.realized_profit
+  Field required [type=missing, input_value={'history': [{'maker': 'Y...kxOTE0MzMwMDExMDAwMQ=='}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.unrealized_profit
+  Field required [type=missing, input_value={'history': [{'maker': 'Y...kxOTE0MzMwMDExMDAwMQ=='}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.maker_tags
+  Field required [type=missing, input_value={'history': [{'maker': 'Y...kxOTE0MzMwMDExMDAwMQ=='}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.maker_token_tags
+  Field required [type=missing, input_value={'history': [{'maker': 'Y...kxOTE0MzMwMDExMDAwMQ=='}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.maker_name
+  Field required [type=missing, input_value={'history': [{'maker': 'Y...kxOTE0MzMwMDExMDAwMQ=='}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.maker_twitter_username
+  Field required [type=missing, input_value={'history': [{'maker': 'Y...kxOTE0MzMwMDExMDAwMQ=='}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.maker_twitter_name
+  Field required [type=missing, input_value={'history': [{'maker': 'Y...kxOTE0MzMwMDExMDAwMQ=='}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.maker_avatar
+  Field required [type=missing, input_value={'history': [{'maker': 'Y...kxOTE0MzMwMDExMDAwMQ=='}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.maker_ens
+  Field required [type=missing, input_value={'history': [{'maker': 'Y...kxOTE0MzMwMDExMDAwMQ=='}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.token_address
+  Field required [type=missing, input_value={'history': [{'maker': 'Y...kxOTE0MzMwMDExMDAwMQ=='}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+2025-02-08 17:03:53 - Early Buyers - CRITICAL - Error running plugin: 30 validation errors for EarlyBuyersResponse
+data.maker
+  Field required [type=missing, input_value={'rank': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.base_amount
+  Field required [type=missing, input_value={'rank': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.quote_amount
+  Field required [type=missing, input_value={'rank': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.quote_symbol
+  Field required [type=missing, input_value={'rank': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.quote_address
+  Field required [type=missing, input_value={'rank': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.amount_usd
+  Field required [type=missing, input_value={'rank': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.timestamp
+  Field required [type=missing, input_value={'rank': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.event
+  Field required [type=missing, input_value={'rank': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.tx_hash
+  Field required [type=missing, input_value={'rank': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.price_usd
+  Field required [type=missing, input_value={'rank': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.total_trade
+  Field required [type=missing, input_value={'rank': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.id
+  Field required [type=missing, input_value={'rank': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.is_following
+  Field required [type=missing, input_value={'rank': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.is_open_or_close
+  Field required [type=missing, input_value={'rank': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.buy_cost_usd
+  Field required [type=missing, input_value={'rank': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.balance
+  Field required [type=missing, input_value={'rank': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.cost
+  Field required [type=missing, input_value={'rank': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.history_bought_amount
+  Field required [type=missing, input_value={'rank': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.history_sold_income
+  Field required [type=missing, input_value={'rank': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.history_sold_amount
+  Field required [type=missing, input_value={'rank': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.realized_profit
+  Field required [type=missing, input_value={'rank': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.unrealized_profit
+  Field required [type=missing, input_value={'rank': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.maker_tags
+  Field required [type=missing, input_value={'rank': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.maker_token_tags
+  Field required [type=missing, input_value={'rank': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.maker_name
+  Field required [type=missing, input_value={'rank': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.maker_twitter_username
+  Field required [type=missing, input_value={'rank': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.maker_twitter_name
+  Field required [type=missing, input_value={'rank': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.maker_avatar
+  Field required [type=missing, input_value={'rank': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.maker_ens
+  Field required [type=missing, input_value={'rank': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.token_address
+  Field required [type=missing, input_value={'rank': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+Traceback (most recent call last):
+  File "C:\Users\orhei\Desktop\WalletWave\src\WalletWave\plugins\early_buyers.py", line 110, in execute
+    early_buyers = await self.gmgn.get_early_buyers(contract_address, self.limit)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhei\Desktop\WalletWave\src\WalletWave\repositories\gmgn_repo.py", line 60, in get_early_buyers
+    return EarlyBuyersResponse(code=0, msg="Empty Response", data={"rank": []})
+  File "C:\Users\orhei\Desktop\WalletWave\venv\Lib\site-packages\pydantic\main.py", line 214, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 30 validation errors for EarlyBuyersResponse
+data.maker
+  Field required [type=missing, input_value={'rank': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.base_amount
+  Field required [type=missing, input_value={'rank': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.quote_amount
+  Field required [type=missing, input_value={'rank': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.quote_symbol
+  Field required [type=missing, input_value={'rank': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.quote_address
+  Field required [type=missing, input_value={'rank': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.amount_usd
+  Field required [type=missing, input_value={'rank': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.timestamp
+  Field required [type=missing, input_value={'rank': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.event
+  Field required [type=missing, input_value={'rank': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.tx_hash
+  Field required [type=missing, input_value={'rank': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.price_usd
+  Field required [type=missing, input_value={'rank': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.total_trade
+  Field required [type=missing, input_value={'rank': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.id
+  Field required [type=missing, input_value={'rank': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.is_following
+  Field required [type=missing, input_value={'rank': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.is_open_or_close
+  Field required [type=missing, input_value={'rank': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.buy_cost_usd
+  Field required [type=missing, input_value={'rank': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.balance
+  Field required [type=missing, input_value={'rank': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.cost
+  Field required [type=missing, input_value={'rank': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.history_bought_amount
+  Field required [type=missing, input_value={'rank': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.history_sold_income
+  Field required [type=missing, input_value={'rank': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.history_sold_amount
+  Field required [type=missing, input_value={'rank': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.realized_profit
+  Field required [type=missing, input_value={'rank': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.unrealized_profit
+  Field required [type=missing, input_value={'rank': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.maker_tags
+  Field required [type=missing, input_value={'rank': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.maker_token_tags
+  Field required [type=missing, input_value={'rank': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.maker_name
+  Field required [type=missing, input_value={'rank': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.maker_twitter_username
+  Field required [type=missing, input_value={'rank': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.maker_twitter_name
+  Field required [type=missing, input_value={'rank': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.maker_avatar
+  Field required [type=missing, input_value={'rank': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.maker_ens
+  Field required [type=missing, input_value={'rank': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.token_address
+  Field required [type=missing, input_value={'rank': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+2025-02-08 17:03:53 - WalletWave - INFO - Exporting plugin results..
+2025-02-08 17:03:53 - WalletWave - INFO - Exporting wallet data...
+2025-02-08 17:03:53 - FileUtils - WARNING - No data to export
+2025-02-08 17:03:53 - WalletWave - INFO - Finalizing plugin...
+2025-02-08 17:03:53 - Early Buyers - INFO - Solana Wallet Scanner finalized
+2025-02-08 17:16:57 - WalletWave - INFO - Initializing: Early Token Buyers
+2025-02-08 17:16:57 - Early Buyers - INFO - Early Buyers plugin initialized.
+2025-02-08 17:16:57 - WalletWave - INFO - Executing plugin...
+2025-02-08 17:17:02 - Early Buyers - INFO - Fetching early buyers with limit=50
+2025-02-08 17:17:02 - GMGN_Client_v2 - INFO - Executing 1 queued requests...
+2025-02-08 17:17:06 - WalletWave - INFO - Exporting plugin results..
+2025-02-08 17:17:06 - WalletWave - INFO - Exporting wallet data...
+2025-02-08 17:17:06 - FileUtils - WARNING - No data to export
+2025-02-08 17:17:06 - WalletWave - INFO - Finalizing plugin...
+2025-02-08 17:17:06 - Early Buyers - INFO - Solana Wallet Scanner finalized
+2025-02-08 17:30:17 - WalletWave - INFO - Initializing: Early Token Buyers
+2025-02-08 17:30:17 - Early Buyers - INFO - Early Buyers plugin initialized.
+2025-02-08 17:30:17 - WalletWave - INFO - Executing plugin...
+2025-02-08 17:30:21 - Early Buyers - INFO - Fetching early buyers with limit=50
+2025-02-08 17:30:21 - GMGN_Client_v2 - INFO - Executing 1 queued requests...
+2025-02-08 17:30:25 - Early Buyers - CRITICAL - Error running plugin: tuple indices must be integers or slices, not str
+Traceback (most recent call last):
+  File "C:\Users\orhei\Desktop\WalletWave\src\WalletWave\plugins\early_buyers.py", line 117, in execute
+    print(self._analyze_returned_buyers(early_buyers))
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\orhei\Desktop\WalletWave\src\WalletWave\plugins\early_buyers.py", line 81, in _analyze_returned_buyers
+    makers = [trade['maker'] for trade in early_buyers]
+              ~~~~~^^^^^^^^^
+TypeError: tuple indices must be integers or slices, not str
+2025-02-08 17:30:25 - WalletWave - INFO - Exporting plugin results..
+2025-02-08 17:30:25 - WalletWave - INFO - Exporting wallet data...
+2025-02-08 17:30:25 - FileUtils - WARNING - No data to export
+2025-02-08 17:30:25 - WalletWave - INFO - Finalizing plugin...
+2025-02-08 17:30:25 - Early Buyers - INFO - Solana Wallet Scanner finalized
+2025-02-08 17:34:00 - WalletWave - INFO - Initializing: Early Token Buyers
+2025-02-08 17:34:00 - Early Buyers - INFO - Early Buyers plugin initialized.
+2025-02-08 17:34:00 - WalletWave - INFO - Executing plugin...
+2025-02-08 17:34:01 - Early Buyers - INFO - 'from pydantic import BaseModel' is invalid. Please enter a valid CA
+2025-02-08 17:34:01 - Early Buyers - INFO - 'from typing import Optional, List' is invalid. Please enter a valid CA
+2025-02-08 17:34:01 - Early Buyers - INFO - '' is invalid. Please enter a valid CA
+2025-02-08 17:34:01 - Early Buyers - INFO - '' is invalid. Please enter a valid CA
+2025-02-08 17:34:01 - Early Buyers - INFO - 'class EarlyBuyersData(BaseModel):' is invalid. Please enter a valid CA
+2025-02-08 17:34:01 - Early Buyers - INFO - 'maker: str' is invalid. Please enter a valid CA
+2025-02-08 17:34:01 - Early Buyers - INFO - 'base_amount: str' is invalid. Please enter a valid CA
+2025-02-08 17:34:01 - Early Buyers - INFO - 'quote_amount: str' is invalid. Please enter a valid CA
+2025-02-08 17:34:01 - Early Buyers - INFO - 'quote_symbol: str' is invalid. Please enter a valid CA
+2025-02-08 17:34:01 - Early Buyers - INFO - 'quote_address: str' is invalid. Please enter a valid CA
+2025-02-08 17:34:01 - Early Buyers - INFO - 'amount_usd: str' is invalid. Please enter a valid CA
+2025-02-08 17:34:01 - Early Buyers - INFO - 'timestamp: int' is invalid. Please enter a valid CA
+2025-02-08 17:34:01 - Early Buyers - INFO - 'event: str' is invalid. Please enter a valid CA
+2025-02-08 17:34:01 - Early Buyers - INFO - 'tx_hash: str' is invalid. Please enter a valid CA
+2025-02-08 17:34:01 - Early Buyers - INFO - 'price_usd: str' is invalid. Please enter a valid CA
+2025-02-08 17:34:01 - Early Buyers - INFO - 'total_trade: int' is invalid. Please enter a valid CA
+2025-02-08 17:34:01 - Early Buyers - INFO - 'id: str' is invalid. Please enter a valid CA
+2025-02-08 17:34:01 - Early Buyers - INFO - 'is_following: int' is invalid. Please enter a valid CA
+2025-02-08 17:34:01 - Early Buyers - INFO - 'is_open_or_close: int' is invalid. Please enter a valid CA
+2025-02-08 17:34:01 - Early Buyers - INFO - 'buy_cost_usd: str' is invalid. Please enter a valid CA
+2025-02-08 17:34:01 - Early Buyers - INFO - 'balance: str' is invalid. Please enter a valid CA
+2025-02-08 17:34:01 - Early Buyers - INFO - 'cost: str' is invalid. Please enter a valid CA
+2025-02-08 17:34:01 - Early Buyers - INFO - 'history_bought_amount: str' is invalid. Please enter a valid CA
+2025-02-08 17:34:01 - Early Buyers - INFO - 'history_sold_income: str' is invalid. Please enter a valid CA
+2025-02-08 17:34:01 - Early Buyers - INFO - 'history_sold_amount: str' is invalid. Please enter a valid CA
+2025-02-08 17:34:01 - Early Buyers - INFO - 'realized_profit: str' is invalid. Please enter a valid CA
+2025-02-08 17:34:01 - Early Buyers - INFO - 'unrealized_profit: str' is invalid. Please enter a valid CA
+2025-02-08 17:34:01 - Early Buyers - INFO - 'maker_tags: List[str]' is invalid. Please enter a valid CA
+2025-02-08 17:34:01 - Early Buyers - INFO - 'maker_token_tags: List[str]' is invalid. Please enter a valid CA
+2025-02-08 17:34:01 - Early Buyers - INFO - 'maker_name: str' is invalid. Please enter a valid CA
+2025-02-08 17:34:01 - Early Buyers - INFO - 'maker_twitter_username: str' is invalid. Please enter a valid CA
+2025-02-08 17:34:01 - Early Buyers - INFO - 'maker_twitter_name: str' is invalid. Please enter a valid CA
+2025-02-08 17:34:01 - Early Buyers - INFO - 'maker_avatar: str' is invalid. Please enter a valid CA
+2025-02-08 17:34:01 - Early Buyers - INFO - 'maker_ens: str' is invalid. Please enter a valid CA
+2025-02-08 17:34:01 - Early Buyers - INFO - 'token_address: str' is invalid. Please enter a valid CA
+2025-02-08 17:34:01 - Early Buyers - INFO - '' is invalid. Please enter a valid CA
+2025-02-08 17:34:01 - Early Buyers - INFO - '' is invalid. Please enter a valid CA
+2025-02-08 17:34:01 - Early Buyers - INFO - 'class EarlyBuyersResponseData(BaseModel):' is invalid. Please enter a valid CA
+2025-02-08 17:34:01 - Early Buyers - INFO - 'history: List[EarlyBuyersData]' is invalid. Please enter a valid CA
+2025-02-08 17:34:01 - Early Buyers - INFO - '' is invalid. Please enter a valid CA
+2025-02-08 17:34:01 - Early Buyers - INFO - '' is invalid. Please enter a valid CA
+2025-02-08 17:34:01 - Early Buyers - INFO - 'class EarlyBuyersResponse(BaseModel):' is invalid. Please enter a valid CA
+2025-02-08 17:34:01 - Early Buyers - INFO - 'code: int' is invalid. Please enter a valid CA
+2025-02-08 17:34:01 - Early Buyers - INFO - 'reason: str' is invalid. Please enter a valid CA
+2025-02-08 17:34:01 - Early Buyers - INFO - 'message: str' is invalid. Please enter a valid CA
+2025-02-08 17:34:01 - Early Buyers - INFO - 'data: EarlyBuyersResponseData' is invalid. Please enter a valid CA
+2025-02-08 17:34:01 - Early Buyers - INFO - '' is invalid. Please enter a valid CA
+2025-02-08 17:34:01 - Early Buyers - INFO - '@property' is invalid. Please enter a valid CA
+2025-02-08 17:34:01 - Early Buyers - INFO - 'def buyer_data(self) -> EarlyBuyersResponseData:' is invalid. Please enter a valid CA
+2025-02-08 17:34:01 - Early Buyers - INFO - '"""' is invalid. Please enter a valid CA
+2025-02-08 17:34:01 - Early Buyers - INFO - 'Property to return the core trading data.' is invalid. Please enter a valid CA
+2025-02-08 17:34:01 - Early Buyers - INFO - '' is invalid. Please enter a valid CA
+2025-02-08 17:34:01 - Early Buyers - INFO - 'Returns:' is invalid. Please enter a valid CA
+2025-02-08 17:34:01 - Early Buyers - INFO - 'WalletInfo: The trade data object.' is invalid. Please enter a valid CA
+2025-02-08 17:34:01 - Early Buyers - INFO - '"""' is invalid. Please enter a valid CA
+2025-02-08 17:34:01 - Early Buyers - INFO - 'return self.data' is invalid. Please enter a valid CA
+2025-02-08 17:34:12 - Early Buyers - INFO - Fetching early buyers with limit=50
+2025-02-08 17:34:12 - GMGN_Client_v2 - INFO - Executing 1 queued requests...
+2025-02-08 17:34:16 - Early Buyers - CRITICAL - Error running plugin: 'EarlyBuyersData' object is not subscriptable
+Traceback (most recent call last):
+  File "C:\Users\orhei\Desktop\WalletWave\src\WalletWave\plugins\early_buyers.py", line 117, in execute
+    print(self._analyze_returned_buyers(early_buyers))
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\orhei\Desktop\WalletWave\src\WalletWave\plugins\early_buyers.py", line 81, in _analyze_returned_buyers
+    makers = [trade['maker'] for trade in early_buyers.buyer_data.history]
+              ~~~~~^^^^^^^^^
+TypeError: 'EarlyBuyersData' object is not subscriptable
+2025-02-08 17:34:16 - WalletWave - INFO - Exporting plugin results..
+2025-02-08 17:34:16 - WalletWave - INFO - Exporting wallet data...
+2025-02-08 17:34:16 - FileUtils - WARNING - No data to export
+2025-02-08 17:34:16 - WalletWave - INFO - Finalizing plugin...
+2025-02-08 17:34:16 - Early Buyers - INFO - Solana Wallet Scanner finalized
+2025-02-08 17:35:18 - WalletWave - INFO - Initializing: Early Token Buyers
+2025-02-08 17:35:18 - Early Buyers - INFO - Early Buyers plugin initialized.
+2025-02-08 17:35:18 - WalletWave - INFO - Executing plugin...
+2025-02-08 17:35:23 - Early Buyers - INFO - Fetching early buyers with limit=50
+2025-02-08 17:35:23 - GMGN_Client_v2 - INFO - Executing 1 queued requests...
+2025-02-08 17:35:27 - WalletWave - INFO - Exporting plugin results..
+2025-02-08 17:35:27 - WalletWave - INFO - Exporting wallet data...
+2025-02-08 17:35:27 - FileUtils - WARNING - No data to export
+2025-02-08 17:35:27 - WalletWave - INFO - Finalizing plugin...
+2025-02-08 17:35:27 - Early Buyers - INFO - Solana Wallet Scanner finalized
+2025-02-08 17:51:09 - WalletWave - INFO - Initializing: Early Token Buyers
+2025-02-08 17:51:09 - Early Buyers - INFO - Early Buyers plugin initialized.
+2025-02-08 17:51:09 - WalletWave - INFO - Executing plugin...
+2025-02-08 17:51:16 - Early Buyers - INFO - Fetching early buyers with limit=50
+2025-02-08 17:51:16 - GMGN_Client_v2 - INFO - Executing 1 queued requests...
+2025-02-08 17:51:20 - WalletWave - INFO - Exporting plugin results..
+2025-02-08 17:51:20 - WalletWave - INFO - Exporting wallet data...
+2025-02-08 17:51:20 - FileUtils - WARNING - No data to export
+2025-02-08 17:51:20 - WalletWave - INFO - Finalizing plugin...
+2025-02-08 17:51:20 - Early Buyers - INFO - Solana Wallet Scanner finalized
+2025-02-08 17:52:09 - WalletWave - INFO - Initializing: Early Token Buyers
+2025-02-08 17:52:09 - Early Buyers - INFO - Early Buyers plugin initialized.
+2025-02-08 17:52:09 - WalletWave - INFO - Executing plugin...
+2025-02-08 17:52:10 - Early Buyers - INFO - '51joJB3rHBNH16ByVmFnQHAYgREYXUY9ZCdJpDDf4Q62VZDjCh8sfn8XkR1nQFQNS6TsLTkpb1NTwwz81oZBPGnp' is invalid. Please enter a valid CA
+2025-02-08 17:52:22 - Early Buyers - INFO - Fetching early buyers with limit=50
+2025-02-08 17:52:22 - GMGN_Client_v2 - INFO - Executing 1 queued requests...
+2025-02-08 17:52:27 - WalletWave - INFO - Exporting plugin results..
+2025-02-08 17:52:27 - WalletWave - INFO - Exporting wallet data...
+2025-02-08 17:52:27 - FileUtils - WARNING - No data to export
+2025-02-08 17:52:27 - WalletWave - INFO - Finalizing plugin...
+2025-02-08 17:52:27 - Early Buyers - INFO - Solana Wallet Scanner finalized
+2025-02-08 17:52:52 - WalletWave - INFO - Initializing: Early Token Buyers
+2025-02-08 17:52:52 - Early Buyers - INFO - Early Buyers plugin initialized.
+2025-02-08 17:52:52 - WalletWave - INFO - Executing plugin...
+2025-02-08 17:52:53 - Early Buyers - INFO - Fetching early buyers with limit=50
+2025-02-08 17:52:53 - GMGN_Client_v2 - INFO - Executing 1 queued requests...
+2025-02-08 17:52:59 - WalletWave - INFO - Initializing: Early Token Buyers
+2025-02-08 17:52:59 - Early Buyers - INFO - Early Buyers plugin initialized.
+2025-02-08 17:52:59 - WalletWave - INFO - Executing plugin...
+2025-02-08 17:53:02 - Early Buyers - INFO - Fetching early buyers with limit=50
+2025-02-08 17:53:02 - GMGN_Client_v2 - INFO - Executing 1 queued requests...
+2025-02-08 17:53:06 - WalletWave - INFO - Exporting plugin results..
+2025-02-08 17:53:06 - WalletWave - INFO - Exporting wallet data...
+2025-02-08 17:53:06 - FileUtils - WARNING - No data to export
+2025-02-08 17:53:06 - WalletWave - INFO - Finalizing plugin...
+2025-02-08 17:53:06 - Early Buyers - INFO - Solana Wallet Scanner finalized
+2025-02-08 17:53:23 - WalletWave - INFO - Initializing: Early Token Buyers
+2025-02-08 17:53:23 - Early Buyers - INFO - Early Buyers plugin initialized.
+2025-02-08 17:53:23 - WalletWave - INFO - Executing plugin...
+2025-02-08 17:53:35 - Early Buyers - INFO - Fetching early buyers with limit=50
+2025-02-08 17:53:35 - GMGN_Client_v2 - INFO - Executing 1 queued requests...
+2025-02-08 17:53:40 - WalletWave - INFO - Exporting plugin results..
+2025-02-08 17:53:40 - WalletWave - INFO - Exporting wallet data...
+2025-02-08 17:53:40 - FileUtils - WARNING - No data to export
+2025-02-08 17:53:40 - WalletWave - INFO - Finalizing plugin...
+2025-02-08 17:53:40 - Early Buyers - INFO - Solana Wallet Scanner finalized
+2025-02-08 17:57:53 - WalletWave - INFO - Initializing: Early Token Buyers
+2025-02-08 17:57:53 - Early Buyers - INFO - Early Buyers plugin initialized.
+2025-02-08 17:57:53 - WalletWave - INFO - Executing plugin...
+2025-02-08 17:57:56 - Early Buyers - INFO - Fetching early buyers with limit=50
+2025-02-08 17:57:56 - GMGN_Client_v2 - INFO - Executing 1 queued requests...
+2025-02-08 17:58:01 - WalletWave - INFO - Exporting plugin results..
+2025-02-08 17:58:01 - WalletWave - INFO - Exporting wallet data...
+2025-02-08 17:58:01 - FileUtils - WARNING - No data to export
+2025-02-08 17:58:01 - WalletWave - INFO - Finalizing plugin...
+2025-02-08 17:58:01 - Early Buyers - INFO - Solana Wallet Scanner finalized
+2025-02-08 18:01:16 - WalletWave - INFO - Initializing: Early Token Buyers
+2025-02-08 18:01:16 - Early Buyers - INFO - Early Buyers plugin initialized.
+2025-02-08 18:01:16 - WalletWave - INFO - Executing plugin...
+2025-02-08 18:01:19 - Early Buyers - INFO - Fetching early buyers with limit=50
+2025-02-08 18:01:19 - GMGN_Client_v2 - INFO - Executing 1 queued requests...
+2025-02-08 18:01:24 - WalletWave - INFO - Exporting plugin results..
+2025-02-08 18:01:24 - WalletWave - INFO - Exporting wallet data...
+2025-02-08 18:01:24 - FileUtils - WARNING - No data to export
+2025-02-08 18:01:24 - WalletWave - INFO - Finalizing plugin...
+2025-02-08 18:01:24 - Early Buyers - INFO - Solana Wallet Scanner finalized
+2025-02-08 18:14:34 - WalletWave - INFO - Initializing: Early Token Buyers
+2025-02-08 18:14:34 - Early Buyers - INFO - Early Buyers plugin initialized.
+2025-02-08 18:14:34 - WalletWave - INFO - Executing plugin...
+2025-02-08 18:14:39 - Early Buyers - INFO - '# Print individual Wallet's data' is invalid. Please enter a valid CA
+2025-02-08 18:14:39 - Early Buyers - INFO - 'for wallet, stats in maker_stats.items():' is invalid. Please enter a valid CA
+2025-02-08 18:14:39 - Early Buyers - INFO - 'print(wallet[stats['total_buys']])' is invalid. Please enter a valid CA
+2025-02-08 18:14:39 - Early Buyers - INFO - 'print(wallet[stats['total_sells']])' is invalid. Please enter a valid CA
+2025-02-08 18:14:39 - Early Buyers - INFO - 'print(wallet[stats['volume_buys_usd']])' is invalid. Please enter a valid CA
+2025-02-08 18:14:41 - Early Buyers - CRITICAL - Config validation error: 
+2025-02-08 18:14:41 - Early Buyers - WARNING - Falling back to default values: limit=50
+2025-02-08 18:14:41 - Early Buyers - INFO - Fetching early buyers with limit=50
+2025-02-08 18:14:41 - Early Buyers - CRITICAL - Error running plugin: token_address is not a string..
+Traceback (most recent call last):
+  File "C:\Users\orhei\Desktop\WalletWave\src\WalletWave\plugins\early_buyers.py", line 117, in execute
+    early_buyers = await self.gmgn.get_early_buyers(contract_address, self.limit)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhei\Desktop\WalletWave\src\WalletWave\repositories\gmgn_repo.py", line 38, in get_early_buyers
+    raise ValueError("token_address is not a string..")
+ValueError: token_address is not a string..
+2025-02-08 18:14:41 - WalletWave - INFO - Exporting plugin results..
+2025-02-08 18:14:41 - WalletWave - INFO - Exporting wallet data...
+2025-02-08 18:14:41 - FileUtils - WARNING - No data to export
+2025-02-08 18:14:41 - WalletWave - INFO - Finalizing plugin...
+2025-02-08 18:14:41 - Early Buyers - INFO - Solana Wallet Scanner finalized
+2025-02-08 18:14:45 - WalletWave - INFO - Initializing: Early Token Buyers
+2025-02-08 18:14:45 - Early Buyers - INFO - Early Buyers plugin initialized.
+2025-02-08 18:14:45 - WalletWave - INFO - Executing plugin...
+2025-02-08 18:14:49 - Early Buyers - INFO - Fetching early buyers with limit=50
+2025-02-08 18:14:49 - GMGN_Client_v2 - INFO - Executing 1 queued requests...
+2025-02-08 18:14:53 - Early Buyers - CRITICAL - Error while parsing early buyers data: unsupported operand type(s) for +=: 'float' and 'str'
+2025-02-08 18:14:53 - WalletWave - INFO - Exporting plugin results..
+2025-02-08 18:14:53 - WalletWave - INFO - Exporting wallet data...
+2025-02-08 18:14:53 - FileUtils - WARNING - No data to export
+2025-02-08 18:14:53 - WalletWave - INFO - Finalizing plugin...
+2025-02-08 18:14:53 - Early Buyers - INFO - Solana Wallet Scanner finalized
+2025-02-08 18:15:31 - WalletWave - INFO - Initializing: Early Token Buyers
+2025-02-08 18:15:31 - Early Buyers - INFO - Early Buyers plugin initialized.
+2025-02-08 18:15:31 - WalletWave - INFO - Executing plugin...
+2025-02-08 18:15:37 - Early Buyers - INFO - Fetching early buyers with limit=50
+2025-02-08 18:15:37 - GMGN_Client_v2 - INFO - Executing 1 queued requests...
+2025-02-08 18:15:42 - Early Buyers - CRITICAL - Error while parsing early buyers data: invalid literal for int() with base 10: '16966.13688000000000000000'
+2025-02-08 18:15:42 - WalletWave - INFO - Exporting plugin results..
+2025-02-08 18:15:42 - WalletWave - INFO - Exporting wallet data...
+2025-02-08 18:15:42 - FileUtils - WARNING - No data to export
+2025-02-08 18:15:42 - WalletWave - INFO - Finalizing plugin...
+2025-02-08 18:15:42 - Early Buyers - INFO - Solana Wallet Scanner finalized
+2025-02-08 18:16:52 - WalletWave - INFO - Initializing: Early Token Buyers
+2025-02-08 18:16:52 - Early Buyers - INFO - Early Buyers plugin initialized.
+2025-02-08 18:16:52 - WalletWave - INFO - Executing plugin...
+2025-02-08 18:16:55 - Early Buyers - INFO - Fetching early buyers with limit=50
+2025-02-08 18:16:55 - GMGN_Client_v2 - INFO - Executing 1 queued requests...
+2025-02-08 18:16:59 - WalletWave - INFO - Exporting plugin results..
+2025-02-08 18:16:59 - WalletWave - INFO - Exporting wallet data...
+2025-02-08 18:16:59 - FileUtils - WARNING - No data to export
+2025-02-08 18:16:59 - WalletWave - INFO - Finalizing plugin...
+2025-02-08 18:16:59 - Early Buyers - INFO - Solana Wallet Scanner finalized
+2025-02-08 18:20:30 - WalletWave - INFO - Initializing: Early Token Buyers
+2025-02-08 18:20:30 - Early Buyers - INFO - Early Buyers plugin initialized.
+2025-02-08 18:20:30 - WalletWave - INFO - Executing plugin...
+2025-02-08 18:20:34 - Early Buyers - INFO - Fetching early buyers with limit=50
+2025-02-08 18:20:34 - GMGN_Client_v2 - INFO - Executing 1 queued requests...
+2025-02-08 18:20:39 - WalletWave - INFO - Exporting plugin results..
+2025-02-08 18:20:39 - WalletWave - INFO - Exporting wallet data...
+2025-02-08 18:20:39 - FileUtils - WARNING - No data to export
+2025-02-08 18:20:39 - WalletWave - INFO - Finalizing plugin...
+2025-02-08 18:20:39 - Early Buyers - INFO - Solana Wallet Scanner finalized
+2025-02-08 18:22:29 - WalletWave - INFO - Initializing: Early Token Buyers
+2025-02-08 18:22:29 - Early Buyers - INFO - Early Buyers plugin initialized.
+2025-02-08 18:22:29 - WalletWave - INFO - Executing plugin...
+2025-02-08 18:22:33 - Early Buyers - INFO - Fetching early buyers with limit=50
+2025-02-08 18:22:33 - GMGN_Client_v2 - INFO - Executing 1 queued requests...
+2025-02-08 18:22:37 - WalletWave - INFO - Exporting plugin results..
+2025-02-08 18:22:37 - WalletWave - INFO - Exporting wallet data...
+2025-02-08 18:22:37 - FileUtils - WARNING - No data to export
+2025-02-08 18:22:37 - WalletWave - INFO - Finalizing plugin...
+2025-02-08 18:22:37 - Early Buyers - INFO - Solana Wallet Scanner finalized
+2025-02-08 18:31:25 - WalletWave - INFO - Initializing: Early Token Buyers
+2025-02-08 18:31:25 - Early Buyers - INFO - Early Buyers plugin initialized.
+2025-02-08 18:31:25 - WalletWave - INFO - Executing plugin...
+2025-02-08 18:31:28 - Early Buyers - INFO - Fetching early buyers with limit=50
+2025-02-08 18:31:28 - GMGN_Client_v2 - INFO - Executing 1 queued requests...
+2025-02-08 18:31:32 - WalletWave - INFO - Exporting plugin results..
+2025-02-08 18:31:32 - WalletWave - INFO - Exporting wallet data...
+2025-02-08 18:31:32 - FileUtils - WARNING - No data to export
+2025-02-08 18:31:32 - WalletWave - INFO - Finalizing plugin...
+2025-02-08 18:31:32 - Early Buyers - INFO - Solana Wallet Scanner finalized
+2025-02-08 18:51:15 - WalletWave - INFO - Initializing: Early Token Buyers
+2025-02-08 18:51:15 - Early Buyers - INFO - Early Buyers plugin initialized.
+2025-02-08 18:51:15 - WalletWave - INFO - Executing plugin...
+2025-02-08 18:51:22 - Early Buyers - INFO - Fetching early buyers with limit=50
+2025-02-08 18:51:22 - GMGN_Client_v2 - INFO - Executing 1 queued requests...
+2025-02-08 18:51:27 - WalletWave - INFO - Exporting plugin results..
+2025-02-08 18:51:27 - WalletWave - INFO - Exporting wallet data...
+2025-02-08 18:51:27 - FileUtils - WARNING - No data to export
+2025-02-08 18:51:27 - WalletWave - INFO - Finalizing plugin...
+2025-02-08 18:51:27 - Early Buyers - INFO - Solana Wallet Scanner finalized

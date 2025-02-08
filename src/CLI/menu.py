@@ -51,5 +51,3 @@ def menu(config_manager):
                 print("Invalid input. Please enter a number.")
         else:
             print("Invalid choice.")
-
-
