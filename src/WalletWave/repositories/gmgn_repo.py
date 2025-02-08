@@ -18,9 +18,8 @@ class GmgnRepo:
         self.client = Gmgn()
         self.endpoint = GmgnEndpoints
 
-    async def get_early_buyers(self, token_address: str, limit: int = 50):
+    async def get_early_buyers(self, token_address: str, limit: int = 100):
         """
-        Todo: Add Validation for returned data?
         Fetches the early buyers of a token
 
         Args:
@@ -52,7 +51,6 @@ class GmgnRepo:
             if not response or response[0] is None:
                 self.logger.warning("Response returned empty or None for early buyers.")
                 return EarlyBuyersResponse(code=0, msg="Empty Response", data={"rank": []})
-
             return EarlyBuyersResponse.model_validate(response[0])
         except Exception as e:
             self.logger.error(f"Error in get_early_buyers: {e}", exc_info=True)

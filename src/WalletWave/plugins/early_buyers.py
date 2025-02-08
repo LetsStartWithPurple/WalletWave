@@ -4,6 +4,8 @@ from WalletWave.plugins.utils.plugin_interface import PluginInterface
 from WalletWave.repositories.gmgn_repo import GmgnRepo
 from WalletWave.utils.logging_utils import get_logger
 from WalletWave.api.models.gmgn.early_buyers import EarlyBuyersResponse
+from WalletWave.utils.dexscreener import DexScreener
+
 from collections import defaultdict
 import csv
 
@@ -56,7 +58,7 @@ class EarlyBuyers(PluginInterface):
         8. Unrealized Profit
         9. Total profit
 
-    Important: Sometines, within the established limits, we might miss a wallet's buy/sell.
+    Important: Sometimes, within the established limits, we might miss a wallet's buy/sell.
     Example: This wallet -> 3LfX4Nm7ipyPs6p5jUEqdMpAihTchz9x6URjB9Dyk8L3 bought and sold once the token EH6SNJFmpLKo8oLuk3VMR7h1acg2tEvSzJwHDx51moon,
              but in the 50 limit, only shows a buy.. idk how to workaround this yet..
     """
@@ -64,6 +66,7 @@ class EarlyBuyers(PluginInterface):
         super().__init__(config_manager)
         self.plugin_settings = config_manager.TokenEarlyBuyers
         self.gmgn = GmgnRepo()
+        self.ds = DexScreener("solana")
         # By default, 50 first early buyers will be fetched. User can configure it later on, but a limit should be established.
         self.limit = config_manager.get_plugin_setting(self.plugin_class, "limit", "50")
         self.logger = get_logger("Early Buyers")
@@ -97,13 +100,13 @@ class EarlyBuyers(PluginInterface):
                 # Todo: ask the user to set the limit..
                 user_input_ca = input("Enter Token's CA: ").strip()
                 # Will handle mainly Pump.fun and Raydium's/Meteora's tokens length, which is 43-44 chars
-                if len(user_input_ca) == 43 or len(user_input_ca) == 44:
+
+                valid_ca = await self.ds.get_token_info_by_address(user_input_ca)
+
+                if valid_ca and isinstance(valid_ca, list) and len(valid_ca) > 0 and "pairAddress" in valid_ca[0]:
                     contract_address = user_input_ca
                     break
                 else:
-                    # Todo: In the future, check if the CA is valid by using some Blockchain API calls.
-                    #       DexScreener's API could suffice too, but has a 300 req/min limit.
-                    #       For now, we'll assume that the pasted CA is correct.
                     self.logger.info(f"'{user_input_ca}' is invalid. Please enter a valid CA")
 
         except Exception as e:

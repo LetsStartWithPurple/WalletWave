@@ -3,3 +3,4 @@ colorama
 pydantic
 curl_cffi
 rich
+requests
