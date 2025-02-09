@@ -12,7 +12,6 @@ import csv
 # Author: viksant
 # Version: 1.0.0
 
-
 class EarlyBuyers(PluginInterface):
     """
     This plugin tends to retrieve the early byers of a token based on the token's CA
@@ -81,7 +80,7 @@ class EarlyBuyers(PluginInterface):
         return "Returns a given amount of early buyers of a specific Solana Token."
 
     def get_version(self) -> str:
-        return "1.0.0"
+        return "1.0.1"
 
     async def initialize(self) -> None:
         self.logger.info("Early Buyers plugin initialized.")
@@ -97,14 +96,16 @@ class EarlyBuyers(PluginInterface):
             limit = self.plugin_settings.get("limit")
             revert = self.plugin_settings.get("revert")
             while True:
-                # Todo: ask the user to set the limit..
+
+                # Todo: Search alternatives to DexScreener's API, because it only shows tokens that are on dexscreener
+                #       which means the ones that already migrated.. but what if the token just didn't migrate (yet)?
                 user_input_ca = input("Enter Token's CA: ").strip()
-                # Will handle mainly Pump.fun and Raydium's/Meteora's tokens length, which is 43-44 chars
 
                 valid_ca = await self.ds.get_token_info_by_address(user_input_ca)
 
                 if valid_ca and isinstance(valid_ca, list) and len(valid_ca) > 0 and "pairAddress" in valid_ca[0]:
                     contract_address = user_input_ca
+                    print(f" Token address {user_input_ca} is valid. Continuing")
                     break
                 else:
                     self.logger.info(f"'{user_input_ca}' is invalid. Please enter a valid CA")
@@ -112,14 +113,13 @@ class EarlyBuyers(PluginInterface):
         except Exception as e:
             self.logger.critical(f"Config validation error: {e}")
             limit = 50
-            revert = "true"
             self.logger.warning(f"Falling back to default values: limit={limit}")
 
         # 2. Fetch the data
         try:
             self.logger.info(f"Fetching early buyers with limit={limit}")
             early_buyers = await self.gmgn.get_early_buyers(contract_address, self.limit)
-            print(self._analyze_returned_buyers(early_buyers))
+            self._analyze_returned_buyers(early_buyers)
         except Exception as e:
             self.logger.critical(f"Error running plugin: {e}", exc_info=True)
             return []
@@ -143,7 +143,6 @@ class EarlyBuyers(PluginInterface):
         if EarlyBuyersResponse:
             try:
                 buyer_data_dictionary = defaultdict(list)
-
                 # Group Transactions for each wallet
                 for tx in early_buyers.buyer_data.history:
                     buyer_data_dictionary[tx.maker].append(tx)
@@ -179,14 +178,17 @@ class EarlyBuyers(PluginInterface):
                           'unrealized_profit',
                           'total_profit', 'roi']
 
-                with open('early_buyers.csv', 'w', newline='') as f:
+                with open('earlyBuyers.csv', 'w', newline='') as f:
                     writer = csv.DictWriter(f, fieldnames=fields)
                     writer.writeheader()
                     for wallet, stats in maker_stats.items():
-                        writer.writerow({
-                            'wallet': wallet,
-                            **stats  # Unpacks all stats
-                        })
+                        if maker_stats[wallet]["total_buys"] > 0 and maker_stats[wallet]["total_sells"]:
+                            # Ignore those wallets who do not have sells but do have realized profit, as the sell Tx are not caught in this limit
+                            writer.writerow({
+                                'wallet': wallet,
+                                **stats
+                            })
+                    self.logger.info("Early buyers data written to earlyBuyers.csv")
             except Exception as e:
                 self.logger.critical(f"Error while parsing early buyers data: {e}")
 

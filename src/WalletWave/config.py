@@ -23,12 +23,12 @@ class ConfigManager:
 
         :param args: Command-line arguments parsed via argparse
         """
-        self.logger = get_logger("ConfigManager") # set global logger
-        self._config_path = os.path.abspath(args.config) # get absolute path of the config file
-        self._config_data = self._load_config() # load the config from YAML file
-        self._args = args # store the command line args
-        self._final_config = self._merge_configurations() # merge the file config settings with the CLI arguments
-        self._plugin_settings = self._load_plugin_settings() # load plugin settings
+        self.logger = get_logger("ConfigManager")  # set global logger
+        self._config_path = os.path.abspath(args.config)  # get absolute path of the config file
+        self._config_data = self._load_config()  # load the config from YAML file
+        self._args = args  # store the command line args
+        self._final_config = self._merge_configurations()  # merge the file config settings with the CLI arguments
+        self._plugin_settings = self._load_plugin_settings()  # load plugin settings
 
     def _load_config(self):
         """
@@ -161,6 +161,7 @@ class ConfigManager:
         """ Return the fully merged config dictionary """
         return self._final_config
 
+
 def parse_args():
     """ Parse command-line arguments"""
     # Get the default path of the config file relative the script directory
@@ -172,6 +173,7 @@ def parse_args():
     parser.add_argument("-v", "--verbose", action="store_true", help="Enable debug logging")
     parser.add_argument("--export-format", type=str, choices=["csv", "txt"], help="Export format (csv or txt)")
     return parser.parse_args()
+
 
 if __name__ == "__main__":
     # Parse arguments

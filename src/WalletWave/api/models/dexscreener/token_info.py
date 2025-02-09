@@ -14,7 +14,7 @@ class TxnData(BaseModel):
 
 
 class Liquidity(BaseModel):
-    usd: float
+    usd: Optional[float] = None
     base: float
     quote: float
 
@@ -47,7 +47,7 @@ class DexPair(BaseModel):
     txns: Dict[str, TxnData] = Field(default_factory=dict)
     volume: Dict[str, float] = Field(default_factory=dict)
     priceChange: Dict[str, float] = Field(default_factory=dict)
-    liquidity: Liquidity
+    liquidity: Optional[Liquidity] = None
     fdv: float
     marketCap: float
     pairCreatedAt: int

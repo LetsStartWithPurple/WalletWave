@@ -35,4 +35,4 @@ plugin_settings:
     timeframe: "7d"
 
   TokenEarlyBuyers:
-    limit: 50
+    limit: "50"

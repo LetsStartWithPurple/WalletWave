@@ -1245,3 +1245,758 @@ ValueError: token_address is not a string..
 2025-02-08 21:01:47 - FileUtils - WARNING - No data to export
 2025-02-08 21:01:47 - WalletWave - INFO - Finalizing plugin...
 2025-02-08 21:01:47 - Early Buyers - INFO - Solana Wallet Scanner finalized
+2025-02-08 21:03:53 - WalletWave - INFO - Initializing: Early Token Buyers
+2025-02-08 21:03:53 - Early Buyers - INFO - Early Buyers plugin initialized.
+2025-02-08 21:03:53 - WalletWave - INFO - Executing plugin...
+2025-02-08 21:03:58 - DexScreener API - WARNING - No valid data received for token J3TqbUgHurQGNxWtT88UQPcMNVmrL875pToQZdrkpuma
+2025-02-08 21:03:58 - Early Buyers - INFO - 'J3TqbUgHurQGNxWtT88UQPcMNVmrL875pToQZdrkpuma' is invalid. Please enter a valid CA
+2025-02-09 18:06:08 - WalletWave - INFO - Initializing: Early Token Buyers
+2025-02-09 18:06:08 - Early Buyers - INFO - Early Buyers plugin initialized.
+2025-02-09 18:06:08 - WalletWave - INFO - Executing plugin...
+2025-02-09 18:06:12 - Early Buyers - INFO - Fetching early buyers with limit=1000
+2025-02-09 18:06:12 - GMGN_Client_v2 - INFO - Executing 1 queued requests...
+2025-02-09 18:06:16 - GMGN_Client_v2 - ERROR - Failed https://gmgn.ai/api/v1/token_trades/sol/4Z6AbaXT9nk5J3uihNSjBVUoxUTSosRbDTkTfAFMpump?limit=50&maker=&revert=true: No response received
+2025-02-09 18:06:16 - GMGN_Client_v2 - INFO - retrying 1 for https://gmgn.ai/api/v1/token_trades/sol/4Z6AbaXT9nk5J3uihNSjBVUoxUTSosRbDTkTfAFMpump?limit=50&maker=&revert=true
+2025-02-09 18:06:19 - GMGN_Client_v2 - INFO - retrying 2 for https://gmgn.ai/api/v1/token_trades/sol/4Z6AbaXT9nk5J3uihNSjBVUoxUTSosRbDTkTfAFMpump?limit=50&maker=&revert=true
+2025-02-09 18:06:21 - GMGN_Client_v2 - INFO - retrying 3 for https://gmgn.ai/api/v1/token_trades/sol/4Z6AbaXT9nk5J3uihNSjBVUoxUTSosRbDTkTfAFMpump?limit=50&maker=&revert=true
+2025-02-09 18:06:24 - GMGN_Client_v2 - ERROR - url https://gmgn.ai/api/v1/token_trades/sol/4Z6AbaXT9nk5J3uihNSjBVUoxUTSosRbDTkTfAFMpump?limit=50&maker=&revert=true failed after 3 retries
+2025-02-09 18:06:24 - GMGN_Client_v2 - ERROR - Failed https://gmgn.ai/api/v1/token_trades/sol/4Z6AbaXT9nk5J3uihNSjBVUoxUTSosRbDTkTfAFMpump?limit=50&maker=&revert=true: HTTP Error 403: 
+2025-02-09 18:06:24 - GmgnRepo - WARNING - Response returned empty or None for early buyers.
+2025-02-09 18:06:24 - GmgnRepo - ERROR - Error in get_early_buyers: 3 validation errors for EarlyBuyersResponse
+reason
+  Field required [type=missing, input_value={'code': 0, 'msg': 'Empty...', 'data': {'rank': []}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+message
+  Field required [type=missing, input_value={'code': 0, 'msg': 'Empty...', 'data': {'rank': []}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.history
+  Field required [type=missing, input_value={'rank': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+Traceback (most recent call last):
+  File "C:\Users\orhei\Desktop\WalletWave\src\WalletWave\repositories\gmgn_repo.py", line 53, in get_early_buyers
+    return EarlyBuyersResponse(code=0, msg="Empty Response", data={"rank": []})
+  File "C:\Users\orhei\Desktop\WalletWave\venv\Lib\site-packages\pydantic\main.py", line 214, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 3 validation errors for EarlyBuyersResponse
+reason
+  Field required [type=missing, input_value={'code': 0, 'msg': 'Empty...', 'data': {'rank': []}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+message
+  Field required [type=missing, input_value={'code': 0, 'msg': 'Empty...', 'data': {'rank': []}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.history
+  Field required [type=missing, input_value={'rank': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+2025-02-09 18:06:24 - Early Buyers - CRITICAL - Error running plugin: 3 validation errors for EarlyBuyersResponse
+reason
+  Field required [type=missing, input_value={'code': 0, 'msg': 'Empty...', 'data': {'rank': []}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+message
+  Field required [type=missing, input_value={'code': 0, 'msg': 'Empty...', 'data': {'rank': []}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.history
+  Field required [type=missing, input_value={'rank': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+Traceback (most recent call last):
+  File "C:\Users\orhei\Desktop\WalletWave\src\WalletWave\plugins\early_buyers.py", line 120, in execute
+    early_buyers = await self.gmgn.get_early_buyers(contract_address, self.limit)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhei\Desktop\WalletWave\src\WalletWave\repositories\gmgn_repo.py", line 57, in get_early_buyers
+    return EarlyBuyersResponse(code=0, msg="Empty Response", data={"rank": []})
+  File "C:\Users\orhei\Desktop\WalletWave\venv\Lib\site-packages\pydantic\main.py", line 214, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 3 validation errors for EarlyBuyersResponse
+reason
+  Field required [type=missing, input_value={'code': 0, 'msg': 'Empty...', 'data': {'rank': []}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+message
+  Field required [type=missing, input_value={'code': 0, 'msg': 'Empty...', 'data': {'rank': []}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.history
+  Field required [type=missing, input_value={'rank': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+2025-02-09 18:06:24 - WalletWave - INFO - Exporting plugin results..
+2025-02-09 18:06:24 - WalletWave - INFO - Exporting wallet data...
+2025-02-09 18:06:24 - FileUtils - WARNING - No data to export
+2025-02-09 18:06:24 - WalletWave - INFO - Finalizing plugin...
+2025-02-09 18:06:24 - Early Buyers - INFO - Solana Wallet Scanner finalized
+2025-02-09 18:08:53 - WalletWave - INFO - Initializing: Early Token Buyers
+2025-02-09 18:08:53 - Early Buyers - INFO - Early Buyers plugin initialized.
+2025-02-09 18:08:53 - WalletWave - INFO - Executing plugin...
+2025-02-09 18:08:56 - Early Buyers - INFO - Fetching early buyers with limit=1000
+2025-02-09 18:08:56 - GMGN_Client_v2 - INFO - Executing 1 queued requests...
+2025-02-09 18:09:01 - GMGN_Client_v2 - ERROR - Failed https://gmgn.ai/api/v1/token_trades/sol/4Z6AbaXT9nk5J3uihNSjBVUoxUTSosRbDTkTfAFMpump?limit=50&maker=&revert=true: No response received
+2025-02-09 18:09:01 - GMGN_Client_v2 - INFO - retrying 1 for https://gmgn.ai/api/v1/token_trades/sol/4Z6AbaXT9nk5J3uihNSjBVUoxUTSosRbDTkTfAFMpump?limit=50&maker=&revert=true
+2025-02-09 18:09:02 - GMGN_Client_v2 - INFO - retrying 2 for https://gmgn.ai/api/v1/token_trades/sol/4Z6AbaXT9nk5J3uihNSjBVUoxUTSosRbDTkTfAFMpump?limit=50&maker=&revert=true
+2025-02-09 18:09:04 - GMGN_Client_v2 - INFO - retrying 3 for https://gmgn.ai/api/v1/token_trades/sol/4Z6AbaXT9nk5J3uihNSjBVUoxUTSosRbDTkTfAFMpump?limit=50&maker=&revert=true
+2025-02-09 18:09:07 - GMGN_Client_v2 - ERROR - url https://gmgn.ai/api/v1/token_trades/sol/4Z6AbaXT9nk5J3uihNSjBVUoxUTSosRbDTkTfAFMpump?limit=50&maker=&revert=true failed after 3 retries
+2025-02-09 18:09:07 - GMGN_Client_v2 - ERROR - Failed https://gmgn.ai/api/v1/token_trades/sol/4Z6AbaXT9nk5J3uihNSjBVUoxUTSosRbDTkTfAFMpump?limit=50&maker=&revert=true: HTTP Error 403: 
+2025-02-09 18:09:07 - GmgnRepo - WARNING - Response returned empty or None for early buyers.
+2025-02-09 18:09:07 - GmgnRepo - ERROR - Error in get_early_buyers: 3 validation errors for EarlyBuyersResponse
+reason
+  Field required [type=missing, input_value={'code': 0, 'msg': 'Empty...', 'data': {'rank': []}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+message
+  Field required [type=missing, input_value={'code': 0, 'msg': 'Empty...', 'data': {'rank': []}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.history
+  Field required [type=missing, input_value={'rank': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+Traceback (most recent call last):
+  File "C:\Users\orhei\Desktop\WalletWave\src\WalletWave\repositories\gmgn_repo.py", line 53, in get_early_buyers
+    return EarlyBuyersResponse(code=0, msg="Empty Response", data={"rank": []})
+  File "C:\Users\orhei\Desktop\WalletWave\venv\Lib\site-packages\pydantic\main.py", line 214, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 3 validation errors for EarlyBuyersResponse
+reason
+  Field required [type=missing, input_value={'code': 0, 'msg': 'Empty...', 'data': {'rank': []}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+message
+  Field required [type=missing, input_value={'code': 0, 'msg': 'Empty...', 'data': {'rank': []}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.history
+  Field required [type=missing, input_value={'rank': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+2025-02-09 18:09:07 - Early Buyers - CRITICAL - Error running plugin: 3 validation errors for EarlyBuyersResponse
+reason
+  Field required [type=missing, input_value={'code': 0, 'msg': 'Empty...', 'data': {'rank': []}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+message
+  Field required [type=missing, input_value={'code': 0, 'msg': 'Empty...', 'data': {'rank': []}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.history
+  Field required [type=missing, input_value={'rank': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+Traceback (most recent call last):
+  File "C:\Users\orhei\Desktop\WalletWave\src\WalletWave\plugins\early_buyers.py", line 120, in execute
+    early_buyers = await self.gmgn.get_early_buyers(contract_address, self.limit)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhei\Desktop\WalletWave\src\WalletWave\repositories\gmgn_repo.py", line 57, in get_early_buyers
+    return EarlyBuyersResponse(code=0, msg="Empty Response", data={"rank": []})
+  File "C:\Users\orhei\Desktop\WalletWave\venv\Lib\site-packages\pydantic\main.py", line 214, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 3 validation errors for EarlyBuyersResponse
+reason
+  Field required [type=missing, input_value={'code': 0, 'msg': 'Empty...', 'data': {'rank': []}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+message
+  Field required [type=missing, input_value={'code': 0, 'msg': 'Empty...', 'data': {'rank': []}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.history
+  Field required [type=missing, input_value={'rank': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+2025-02-09 18:09:07 - WalletWave - INFO - Exporting plugin results..
+2025-02-09 18:09:07 - WalletWave - INFO - Exporting wallet data...
+2025-02-09 18:09:07 - FileUtils - WARNING - No data to export
+2025-02-09 18:09:07 - WalletWave - INFO - Finalizing plugin...
+2025-02-09 18:09:07 - Early Buyers - INFO - Solana Wallet Scanner finalized
+2025-02-09 19:51:39 - WalletWave - INFO - Initializing: Early Token Buyers
+2025-02-09 19:51:39 - Early Buyers - INFO - Early Buyers plugin initialized.
+2025-02-09 19:51:39 - WalletWave - INFO - Executing plugin...
+2025-02-09 19:51:48 - Early Buyers - INFO - Fetching early buyers with limit=1000
+2025-02-09 19:51:48 - GMGN_Client_v2 - INFO - Executing 1 queued requests...
+2025-02-09 19:51:52 - WalletWave - INFO - Exporting plugin results..
+2025-02-09 19:51:52 - WalletWave - INFO - Exporting wallet data...
+2025-02-09 19:51:52 - FileUtils - WARNING - No data to export
+2025-02-09 19:51:52 - WalletWave - INFO - Finalizing plugin...
+2025-02-09 19:51:52 - Early Buyers - INFO - Solana Wallet Scanner finalized
+2025-02-09 19:54:29 - WalletWave - INFO - Initializing: Early Token Buyers
+2025-02-09 19:54:29 - Early Buyers - INFO - Early Buyers plugin initialized.
+2025-02-09 19:54:29 - WalletWave - INFO - Executing plugin...
+2025-02-09 19:54:38 - Early Buyers - INFO - Fetching early buyers with limit=1000
+2025-02-09 19:54:38 - GMGN_Client_v2 - INFO - Executing 1 queued requests...
+2025-02-09 19:54:42 - WalletWave - INFO - Exporting plugin results..
+2025-02-09 19:54:42 - WalletWave - INFO - Exporting wallet data...
+2025-02-09 19:54:42 - FileUtils - WARNING - No data to export
+2025-02-09 19:54:42 - WalletWave - INFO - Finalizing plugin...
+2025-02-09 19:54:42 - Early Buyers - INFO - Solana Wallet Scanner finalized
+2025-02-09 19:55:36 - WalletWave - INFO - Initializing: Early Token Buyers
+2025-02-09 19:55:36 - Early Buyers - INFO - Early Buyers plugin initialized.
+2025-02-09 19:55:36 - WalletWave - INFO - Executing plugin...
+2025-02-09 19:55:42 - DexScreener API - ERROR - Validation error: 1 validation error for DexscreenerPairResponse
+data.11.liquidity
+  Field required [type=missing, input_value={'chainId': 'solana', 'de...osts': {'active': 7500}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+2025-02-09 19:55:42 - Early Buyers - INFO - '644MryX1MXBNjA8QEUNeQ5HSEVZZqGRzPdiLz4EBpump' is invalid. Please enter a valid CA
+2025-02-09 19:55:48 - DexScreener API - ERROR - Validation error: 1 validation error for DexscreenerPairResponse
+data.11.liquidity
+  Field required [type=missing, input_value={'chainId': 'solana', 'de...osts': {'active': 7500}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+2025-02-09 19:55:48 - Early Buyers - INFO - '644MryX1MXBNjA8QEUNeQ5HSEVZZqGRzPdiLz4EBpump' is invalid. Please enter a valid CA
+2025-02-09 20:02:08 - WalletWave - INFO - Initializing: Early Token Buyers
+2025-02-09 20:02:08 - Early Buyers - INFO - Early Buyers plugin initialized.
+2025-02-09 20:02:08 - WalletWave - INFO - Executing plugin...
+2025-02-09 20:02:12 - DexScreener API - ERROR - Validation error: 1 validation error for DexscreenerPairResponse
+data.11.liquidity
+  Field required [type=missing, input_value={'chainId': 'solana', 'de...osts': {'active': 7500}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+2025-02-09 20:02:12 - Early Buyers - INFO - '644MryX1MXBNjA8QEUNeQ5HSEVZZqGRzPdiLz4EBpump' is invalid. Please enter a valid CA
+2025-02-09 20:08:16 - Early Buyers - CRITICAL - Config validation error: 
+2025-02-09 20:08:16 - Early Buyers - WARNING - Falling back to default values: limit=1000
+2025-02-09 20:08:16 - Early Buyers - INFO - Fetching early buyers with limit=1000
+2025-02-09 20:08:16 - Early Buyers - CRITICAL - Error running plugin: token_address is not a string..
+Traceback (most recent call last):
+  File "C:\Users\orhei\Desktop\WalletWave\src\WalletWave\plugins\early_buyers.py", line 119, in execute
+    early_buyers = await self.gmgn.get_early_buyers(contract_address, self.limit)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhei\Desktop\WalletWave\src\WalletWave\repositories\gmgn_repo.py", line 37, in get_early_buyers
+    raise ValueError("token_address is not a string..")
+ValueError: token_address is not a string..
+2025-02-09 20:08:16 - WalletWave - INFO - Exporting plugin results..
+2025-02-09 20:08:16 - WalletWave - INFO - Exporting wallet data...
+2025-02-09 20:08:16 - FileUtils - WARNING - No data to export
+2025-02-09 20:08:16 - WalletWave - INFO - Finalizing plugin...
+2025-02-09 20:08:16 - Early Buyers - INFO - Solana Wallet Scanner finalized
+2025-02-09 20:08:27 - WalletWave - INFO - Initializing: Early Token Buyers
+2025-02-09 20:08:27 - Early Buyers - INFO - Early Buyers plugin initialized.
+2025-02-09 20:08:27 - WalletWave - INFO - Executing plugin...
+2025-02-09 20:08:30 - DexScreener API - ERROR - Validation error: 1 validation error for DexscreenerPairResponse
+data.11.liquidity
+  Field required [type=missing, input_value={'chainId': 'solana', 'de...osts': {'active': 7500}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+2025-02-09 20:08:30 - Early Buyers - INFO - '644MryX1MXBNjA8QEUNeQ5HSEVZZqGRzPdiLz4EBpump' is invalid. Please enter a valid CA
+2025-02-09 20:09:04 - Early Buyers - CRITICAL - Config validation error: 
+2025-02-09 20:09:04 - Early Buyers - WARNING - Falling back to default values: limit=1000
+2025-02-09 20:09:04 - Early Buyers - INFO - Fetching early buyers with limit=1000
+2025-02-09 20:09:04 - Early Buyers - CRITICAL - Error running plugin: token_address is not a string..
+Traceback (most recent call last):
+  File "C:\Users\orhei\Desktop\WalletWave\src\WalletWave\plugins\early_buyers.py", line 119, in execute
+    early_buyers = await self.gmgn.get_early_buyers(contract_address, self.limit)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhei\Desktop\WalletWave\src\WalletWave\repositories\gmgn_repo.py", line 37, in get_early_buyers
+    raise ValueError("token_address is not a string..")
+ValueError: token_address is not a string..
+2025-02-09 20:09:04 - WalletWave - INFO - Exporting plugin results..
+2025-02-09 20:09:04 - WalletWave - INFO - Exporting wallet data...
+2025-02-09 20:09:04 - FileUtils - WARNING - No data to export
+2025-02-09 20:09:04 - WalletWave - INFO - Finalizing plugin...
+2025-02-09 20:09:04 - Early Buyers - INFO - Solana Wallet Scanner finalized
+2025-02-09 20:09:13 - WalletWave - INFO - Initializing: Early Token Buyers
+2025-02-09 20:09:13 - Early Buyers - INFO - Early Buyers plugin initialized.
+2025-02-09 20:09:13 - WalletWave - INFO - Executing plugin...
+2025-02-09 20:09:14 - DexScreener API - CRITICAL - Error while fetching 644MryX1MXBNjA8QEUNeQ5HSEVZZqGRzPdiLz4EBpump pool: 'dict' object has no attribute 'usd'
+2025-02-09 20:09:14 - Early Buyers - INFO - '644MryX1MXBNjA8QEUNeQ5HSEVZZqGRzPdiLz4EBpump' is invalid. Please enter a valid CA
+2025-02-09 20:10:55 - Early Buyers - CRITICAL - Config validation error: 
+2025-02-09 20:10:55 - Early Buyers - WARNING - Falling back to default values: limit=1000
+2025-02-09 20:10:55 - Early Buyers - INFO - Fetching early buyers with limit=1000
+2025-02-09 20:10:55 - Early Buyers - CRITICAL - Error running plugin: token_address is not a string..
+Traceback (most recent call last):
+  File "C:\Users\orhei\Desktop\WalletWave\src\WalletWave\plugins\early_buyers.py", line 119, in execute
+    early_buyers = await self.gmgn.get_early_buyers(contract_address, self.limit)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhei\Desktop\WalletWave\src\WalletWave\repositories\gmgn_repo.py", line 37, in get_early_buyers
+    raise ValueError("token_address is not a string..")
+ValueError: token_address is not a string..
+2025-02-09 20:10:55 - WalletWave - INFO - Exporting plugin results..
+2025-02-09 20:10:55 - WalletWave - INFO - Exporting wallet data...
+2025-02-09 20:10:55 - FileUtils - WARNING - No data to export
+2025-02-09 20:10:55 - WalletWave - INFO - Finalizing plugin...
+2025-02-09 20:10:55 - Early Buyers - INFO - Solana Wallet Scanner finalized
+2025-02-09 20:11:04 - WalletWave - INFO - Initializing: Early Token Buyers
+2025-02-09 20:11:04 - Early Buyers - INFO - Early Buyers plugin initialized.
+2025-02-09 20:11:04 - WalletWave - INFO - Executing plugin...
+2025-02-09 20:11:05 - DexScreener API - WARNING - No valid data received for token [
+2025-02-09 20:11:05 - Early Buyers - INFO - '[' is invalid. Please enter a valid CA
+2025-02-09 20:11:05 - DexScreener API - WARNING - No valid data received for token {
+2025-02-09 20:11:05 - Early Buyers - INFO - '{' is invalid. Please enter a valid CA
+2025-02-09 20:11:06 - DexScreener API - WARNING - No valid data received for token "chainId": "solana",
+2025-02-09 20:11:06 - Early Buyers - INFO - '"chainId": "solana",' is invalid. Please enter a valid CA
+2025-02-09 20:13:44 - WalletWave - INFO - Initializing: Early Token Buyers
+2025-02-09 20:13:44 - Early Buyers - INFO - Early Buyers plugin initialized.
+2025-02-09 20:13:44 - WalletWave - INFO - Executing plugin...
+2025-02-09 20:13:48 - DexScreener API - CRITICAL - Error while fetching 644MryX1MXBNjA8QEUNeQ5HSEVZZqGRzPdiLz4EBpump pool: 'NoneType' object has no attribute 'usd'
+2025-02-09 20:13:48 - Early Buyers - INFO - '644MryX1MXBNjA8QEUNeQ5HSEVZZqGRzPdiLz4EBpump' is invalid. Please enter a valid CA
+2025-02-09 20:14:20 - Early Buyers - CRITICAL - Config validation error: 
+2025-02-09 20:14:20 - Early Buyers - WARNING - Falling back to default values: limit=1000
+2025-02-09 20:14:20 - Early Buyers - INFO - Fetching early buyers with limit=1000
+2025-02-09 20:14:20 - Early Buyers - CRITICAL - Error running plugin: token_address is not a string..
+Traceback (most recent call last):
+  File "C:\Users\orhei\Desktop\WalletWave\src\WalletWave\plugins\early_buyers.py", line 119, in execute
+    early_buyers = await self.gmgn.get_early_buyers(contract_address, self.limit)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhei\Desktop\WalletWave\src\WalletWave\repositories\gmgn_repo.py", line 37, in get_early_buyers
+    raise ValueError("token_address is not a string..")
+ValueError: token_address is not a string..
+2025-02-09 20:14:20 - WalletWave - INFO - Exporting plugin results..
+2025-02-09 20:14:20 - WalletWave - INFO - Exporting wallet data...
+2025-02-09 20:14:20 - FileUtils - WARNING - No data to export
+2025-02-09 20:14:20 - WalletWave - INFO - Finalizing plugin...
+2025-02-09 20:14:20 - Early Buyers - INFO - Solana Wallet Scanner finalized
+2025-02-09 20:14:29 - WalletWave - INFO - Initializing: Early Token Buyers
+2025-02-09 20:14:29 - Early Buyers - INFO - Early Buyers plugin initialized.
+2025-02-09 20:14:29 - WalletWave - INFO - Executing plugin...
+2025-02-09 20:14:32 - Early Buyers - INFO - Fetching early buyers with limit=1000
+2025-02-09 20:14:32 - GMGN_Client_v2 - INFO - Executing 1 queued requests...
+2025-02-09 20:14:35 - WalletWave - INFO - Exporting plugin results..
+2025-02-09 20:14:35 - WalletWave - INFO - Exporting wallet data...
+2025-02-09 20:14:35 - FileUtils - WARNING - No data to export
+2025-02-09 20:14:35 - WalletWave - INFO - Finalizing plugin...
+2025-02-09 20:14:35 - Early Buyers - INFO - Solana Wallet Scanner finalized
+2025-02-09 20:17:00 - WalletWave - INFO - Initializing: Early Token Buyers
+2025-02-09 20:17:00 - Early Buyers - INFO - Early Buyers plugin initialized.
+2025-02-09 20:17:00 - WalletWave - INFO - Executing plugin...
+2025-02-09 20:17:01 - DexScreener API - CRITICAL - Error while fetching 644MryX1MXBNjA8QEUNeQ5HSEVZZqGRzPdiLz4EBpump pool: 'DexPair' object has no attribute 'liquidity'
+2025-02-09 20:17:01 - Early Buyers - INFO - '644MryX1MXBNjA8QEUNeQ5HSEVZZqGRzPdiLz4EBpump' is invalid. Please enter a valid CA
+2025-02-09 20:17:14 - Early Buyers - CRITICAL - Config validation error: 
+2025-02-09 20:17:14 - Early Buyers - WARNING - Falling back to default values: limit=1000
+2025-02-09 20:17:14 - Early Buyers - INFO - Fetching early buyers with limit=1000
+2025-02-09 20:17:14 - Early Buyers - CRITICAL - Error running plugin: token_address is not a string..
+Traceback (most recent call last):
+  File "C:\Users\orhei\Desktop\WalletWave\src\WalletWave\plugins\early_buyers.py", line 119, in execute
+    early_buyers = await self.gmgn.get_early_buyers(contract_address, self.limit)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhei\Desktop\WalletWave\src\WalletWave\repositories\gmgn_repo.py", line 37, in get_early_buyers
+    raise ValueError("token_address is not a string..")
+ValueError: token_address is not a string..
+2025-02-09 20:17:14 - WalletWave - INFO - Exporting plugin results..
+2025-02-09 20:17:14 - WalletWave - INFO - Exporting wallet data...
+2025-02-09 20:17:14 - FileUtils - WARNING - No data to export
+2025-02-09 20:17:14 - WalletWave - INFO - Finalizing plugin...
+2025-02-09 20:17:14 - Early Buyers - INFO - Solana Wallet Scanner finalized
+2025-02-09 20:17:25 - WalletWave - INFO - Initializing: Early Token Buyers
+2025-02-09 20:17:25 - Early Buyers - INFO - Early Buyers plugin initialized.
+2025-02-09 20:17:25 - WalletWave - INFO - Executing plugin...
+2025-02-09 20:17:26 - DexScreener API - CRITICAL - Error while fetching 644MryX1MXBNjA8QEUNeQ5HSEVZZqGRzPdiLz4EBpump pool: 'NoneType' object has no attribute 'base'
+2025-02-09 20:17:26 - Early Buyers - INFO - '644MryX1MXBNjA8QEUNeQ5HSEVZZqGRzPdiLz4EBpump' is invalid. Please enter a valid CA
+2025-02-09 20:18:33 - Early Buyers - CRITICAL - Config validation error: 
+2025-02-09 20:18:33 - Early Buyers - WARNING - Falling back to default values: limit=1000
+2025-02-09 20:18:33 - Early Buyers - INFO - Fetching early buyers with limit=1000
+2025-02-09 20:18:33 - Early Buyers - CRITICAL - Error running plugin: token_address is not a string..
+Traceback (most recent call last):
+  File "C:\Users\orhei\Desktop\WalletWave\src\WalletWave\plugins\early_buyers.py", line 119, in execute
+    early_buyers = await self.gmgn.get_early_buyers(contract_address, self.limit)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhei\Desktop\WalletWave\src\WalletWave\repositories\gmgn_repo.py", line 37, in get_early_buyers
+    raise ValueError("token_address is not a string..")
+ValueError: token_address is not a string..
+2025-02-09 20:18:33 - WalletWave - INFO - Exporting plugin results..
+2025-02-09 20:18:33 - WalletWave - INFO - Exporting wallet data...
+2025-02-09 20:18:33 - FileUtils - WARNING - No data to export
+2025-02-09 20:18:33 - WalletWave - INFO - Finalizing plugin...
+2025-02-09 20:18:33 - Early Buyers - INFO - Solana Wallet Scanner finalized
+2025-02-09 20:19:11 - WalletWave - INFO - Initializing: Early Token Buyers
+2025-02-09 20:19:11 - Early Buyers - INFO - Early Buyers plugin initialized.
+2025-02-09 20:19:11 - WalletWave - INFO - Executing plugin...
+2025-02-09 20:19:14 - Early Buyers - INFO - Fetching early buyers with limit=1000
+2025-02-09 20:19:14 - GMGN_Client_v2 - INFO - Executing 1 queued requests...
+2025-02-09 20:19:17 - WalletWave - INFO - Exporting plugin results..
+2025-02-09 20:19:17 - WalletWave - INFO - Exporting wallet data...
+2025-02-09 20:19:17 - FileUtils - WARNING - No data to export
+2025-02-09 20:19:17 - WalletWave - INFO - Finalizing plugin...
+2025-02-09 20:19:17 - Early Buyers - INFO - Solana Wallet Scanner finalized
+2025-02-09 20:22:52 - WalletWave - INFO - Initializing: Early Token Buyers
+2025-02-09 20:22:52 - Early Buyers - INFO - Early Buyers plugin initialized.
+2025-02-09 20:22:52 - WalletWave - INFO - Executing plugin...
+2025-02-09 20:22:55 - Early Buyers - INFO - Fetching early buyers with limit=1000
+2025-02-09 20:22:55 - GMGN_Client_v2 - INFO - Executing 1 queued requests...
+2025-02-09 20:23:00 - WalletWave - INFO - Exporting plugin results..
+2025-02-09 20:23:00 - WalletWave - INFO - Exporting wallet data...
+2025-02-09 20:23:00 - FileUtils - WARNING - No data to export
+2025-02-09 20:23:00 - WalletWave - INFO - Finalizing plugin...
+2025-02-09 20:23:00 - Early Buyers - INFO - Solana Wallet Scanner finalized
+2025-02-09 20:23:32 - WalletWave - INFO - Initializing: Early Token Buyers
+2025-02-09 20:23:32 - Early Buyers - INFO - Early Buyers plugin initialized.
+2025-02-09 20:23:32 - WalletWave - INFO - Executing plugin...
+2025-02-09 20:23:33 - Early Buyers - INFO - Fetching early buyers with limit=1000
+2025-02-09 20:23:33 - GMGN_Client_v2 - INFO - Executing 1 queued requests...
+2025-02-09 20:23:38 - WalletWave - INFO - Exporting plugin results..
+2025-02-09 20:23:38 - WalletWave - INFO - Exporting wallet data...
+2025-02-09 20:23:38 - FileUtils - WARNING - No data to export
+2025-02-09 20:23:38 - WalletWave - INFO - Finalizing plugin...
+2025-02-09 20:23:38 - Early Buyers - INFO - Solana Wallet Scanner finalized
+2025-02-09 20:26:08 - WalletWave - INFO - Initializing: Early Token Buyers
+2025-02-09 20:26:08 - Early Buyers - INFO - Early Buyers plugin initialized.
+2025-02-09 20:26:08 - WalletWave - INFO - Executing plugin...
+2025-02-09 20:26:11 - Early Buyers - INFO - Fetching early buyers with limit=1000
+2025-02-09 20:26:11 - GMGN_Client_v2 - INFO - Executing 1 queued requests...
+2025-02-09 20:26:15 - WalletWave - INFO - Exporting plugin results..
+2025-02-09 20:26:15 - WalletWave - INFO - Exporting wallet data...
+2025-02-09 20:26:15 - FileUtils - WARNING - No data to export
+2025-02-09 20:26:15 - WalletWave - INFO - Finalizing plugin...
+2025-02-09 20:26:15 - Early Buyers - INFO - Solana Wallet Scanner finalized
+2025-02-09 20:26:54 - WalletWave - INFO - Initializing: Early Token Buyers
+2025-02-09 20:26:54 - Early Buyers - INFO - Early Buyers plugin initialized.
+2025-02-09 20:26:54 - WalletWave - INFO - Executing plugin...
+2025-02-09 20:27:30 - Early Buyers - CRITICAL - Config validation error: 
+2025-02-09 20:27:30 - Early Buyers - WARNING - Falling back to default values: limit=1000
+2025-02-09 20:27:30 - Early Buyers - INFO - Fetching early buyers with limit=1000
+2025-02-09 20:27:30 - Early Buyers - CRITICAL - Error running plugin: token_address is not a string..
+Traceback (most recent call last):
+  File "C:\Users\orhei\Desktop\WalletWave\src\WalletWave\plugins\early_buyers.py", line 118, in execute
+    early_buyers = await self.gmgn.get_early_buyers(contract_address, self.limit)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhei\Desktop\WalletWave\src\WalletWave\repositories\gmgn_repo.py", line 37, in get_early_buyers
+    raise ValueError("token_address is not a string..")
+ValueError: token_address is not a string..
+2025-02-09 20:27:30 - WalletWave - INFO - Exporting plugin results..
+2025-02-09 20:27:30 - WalletWave - INFO - Exporting wallet data...
+2025-02-09 20:27:30 - FileUtils - WARNING - No data to export
+2025-02-09 20:27:30 - WalletWave - INFO - Finalizing plugin...
+2025-02-09 20:27:30 - Early Buyers - INFO - Solana Wallet Scanner finalized
+2025-02-09 20:27:39 - WalletWave - INFO - Initializing: Early Token Buyers
+2025-02-09 20:27:39 - Early Buyers - INFO - Early Buyers plugin initialized.
+2025-02-09 20:27:39 - WalletWave - INFO - Executing plugin...
+2025-02-09 20:27:40 - Early Buyers - INFO - Fetching early buyers with limit=50
+2025-02-09 20:27:40 - GMGN_Client_v2 - INFO - Executing 1 queued requests...
+2025-02-09 20:27:44 - WalletWave - INFO - Exporting plugin results..
+2025-02-09 20:27:44 - WalletWave - INFO - Exporting wallet data...
+2025-02-09 20:27:44 - FileUtils - WARNING - No data to export
+2025-02-09 20:27:44 - WalletWave - INFO - Finalizing plugin...
+2025-02-09 20:27:44 - Early Buyers - INFO - Solana Wallet Scanner finalized
+2025-02-09 20:30:19 - WalletWave - INFO - Initializing: Early Token Buyers
+2025-02-09 20:30:19 - Early Buyers - INFO - Early Buyers plugin initialized.
+2025-02-09 20:30:19 - WalletWave - INFO - Executing plugin...
+2025-02-09 20:30:23 - Early Buyers - INFO - Fetching early buyers with limit=50
+2025-02-09 20:30:23 - GMGN_Client_v2 - INFO - Executing 1 queued requests...
+2025-02-09 20:30:28 - WalletWave - INFO - Exporting plugin results..
+2025-02-09 20:30:28 - WalletWave - INFO - Exporting wallet data...
+2025-02-09 20:30:28 - FileUtils - WARNING - No data to export
+2025-02-09 20:30:28 - WalletWave - INFO - Finalizing plugin...
+2025-02-09 20:30:28 - Early Buyers - INFO - Solana Wallet Scanner finalized
+2025-02-09 20:33:27 - WalletWave - INFO - Initializing: Early Token Buyers
+2025-02-09 20:33:27 - Early Buyers - INFO - Early Buyers plugin initialized.
+2025-02-09 20:33:27 - WalletWave - INFO - Executing plugin...
+2025-02-09 20:33:30 - Early Buyers - INFO - Fetching early buyers with limit=50
+2025-02-09 20:33:30 - GMGN_Client_v2 - INFO - Executing 1 queued requests...
+2025-02-09 20:33:35 - WalletWave - INFO - Exporting plugin results..
+2025-02-09 20:33:35 - WalletWave - INFO - Exporting wallet data...
+2025-02-09 20:33:35 - FileUtils - WARNING - No data to export
+2025-02-09 20:33:35 - WalletWave - INFO - Finalizing plugin...
+2025-02-09 20:33:35 - Early Buyers - INFO - Solana Wallet Scanner finalized
+2025-02-09 20:33:54 - WalletWave - INFO - Initializing: Early Token Buyers
+2025-02-09 20:33:54 - Early Buyers - INFO - Early Buyers plugin initialized.
+2025-02-09 20:33:54 - WalletWave - INFO - Executing plugin...
+2025-02-09 20:33:55 - Early Buyers - INFO - Fetching early buyers with limit=50
+2025-02-09 20:33:55 - GMGN_Client_v2 - INFO - Executing 1 queued requests...
+2025-02-09 20:33:59 - WalletWave - INFO - Exporting plugin results..
+2025-02-09 20:33:59 - WalletWave - INFO - Exporting wallet data...
+2025-02-09 20:33:59 - FileUtils - WARNING - No data to export
+2025-02-09 20:33:59 - WalletWave - INFO - Finalizing plugin...
+2025-02-09 20:33:59 - Early Buyers - INFO - Solana Wallet Scanner finalized
+2025-02-09 20:36:14 - WalletWave - INFO - Initializing: Early Token Buyers
+2025-02-09 20:36:14 - Early Buyers - INFO - Early Buyers plugin initialized.
+2025-02-09 20:36:14 - WalletWave - INFO - Executing plugin...
+2025-02-09 20:36:16 - Early Buyers - INFO - Fetching early buyers with limit=50
+2025-02-09 20:36:16 - GMGN_Client_v2 - INFO - Executing 1 queued requests...
+2025-02-09 20:36:20 - WalletWave - INFO - Exporting plugin results..
+2025-02-09 20:36:20 - WalletWave - INFO - Exporting wallet data...
+2025-02-09 20:36:20 - FileUtils - WARNING - No data to export
+2025-02-09 20:36:20 - WalletWave - INFO - Finalizing plugin...
+2025-02-09 20:36:20 - Early Buyers - INFO - Solana Wallet Scanner finalized
+2025-02-09 20:37:11 - WalletWave - INFO - Initializing: Early Token Buyers
+2025-02-09 20:37:11 - Early Buyers - INFO - Early Buyers plugin initialized.
+2025-02-09 20:37:11 - WalletWave - INFO - Executing plugin...
+2025-02-09 20:37:13 - Early Buyers - INFO - Fetching early buyers with limit=50
+2025-02-09 20:37:13 - GMGN_Client_v2 - INFO - Executing 1 queued requests...
+2025-02-09 20:37:16 - GMGN_Client_v2 - ERROR - Failed https://gmgn.ai/api/v1/token_trades/sol/7D1iYWfhw2cr9yBZBFE6nZaaSUvXHqG5FizFFEZwpump?limit=50&revert=true: No response received
+2025-02-09 20:37:16 - GMGN_Client_v2 - INFO - retrying 1 for https://gmgn.ai/api/v1/token_trades/sol/7D1iYWfhw2cr9yBZBFE6nZaaSUvXHqG5FizFFEZwpump?limit=50&revert=true
+2025-02-09 20:37:19 - GMGN_Client_v2 - INFO - retrying 2 for https://gmgn.ai/api/v1/token_trades/sol/7D1iYWfhw2cr9yBZBFE6nZaaSUvXHqG5FizFFEZwpump?limit=50&revert=true
+2025-02-09 20:37:20 - GMGN_Client_v2 - INFO - retrying 3 for https://gmgn.ai/api/v1/token_trades/sol/7D1iYWfhw2cr9yBZBFE6nZaaSUvXHqG5FizFFEZwpump?limit=50&revert=true
+2025-02-09 20:37:23 - GMGN_Client_v2 - ERROR - url https://gmgn.ai/api/v1/token_trades/sol/7D1iYWfhw2cr9yBZBFE6nZaaSUvXHqG5FizFFEZwpump?limit=50&revert=true failed after 3 retries
+2025-02-09 20:37:23 - GMGN_Client_v2 - ERROR - Failed https://gmgn.ai/api/v1/token_trades/sol/7D1iYWfhw2cr9yBZBFE6nZaaSUvXHqG5FizFFEZwpump?limit=50&revert=true: HTTP Error 403: 
+2025-02-09 20:37:23 - GmgnRepo - WARNING - Response returned empty or None for early buyers.
+2025-02-09 20:37:23 - GmgnRepo - ERROR - Error in get_early_buyers: 3 validation errors for EarlyBuyersResponse
+reason
+  Field required [type=missing, input_value={'code': 0, 'msg': 'Empty...', 'data': {'rank': []}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+message
+  Field required [type=missing, input_value={'code': 0, 'msg': 'Empty...', 'data': {'rank': []}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.history
+  Field required [type=missing, input_value={'rank': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+Traceback (most recent call last):
+  File "C:\Users\orhei\Desktop\WalletWave\src\WalletWave\repositories\gmgn_repo.py", line 54, in get_early_buyers
+    return EarlyBuyersResponse(code=0, msg="Empty Response", data={"rank": []})
+  File "C:\Users\orhei\Desktop\WalletWave\venv\Lib\site-packages\pydantic\main.py", line 214, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 3 validation errors for EarlyBuyersResponse
+reason
+  Field required [type=missing, input_value={'code': 0, 'msg': 'Empty...', 'data': {'rank': []}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+message
+  Field required [type=missing, input_value={'code': 0, 'msg': 'Empty...', 'data': {'rank': []}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.history
+  Field required [type=missing, input_value={'rank': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+2025-02-09 20:37:23 - Early Buyers - CRITICAL - Error running plugin: 3 validation errors for EarlyBuyersResponse
+reason
+  Field required [type=missing, input_value={'code': 0, 'msg': 'Empty...', 'data': {'rank': []}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+message
+  Field required [type=missing, input_value={'code': 0, 'msg': 'Empty...', 'data': {'rank': []}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.history
+  Field required [type=missing, input_value={'rank': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+Traceback (most recent call last):
+  File "C:\Users\orhei\Desktop\WalletWave\src\WalletWave\plugins\early_buyers.py", line 118, in execute
+    early_buyers = await self.gmgn.get_early_buyers(contract_address, self.limit)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhei\Desktop\WalletWave\src\WalletWave\repositories\gmgn_repo.py", line 58, in get_early_buyers
+    return EarlyBuyersResponse(code=0, msg="Empty Response", data={"rank": []})
+  File "C:\Users\orhei\Desktop\WalletWave\venv\Lib\site-packages\pydantic\main.py", line 214, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 3 validation errors for EarlyBuyersResponse
+reason
+  Field required [type=missing, input_value={'code': 0, 'msg': 'Empty...', 'data': {'rank': []}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+message
+  Field required [type=missing, input_value={'code': 0, 'msg': 'Empty...', 'data': {'rank': []}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.history
+  Field required [type=missing, input_value={'rank': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+2025-02-09 20:37:23 - WalletWave - INFO - Exporting plugin results..
+2025-02-09 20:37:23 - WalletWave - INFO - Exporting wallet data...
+2025-02-09 20:37:23 - FileUtils - WARNING - No data to export
+2025-02-09 20:37:23 - WalletWave - INFO - Finalizing plugin...
+2025-02-09 20:37:23 - Early Buyers - INFO - Solana Wallet Scanner finalized
+2025-02-09 20:37:43 - WalletWave - INFO - Initializing: Early Token Buyers
+2025-02-09 20:37:43 - Early Buyers - INFO - Early Buyers plugin initialized.
+2025-02-09 20:37:43 - WalletWave - INFO - Executing plugin...
+2025-02-09 20:37:44 - DexScreener API - WARNING - No valid data received for token 4Z6AbaXT9nk5J3uihNSjBVUoxUTSosRbDTKfAFMpump
+2025-02-09 20:37:44 - Early Buyers - INFO - '4Z6AbaXT9nk5J3uihNSjBVUoxUTSosRbDTKfAFMpump' is invalid. Please enter a valid CA
+2025-02-09 20:38:27 - DexScreener API - WARNING - No valid data received for token 4Z6AbaXT9nk5J3uihNSjBVUoxUTSosRbDTKfAFMpumpclear
+2025-02-09 20:38:27 - Early Buyers - INFO - '4Z6AbaXT9nk5J3uihNSjBVUoxUTSosRbDTKfAFMpumpclear' is invalid. Please enter a valid CA
+2025-02-09 20:38:27 - Early Buyers - CRITICAL - Config validation error: 
+2025-02-09 20:38:27 - Early Buyers - WARNING - Falling back to default values: limit=1000
+2025-02-09 20:38:27 - Early Buyers - INFO - Fetching early buyers with limit=1000
+2025-02-09 20:38:27 - Early Buyers - CRITICAL - Error running plugin: token_address is not a string..
+Traceback (most recent call last):
+  File "C:\Users\orhei\Desktop\WalletWave\src\WalletWave\plugins\early_buyers.py", line 118, in execute
+    early_buyers = await self.gmgn.get_early_buyers(contract_address, self.limit)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhei\Desktop\WalletWave\src\WalletWave\repositories\gmgn_repo.py", line 38, in get_early_buyers
+    raise ValueError("token_address is not a string..")
+ValueError: token_address is not a string..
+2025-02-09 20:38:27 - WalletWave - INFO - Exporting plugin results..
+2025-02-09 20:38:27 - WalletWave - INFO - Exporting wallet data...
+2025-02-09 20:38:27 - FileUtils - WARNING - No data to export
+2025-02-09 20:38:27 - WalletWave - INFO - Finalizing plugin...
+2025-02-09 20:38:27 - Early Buyers - INFO - Solana Wallet Scanner finalized
+2025-02-09 20:40:24 - WalletWave - INFO - Initializing: Early Token Buyers
+2025-02-09 20:40:24 - Early Buyers - INFO - Early Buyers plugin initialized.
+2025-02-09 20:40:24 - WalletWave - INFO - Executing plugin...
+2025-02-09 20:40:25 - Early Buyers - INFO - Fetching early buyers with limit=50
+2025-02-09 20:40:25 - GMGN_Client_v2 - INFO - Executing 1 queued requests...
+2025-02-09 20:40:30 - WalletWave - INFO - Exporting plugin results..
+2025-02-09 20:40:30 - WalletWave - INFO - Exporting wallet data...
+2025-02-09 20:40:30 - FileUtils - WARNING - No data to export
+2025-02-09 20:40:30 - WalletWave - INFO - Finalizing plugin...
+2025-02-09 20:40:30 - Early Buyers - INFO - Solana Wallet Scanner finalized
+2025-02-09 20:42:13 - WalletWave - INFO - Initializing: Early Token Buyers
+2025-02-09 20:42:13 - Early Buyers - INFO - Early Buyers plugin initialized.
+2025-02-09 20:42:13 - WalletWave - INFO - Executing plugin...
+2025-02-09 20:42:20 - Early Buyers - INFO - Fetching early buyers with limit=50
+2025-02-09 20:42:20 - GMGN_Client_v2 - INFO - Executing 1 queued requests...
+2025-02-09 20:42:24 - WalletWave - INFO - Exporting plugin results..
+2025-02-09 20:42:24 - WalletWave - INFO - Exporting wallet data...
+2025-02-09 20:42:24 - FileUtils - WARNING - No data to export
+2025-02-09 20:42:24 - WalletWave - INFO - Finalizing plugin...
+2025-02-09 20:42:24 - Early Buyers - INFO - Solana Wallet Scanner finalized
+2025-02-09 20:51:04 - WalletWave - INFO - Initializing: Early Token Buyers
+2025-02-09 20:51:04 - Early Buyers - INFO - Early Buyers plugin initialized.
+2025-02-09 20:51:04 - WalletWave - INFO - Executing plugin...
+2025-02-09 20:51:06 - DexScreener API - WARNING - No valid data received for token GwHn3YZ8kPYTnSuAEoPHHWdpVr4iQXK5qDRn2Fi4KccA
+2025-02-09 20:51:06 - Early Buyers - INFO - 'GwHn3YZ8kPYTnSuAEoPHHWdpVr4iQXK5qDRn2Fi4KccA' is invalid. Please enter a valid CA
+2025-02-09 20:51:12 - Early Buyers - INFO - Fetching early buyers with limit=50
+2025-02-09 20:51:12 - GMGN_Client_v2 - INFO - Executing 1 queued requests...
+2025-02-09 20:51:16 - WalletWave - INFO - Exporting plugin results..
+2025-02-09 20:51:16 - WalletWave - INFO - Exporting wallet data...
+2025-02-09 20:51:16 - FileUtils - WARNING - No data to export
+2025-02-09 20:51:16 - WalletWave - INFO - Finalizing plugin...
+2025-02-09 20:51:16 - Early Buyers - INFO - Solana Wallet Scanner finalized
+2025-02-09 20:51:39 - WalletWave - INFO - Initializing: Early Token Buyers
+2025-02-09 20:51:39 - Early Buyers - INFO - Early Buyers plugin initialized.
+2025-02-09 20:51:39 - WalletWave - INFO - Executing plugin...
+2025-02-09 20:51:49 - Early Buyers - INFO - Fetching early buyers with limit=50
+2025-02-09 20:51:49 - GMGN_Client_v2 - INFO - Executing 1 queued requests...
+2025-02-09 20:51:53 - GMGN_Client_v2 - ERROR - Failed https://gmgn.ai/api/v1/token_trades/sol/7D1iYWfhw2cr9yBZBFE6nZaaSUvXHqG5FizFFEZwpump?limit=50&revert=true: No response received
+2025-02-09 20:51:53 - GMGN_Client_v2 - INFO - retrying 1 for https://gmgn.ai/api/v1/token_trades/sol/7D1iYWfhw2cr9yBZBFE6nZaaSUvXHqG5FizFFEZwpump?limit=50&revert=true
+2025-02-09 20:51:54 - GMGN_Client_v2 - INFO - retrying 2 for https://gmgn.ai/api/v1/token_trades/sol/7D1iYWfhw2cr9yBZBFE6nZaaSUvXHqG5FizFFEZwpump?limit=50&revert=true
+2025-02-09 21:23:00 - WalletWave - INFO - Initializing: Early Token Buyers
+2025-02-09 21:23:00 - Early Buyers - INFO - Early Buyers plugin initialized.
+2025-02-09 21:23:00 - WalletWave - INFO - Executing plugin...
+2025-02-09 21:23:12 - Early Buyers - INFO - Fetching early buyers with limit=50
+2025-02-09 21:23:12 - GMGN_Client_v2 - INFO - Executing 1 queued requests...
+2025-02-09 21:23:15 - GMGN_Client_v2 - ERROR - Failed https://gmgn.ai/api/v1/token_trades/sol/F9fTiA8cd7ULQi4D4gsJiu21UHCm1rESZ7jTVwGMpump?limit=50&revert=true: No response received
+2025-02-09 21:23:15 - GMGN_Client_v2 - INFO - retrying 1 for https://gmgn.ai/api/v1/token_trades/sol/F9fTiA8cd7ULQi4D4gsJiu21UHCm1rESZ7jTVwGMpump?limit=50&revert=true
+2025-02-09 21:23:18 - GMGN_Client_v2 - INFO - retrying 2 for https://gmgn.ai/api/v1/token_trades/sol/F9fTiA8cd7ULQi4D4gsJiu21UHCm1rESZ7jTVwGMpump?limit=50&revert=true
+2025-02-09 21:23:20 - GMGN_Client_v2 - INFO - retrying 3 for https://gmgn.ai/api/v1/token_trades/sol/F9fTiA8cd7ULQi4D4gsJiu21UHCm1rESZ7jTVwGMpump?limit=50&revert=true
+2025-02-09 21:23:22 - GMGN_Client_v2 - ERROR - url https://gmgn.ai/api/v1/token_trades/sol/F9fTiA8cd7ULQi4D4gsJiu21UHCm1rESZ7jTVwGMpump?limit=50&revert=true failed after 3 retries
+2025-02-09 21:23:22 - GMGN_Client_v2 - ERROR - Failed https://gmgn.ai/api/v1/token_trades/sol/F9fTiA8cd7ULQi4D4gsJiu21UHCm1rESZ7jTVwGMpump?limit=50&revert=true: HTTP Error 403: 
+2025-02-09 21:23:22 - GmgnRepo - WARNING - Response returned empty or None for early buyers.
+2025-02-09 21:23:22 - GmgnRepo - ERROR - Error in get_early_buyers: 3 validation errors for EarlyBuyersResponse
+reason
+  Field required [type=missing, input_value={'code': 0, 'msg': 'Empty...', 'data': {'rank': []}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+message
+  Field required [type=missing, input_value={'code': 0, 'msg': 'Empty...', 'data': {'rank': []}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.history
+  Field required [type=missing, input_value={'rank': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+Traceback (most recent call last):
+  File "C:\Users\orhei\Desktop\WalletWave\src\WalletWave\repositories\gmgn_repo.py", line 53, in get_early_buyers
+    return EarlyBuyersResponse(code=0, msg="Empty Response", data={"rank": []})
+  File "C:\Users\orhei\Desktop\WalletWave\venv\Lib\site-packages\pydantic\main.py", line 214, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 3 validation errors for EarlyBuyersResponse
+reason
+  Field required [type=missing, input_value={'code': 0, 'msg': 'Empty...', 'data': {'rank': []}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+message
+  Field required [type=missing, input_value={'code': 0, 'msg': 'Empty...', 'data': {'rank': []}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.history
+  Field required [type=missing, input_value={'rank': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+2025-02-09 21:23:22 - Early Buyers - CRITICAL - Error running plugin: 3 validation errors for EarlyBuyersResponse
+reason
+  Field required [type=missing, input_value={'code': 0, 'msg': 'Empty...', 'data': {'rank': []}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+message
+  Field required [type=missing, input_value={'code': 0, 'msg': 'Empty...', 'data': {'rank': []}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.history
+  Field required [type=missing, input_value={'rank': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+Traceback (most recent call last):
+  File "C:\Users\orhei\Desktop\WalletWave\src\WalletWave\plugins\early_buyers.py", line 121, in execute
+    early_buyers = await self.gmgn.get_early_buyers(contract_address, self.limit)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\orhei\Desktop\WalletWave\src\WalletWave\repositories\gmgn_repo.py", line 57, in get_early_buyers
+    return EarlyBuyersResponse(code=0, msg="Empty Response", data={"rank": []})
+  File "C:\Users\orhei\Desktop\WalletWave\venv\Lib\site-packages\pydantic\main.py", line 214, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 3 validation errors for EarlyBuyersResponse
+reason
+  Field required [type=missing, input_value={'code': 0, 'msg': 'Empty...', 'data': {'rank': []}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+message
+  Field required [type=missing, input_value={'code': 0, 'msg': 'Empty...', 'data': {'rank': []}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+data.history
+  Field required [type=missing, input_value={'rank': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+2025-02-09 21:23:22 - WalletWave - INFO - Exporting plugin results..
+2025-02-09 21:23:22 - WalletWave - INFO - Exporting wallet data...
+2025-02-09 21:23:22 - FileUtils - WARNING - No data to export
+2025-02-09 21:23:22 - WalletWave - INFO - Finalizing plugin...
+2025-02-09 21:23:22 - Early Buyers - INFO - Solana Wallet Scanner finalized
+2025-02-09 21:39:33 - WalletWave - INFO - Initializing: Early Token Buyers
+2025-02-09 21:39:33 - Early Buyers - INFO - Early Buyers plugin initialized.
+2025-02-09 21:39:33 - WalletWave - INFO - Executing plugin...
+2025-02-09 21:39:39 - Early Buyers - INFO - Fetching early buyers with limit=50
+2025-02-09 21:39:39 - GMGN_Client_v2 - INFO - Executing 1 queued requests...
+2025-02-09 21:39:42 - WalletWave - INFO - Exporting plugin results..
+2025-02-09 21:39:42 - WalletWave - INFO - Exporting wallet data...
+2025-02-09 21:39:42 - FileUtils - WARNING - No data to export
+2025-02-09 21:39:42 - WalletWave - INFO - Finalizing plugin...
+2025-02-09 21:39:42 - Early Buyers - INFO - Solana Wallet Scanner finalized
+2025-02-09 21:40:06 - WalletWave - INFO - Initializing: Early Token Buyers
+2025-02-09 21:40:06 - Early Buyers - INFO - Early Buyers plugin initialized.
+2025-02-09 21:40:06 - WalletWave - INFO - Executing plugin...
+2025-02-09 21:40:08 - Early Buyers - INFO - Fetching early buyers with limit=50
+2025-02-09 21:40:08 - GMGN_Client_v2 - INFO - Executing 1 queued requests...
+2025-02-09 21:40:12 - WalletWave - INFO - Exporting plugin results..
+2025-02-09 21:40:12 - WalletWave - INFO - Exporting wallet data...
+2025-02-09 21:40:12 - FileUtils - WARNING - No data to export
+2025-02-09 21:40:12 - WalletWave - INFO - Finalizing plugin...
+2025-02-09 21:40:12 - Early Buyers - INFO - Solana Wallet Scanner finalized
+2025-02-09 21:40:35 - WalletWave - INFO - Initializing: Early Token Buyers
+2025-02-09 21:40:35 - Early Buyers - INFO - Early Buyers plugin initialized.
+2025-02-09 21:40:35 - WalletWave - INFO - Executing plugin...
+2025-02-09 21:40:36 - Early Buyers - INFO - Fetching early buyers with limit=50
+2025-02-09 21:40:36 - GMGN_Client_v2 - INFO - Executing 1 queued requests...
+2025-02-09 21:40:41 - WalletWave - INFO - Exporting plugin results..
+2025-02-09 21:40:41 - WalletWave - INFO - Exporting wallet data...
+2025-02-09 21:40:41 - FileUtils - WARNING - No data to export
+2025-02-09 21:40:41 - WalletWave - INFO - Finalizing plugin...
+2025-02-09 21:40:41 - Early Buyers - INFO - Solana Wallet Scanner finalized
+2025-02-09 21:41:04 - WalletWave - INFO - Initializing: Early Token Buyers
+2025-02-09 21:41:04 - Early Buyers - INFO - Early Buyers plugin initialized.
+2025-02-09 21:41:04 - WalletWave - INFO - Executing plugin...
+2025-02-09 21:41:05 - Early Buyers - INFO - Fetching early buyers with limit=50
+2025-02-09 21:41:05 - GMGN_Client_v2 - INFO - Executing 1 queued requests...
+2025-02-09 21:41:09 - WalletWave - INFO - Exporting plugin results..
+2025-02-09 21:41:09 - WalletWave - INFO - Exporting wallet data...
+2025-02-09 21:41:09 - FileUtils - WARNING - No data to export
+2025-02-09 21:41:09 - WalletWave - INFO - Finalizing plugin...
+2025-02-09 21:41:09 - Early Buyers - INFO - Solana Wallet Scanner finalized
+2025-02-09 21:45:54 - WalletWave - INFO - Initializing: Early Token Buyers
+2025-02-09 21:45:54 - Early Buyers - INFO - Early Buyers plugin initialized.
+2025-02-09 21:45:54 - WalletWave - INFO - Executing plugin...
+2025-02-09 21:45:58 - Early Buyers - INFO - Fetching early buyers with limit=50
+2025-02-09 21:45:58 - GMGN_Client_v2 - INFO - Executing 1 queued requests...
+2025-02-09 21:46:02 - Early Buyers - INFO - Early buyers data written to earlyBuyers.csv
+2025-02-09 21:46:02 - WalletWave - INFO - Exporting plugin results..
+2025-02-09 21:46:02 - WalletWave - INFO - Exporting wallet data...
+2025-02-09 21:46:02 - FileUtils - WARNING - No data to export
+2025-02-09 21:46:02 - WalletWave - INFO - Finalizing plugin...
+2025-02-09 21:46:02 - Early Buyers - INFO - Solana Wallet Scanner finalized
+2025-02-09 21:46:42 - WalletWave - INFO - Initializing: Early Token Buyers
+2025-02-09 21:46:42 - Early Buyers - INFO - Early Buyers plugin initialized.
+2025-02-09 21:46:42 - WalletWave - INFO - Executing plugin...
+2025-02-09 21:46:46 - Early Buyers - INFO - Fetching early buyers with limit=50
+2025-02-09 21:46:46 - GMGN_Client_v2 - INFO - Executing 1 queued requests...
+2025-02-09 21:46:51 - Early Buyers - INFO - Early buyers data written to earlyBuyers.csv
+2025-02-09 21:46:51 - WalletWave - INFO - Exporting plugin results..
+2025-02-09 21:46:51 - WalletWave - INFO - Exporting wallet data...
+2025-02-09 21:46:51 - FileUtils - WARNING - No data to export
+2025-02-09 21:46:51 - WalletWave - INFO - Finalizing plugin...
+2025-02-09 21:46:51 - Early Buyers - INFO - Solana Wallet Scanner finalized
+2025-02-09 21:47:11 - WalletWave - INFO - Initializing: Early Token Buyers
+2025-02-09 21:47:11 - Early Buyers - INFO - Early Buyers plugin initialized.
+2025-02-09 21:47:11 - WalletWave - INFO - Executing plugin...
+2025-02-09 21:47:12 - DexScreener API - WARNING - No valid data received for token v
+2025-02-09 21:47:12 - Early Buyers - INFO - 'v' is invalid. Please enter a valid CA
+2025-02-09 21:47:13 - Early Buyers - INFO - Fetching early buyers with limit=50
+2025-02-09 21:47:13 - GMGN_Client_v2 - INFO - Executing 1 queued requests...
+2025-02-09 21:47:18 - Early Buyers - INFO - Early buyers data written to earlyBuyers.csv
+2025-02-09 21:47:18 - WalletWave - INFO - Exporting plugin results..
+2025-02-09 21:47:18 - WalletWave - INFO - Exporting wallet data...
+2025-02-09 21:47:18 - FileUtils - WARNING - No data to export
+2025-02-09 21:47:18 - WalletWave - INFO - Finalizing plugin...
+2025-02-09 21:47:18 - Early Buyers - INFO - Solana Wallet Scanner finalized
+2025-02-09 21:49:56 - WalletWave - INFO - Initializing: Early Token Buyers
+2025-02-09 21:49:56 - Early Buyers - INFO - Early Buyers plugin initialized.
+2025-02-09 21:49:56 - WalletWave - INFO - Executing plugin...
+2025-02-09 21:49:57 - DexScreener API - CRITICAL - Error while fetching # Ignore those wallets who do not have sells but do have realized profit, as the sell Tx are not caught in this limit pool: Expecting value: line 1 column 1 (char 0)
+2025-02-09 21:49:57 - Early Buyers - INFO - '# Ignore those wallets who do not have sells but do have realized profit, as the sell Tx are not caught in this limit' is invalid. Please enter a valid CA
+2025-02-09 21:50:01 - Early Buyers - INFO - Fetching early buyers with limit=50
+2025-02-09 21:50:01 - GMGN_Client_v2 - INFO - Executing 1 queued requests...
+2025-02-09 21:50:07 - Early Buyers - CRITICAL - Error while parsing early buyers data: string indices must be integers, not 'dict'
+2025-02-09 21:50:07 - WalletWave - INFO - Exporting plugin results..
+2025-02-09 21:50:07 - WalletWave - INFO - Exporting wallet data...
+2025-02-09 21:50:07 - FileUtils - WARNING - No data to export
+2025-02-09 21:50:07 - WalletWave - INFO - Finalizing plugin...
+2025-02-09 21:50:07 - Early Buyers - INFO - Solana Wallet Scanner finalized
+2025-02-09 21:56:30 - WalletWave - INFO - Initializing: Early Token Buyers
+2025-02-09 21:56:30 - Early Buyers - INFO - Early Buyers plugin initialized.
+2025-02-09 21:56:30 - WalletWave - INFO - Executing plugin...
+2025-02-09 21:56:35 - Early Buyers - INFO - Fetching early buyers with limit=50
+2025-02-09 21:56:35 - GMGN_Client_v2 - INFO - Executing 1 queued requests...
+2025-02-09 21:56:39 - Early Buyers - INFO - Early buyers data written to earlyBuyers.csv
+2025-02-09 21:56:39 - WalletWave - INFO - Exporting plugin results..
+2025-02-09 21:56:39 - WalletWave - INFO - Exporting wallet data...
+2025-02-09 21:56:39 - FileUtils - WARNING - No data to export
+2025-02-09 21:56:39 - WalletWave - INFO - Finalizing plugin...
+2025-02-09 21:56:39 - Early Buyers - INFO - Solana Wallet Scanner finalized
+2025-02-09 21:57:56 - WalletWave - INFO - Initializing: Top Wallets
+2025-02-09 21:57:56 - TopWallets - INFO - TopWallets plugin initialized.
+2025-02-09 21:57:56 - WalletWave - INFO - Executing plugin...
+2025-02-09 21:57:56 - GMGN_Client_v2 - INFO - Executing 1 queued requests...
+2025-02-09 21:58:22 - WalletWave - INFO - Initializing: Early Token Buyers
+2025-02-09 21:58:22 - Early Buyers - INFO - Early Buyers plugin initialized.
+2025-02-09 21:58:22 - WalletWave - INFO - Executing plugin...
+2025-02-09 21:58:23 - Early Buyers - INFO - Fetching early buyers with limit=50
+2025-02-09 21:58:23 - GMGN_Client_v2 - INFO - Executing 1 queued requests...
+2025-02-09 21:58:26 - Early Buyers - INFO - Early buyers data written to earlyBuyers.csv
+2025-02-09 21:58:26 - WalletWave - INFO - Exporting plugin results..
+2025-02-09 21:58:26 - WalletWave - INFO - Exporting wallet data...
+2025-02-09 21:58:26 - FileUtils - WARNING - No data to export
+2025-02-09 21:58:26 - WalletWave - INFO - Finalizing plugin...
+2025-02-09 21:58:26 - Early Buyers - INFO - Solana Wallet Scanner finalized

@@ -23,7 +23,7 @@ class Gmgn:
         self.semaphore = None
 
         self.logger.debug("Initializing impersonation...")
-        self.impersonate = "chrome"
+        self.impersonate = "chrome116"
         self.logger.debug("Initiating Gmgn Client...")
 
     async def configure_parallel_requests(self):
@@ -87,16 +87,16 @@ class Gmgn:
         async with AsyncSession(
                 impersonate=self.impersonate,
                 headers={
-                    "Accept": "application/json, text/plain, */*",
-                    "Accept-Language": "en-US,en;q=0.9",
+                    "Accept": "application/json",
+                    "Accept-Language": "es-ES,es;q=0.9,en;q=0.8",
+                    "Priority": "u=1, i",
                     "Accept-Encoding": "gzip, deflate, br",
                     "Referer": "https://gmgn.ai",
-                    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-                                  "AppleWebKit/537.36 (KHTML, like Gecko) "
-                                  "Chrome/104.0.0.0 Safari/537.36",
-                    "sec-ch-ua": '"Chromium";v="104", " Not A;Brand";v="99", "Google Chrome";v="104"',
-                    "sec-ch-ua-mobile": "?0",
-                    "sec-ch-ua-platform": '"Windows"',
+                    "Sec-Ch-Ua": '"Not(A:Brand";v="99", "Google Chrome";v="116", "Chromium";v="116"',
+                    "Sec-Ch-Ua-Full-Version": "116.0.5845.180",
+                    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36",
+                    "Sec-Ch-Ua-Full-Version-List": '"Not(A:Brand";v="99.0.0.0", "Google Chrome";v="116.0.5845.180", "Chromium";v="116.0.5845.180"',
+                    "Sec-Ch-Ua-Platform-Version": "6.0"
                 }
         ) as session:
             tasks = [

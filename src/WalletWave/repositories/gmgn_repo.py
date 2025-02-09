@@ -3,7 +3,6 @@ from typing import List, Union
 from WalletWave.api.models.gmgn.wallet_info import WalletInfoResponse
 from WalletWave.api.models.gmgn.wallets import WalletsResponse
 from WalletWave.api.models.gmgn.early_buyers import EarlyBuyersResponse
-# from WalletWave.services.gmgn_client.client import Gmgn
 from WalletWave.api.clients.client_v2 import Gmgn
 from WalletWave.api.endpoints.gmgn_endpoints import GmgnEndpoints
 from WalletWave.utils.logging_utils import get_logger
@@ -18,7 +17,7 @@ class GmgnRepo:
         self.client = Gmgn()
         self.endpoint = GmgnEndpoints
 
-    async def get_early_buyers(self, token_address: str, limit: int = 100):
+    async def get_early_buyers(self, token_address: str, limit: int = 50):
         """
         Fetches the early buyers of a token
 
@@ -32,7 +31,8 @@ class GmgnRepo:
         Raises:
             ValueError: If the provided CA or limit is invalid.
         """
-        valid_limits = [50, 100, 150, 200]
+
+        valid_limits = [50, 100, 150, 200, 250, 300, 350, 400, 450, 500, 550, 600, 650, 700, 750, 800, 850, 900, 950, 1000]
         if not valid_limits or not isinstance(token_address, str):
             raise ValueError("token_address is not a string..")
 
@@ -41,7 +41,7 @@ class GmgnRepo:
             "revert": "true"
         }
 
-        url = f"https://gmgn.ai/api/v1/token_trades/sol/{token_address}?limit=50&maker=&revert=true"
+        url = f"https://gmgn.ai/api/v1/token_trades/sol/{token_address}?limit=50&revert=true"
 
         self.client.queue_request(url, params)
 

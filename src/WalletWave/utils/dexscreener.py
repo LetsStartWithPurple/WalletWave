@@ -61,9 +61,11 @@ class DexScreener:
                     "volume": pair.volume,
                     "priceChange": pair.priceChange,
                     "liquidity": {
-                        "usd": pair.liquidity.usd,
-                        "base": pair.liquidity.base,
-                        "quote": pair.liquidity.quote,
+                        # Todo: Investigate why some tokens return 0 in all the fields despite not being 0...
+                        #       Example: 644MryX1MXBNjA8QEUNeQ5HSEVZZqGRzPdiLz4EBpump
+                        "usd": pair.liquidity.usd if hasattr(pair.liquidity, "usd") else 0,
+                        "base": pair.liquidity.base if hasattr(pair.liquidity, "base") else 0,
+                        "quote": pair.liquidity.quote if hasattr(pair.liquidity, "quote") else 0,
                     },
                     "fdv": pair.fdv,
                     "marketCap": pair.marketCap,
